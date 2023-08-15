@@ -3,17 +3,29 @@ volumes:
     external: true
 services:
   mongo:
-    image: mongo
+    image: mongo:5
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: hacks
+      MONGO_INITDB_ROOT_PASSWORD: soccer
     volumes:
       - mongo-data:/data/db
+  mongo-express:
+    image: mongo-express
+    restart: always
+    depends_on:
+      - mongo
+    ports:
+      - "8081:8081"
     environment:
-      MONGO_INITDB_ROOT_USERNAME: hack reactor
-      MONGO_INITDB_ROOT_PASSWORD: hacks
+      ME_CONFIG_MONGODB_ADMINUSERNAME: hacks
+      ME_CONFIG_MONGODB_ADMINPASSWORD: soccer
+      ME_CONFIG_MONGODB_URL: mongodb://hacks:soccer@mongo
   fastapi:
     environment:
       DATABASE_URL: mongodb://hacks:soccer@mongo
       DB_NAME: hack_reactor_hacks_db
-      CORS_HOST: http://localhost:3000 # Moved this line here
+      CORS_HOST: http://localhost:3000
+      SIGNING_KEY: ${SIGNING_KEY}
     build:
       context: api
       dockerfile: Dockerfile.dev
