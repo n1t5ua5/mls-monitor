@@ -9,6 +9,10 @@ of all 30 teams in the MLS (Major League Soccer), the biggest soccer league in t
  -->
 
 
-<!-- 8/15/23
+<!-- 8/16/23
+    We got auth almost set up & running for mongo. Need to keep watching the video with Curtis. Had to check out around 8pm est.
+ -->
 
+<!-- 8/17/23
+    Authorization is up & running now thanks to the resilience of my partner Deontay & our instructor Riley. Tidying up the backend up & the 
  -->
