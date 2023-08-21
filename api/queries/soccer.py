@@ -1,21 +1,29 @@
 from pydantic import BaseModel
+import requests
+import os
 
 
-class Team(BaseModel):
-    name: str
-    logo: str
-    abbreviation: str
-    standings: str
-    stats: str
+class TeamQueries:
+    def list_teams(self):
+        url = "https://major-league-soccer-standings.p.rapidapi.com/"
 
+        headers = {
+            "X-RapidAPI-Key": os.environ["RAPID_API_KEY"],
+            "X-RapidAPI-Host": "major-league-soccer-standings.p.rapidapi.com",
+        }
+        response = requests.get(self.url, headers=self.headers)
+        data = response.json()
+        return data
 
-class Standings(BaseModel):
-    pass
+    def get_one_team_id(self, id: int):
+        url = ""
+        params = {"id": id}
 
+        headers = {
+            "X-RapidAPI-Key": os.environ["RAPID_API_KEY"],
+            "X-RapidAPI-Host": "major-league-soccer-standings.p.rapidapi.com",
+        }
+        res = requests.get(url, headers=headers, params=params)
 
-class Stats(BaseModel):
-    pass
-
-
-class Conference(BaseModel):
-    pass
+        data = res.json()
+        return data
