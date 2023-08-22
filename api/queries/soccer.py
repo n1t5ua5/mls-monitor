@@ -1,29 +1,28 @@
 from pydantic import BaseModel
 import requests
 import os
+from typing import Optional
 
 
 class TeamQueries:
     def list_teams(self):
-        url = "https://major-league-soccer-standings.p.rapidapi.com/"
-
+        BASE_URL = "https://major-league-soccer-standings.p.rapidapi.com/"
         headers = {
-            "X-RapidAPI-Key": os.environ["RAPID_API_KEY"],
+            "X-RapidAPI-Key": os.environ["API_KEY"],
             "X-RapidAPI-Host": "major-league-soccer-standings.p.rapidapi.com",
         }
-        response = requests.get(self.url, headers=self.headers)
+        response = requests.get(BASE_URL, headers=headers)
         data = response.json()
         return data
 
-    def get_one_team_id(self, id: int):
-        url = ""
-        params = {"id": id}
+    def get_team_details(self, name: str) -> Optional[dict]:
+        data = self.list_teams()
 
-        headers = {
-            "X-RapidAPI-Key": os.environ["RAPID_API_KEY"],
-            "X-RapidAPI-Host": "major-league-soccer-standings.p.rapidapi.com",
-        }
-        res = requests.get(url, headers=headers, params=params)
+        all_teams = [
+            entry for conference in data for entry in conference["entries"]
+        ]
 
-        data = res.json()
-        return data
+        for team in all_teams:
+            if team["team"]["name"] == name:
+                return team
+        return None
