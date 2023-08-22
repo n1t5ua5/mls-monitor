@@ -14,10 +14,11 @@ from pydantic import BaseModel
 
 from queries.accounts import (
     AccountIn,
-    AccountOut,
     AccountQueries,
     DuplicateAccountError,
 )
+
+from models import AccountOut
 
 
 class AccountForm(BaseModel):
@@ -35,16 +36,18 @@ class HttpError(BaseModel):
 
 router = APIRouter()
 
+
 @router.get("/api/protectd", response_model=bool)
 async def get_protected(
     account_data: dict = Depends(authenticator.try_get_current_account_data),
 ):
     return True
 
+
 @router.get("/token", response_model=AccountToken | None)
 async def get_token(
     request: Request,
-    account: AccountOut = Depends(authenticator.try_get_current_account_data)
+    account: AccountOut = Depends(authenticator.try_get_current_account_data),
 ) -> AccountToken | None:
     if account and authenticator.cookie_name in request.cookies:
         return {
@@ -52,6 +55,7 @@ async def get_token(
             "type": "Bearer",
             "account": account,
         }
+
 
 @router.post("/api/accounts", response_model=AccountToken | HttpError)
 async def create_account(
