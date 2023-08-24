@@ -1,6 +1,7 @@
 from fastapi import APIRouter, Depends
 from queries.soccer import TeamQueries
 
+
 router = APIRouter()
 
 
