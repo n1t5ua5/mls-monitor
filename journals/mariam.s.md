@@ -1,3 +1,11 @@
+## August 22, 2023
+
+Today, I worked on:
+
+* Creating and completing our python function to retrieve and display the list of teams provided in our FastAPI as well as each individual team's stats within the queries file.
+
+My team and I worked on the queries files, creating the backend code. We made python functions to retrieve the data from our FastAPI, and began working on our "favorites" function as well.
+
 ## August 21, 2023
 
 Today, I worked on:
