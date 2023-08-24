@@ -1,4 +1,4 @@
-###  OUR READ.ME JOURNAL  ###
+#####  OUR READ.ME JOURNAL  #####
 
 
 
