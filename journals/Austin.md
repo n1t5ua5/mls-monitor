@@ -37,7 +37,7 @@
 
 
  <!-- 8/24/23
-    ???
+    Today I worked on making a READ.ME file for the group. I looked at some other projects & after awhile assembled something I felt was appropriate. My teammates looked it over & we made some edits to it to make sure it's concise. We checked up on the back end to make sure that we're all set to move forward on the frontend & immediately started creating an HTML skeleton for everything to fit inside of. + we started a MLS.css file to likewise start styling our project.
  -->
 
 
