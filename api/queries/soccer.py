@@ -28,4 +28,3 @@ class TeamQueries:
         for team in all_teams:
             if team["team"]["name"] == name:
                 return team
-        return None

@@ -9,10 +9,10 @@ class TeamIn(BaseModel):
 
 
 class TeamOut(BaseModel):
+    team_id: int
     name: str
     logo: str
     abbreviation: str
-    id: int
     conference: str
 
 
