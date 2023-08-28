@@ -1,8 +1,10 @@
 from pydantic import BaseModel
 from pymongo import MongoClient
-from typing import List
-import os
+from fastapi import Depends
+
 from bson.objectid import ObjectId
+from queries.client import Queries
+from authenticator import authenticator
 
 
 class CommentIn(BaseModel):
@@ -12,6 +14,7 @@ class CommentIn(BaseModel):
 
 class CommentOut(BaseModel):
     id: str
+    username: str
     comment: str
 
 
@@ -42,13 +45,13 @@ class CommentsQueries(Queries):
             result["comment"] = str(result["comment"])
             return CommentOut(**result)
 
-    def create_comment(self, comment: str) -> CommentOut:
-        comment_to_add = {"comment": comment}
+    def create_comment(self, comment: str, username: str) -> CommentOut:
+        comment_to_add = {"comment": comment, "username": username}
         result = self.collection.insert_one(comment_to_add)
         print(result, "llllllllllllllllllll")
         if result.inserted_id:
             return self.get_comment(str(result.inserted_id))
 
-    def delete_comment(self, comment_id: str) -> bool:
-        result = self.collection.delete_one({"_id": ObjectId(comment_id)})
+    def delete_comment(self, comment_id: str, username) -> bool:
+        result = self.collection.delete_one({"_id": ObjectId(comment_id), "username": username})
         return result.deleted_count > 0

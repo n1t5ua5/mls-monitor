@@ -30,6 +30,7 @@ class Stats(BaseModel):
 
 class AccountIn(BaseModel):
     email: str
+    username: str
     password: str
     full_name: str
 
@@ -37,6 +38,7 @@ class AccountIn(BaseModel):
 class AccountOut(BaseModel):
     id: str
     email: str
+    username: str
     full_name: str
 
 
