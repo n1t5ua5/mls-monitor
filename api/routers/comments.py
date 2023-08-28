@@ -1,4 +1,4 @@
-from fastapi import APIRouter, Depends
+from fastapi import APIRouter, Depends, HTTPException
 from queries.comments import CommentsQueries
 from authenticator import authenticator
 router = APIRouter()
@@ -16,17 +16,11 @@ def get_all_comments(repo: CommentsQueries = Depends()):
 
 @router.post("/api/create-comment/")
 def create_comment(comment_id: str, user: dict = Depends(authenticator.try_get_current_account_data), repo: CommentsQueries = Depends()):
-    print(authenticator, "fhfhfhhfhfhfhfhfhhfhh")
-    return repo.create_comment(comment_id, user["email"])
+    if user is None:
+        raise HTTPException(status_code=401, detail="Please Login to add a comment")
+    return repo.create_comment(comment_id, user["username"])
 
 
 @router.delete("/api/delete-comment/")
-def delete_comment(comment_id: str, repo: CommentsQueries = Depends()):
-    return repo.delete_comment(comment_id)
-
-
-f
-fffffff
-mmmdmdmdmdmd
-fddd
-ffff
+def delete_comment(comment_id: str, user: dict = Depends(authenticator.try_get_current_account_data), repo: CommentsQueries = Depends()):
+    return repo.delete_comment(comment_id, user["username"])

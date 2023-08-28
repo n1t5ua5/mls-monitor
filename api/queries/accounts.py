@@ -21,12 +21,12 @@ class AccountQueries(Queries):
     def create(
             self, info: AccountIn, hashed_password: str
             ) -> AccountOutWithPassword:
+        exists = self.collection.find_one({"$or": [{"username": info.username}, {"email": info.email}]})
+        if exists:
+            raise DuplicateAccountError("Username or email already exists")
         props = info.dict()
         props["hashed_password"] = hashed_password
         del props["password"]
-        try:
-            self.collection.insert_one(props)
-        except DuplicateKeyError:
-            raise DuplicateAccountError()
+        self.collection.insert_one(props)
         props["id"] = str(props["_id"])
         return AccountOutWithPassword(**props)
