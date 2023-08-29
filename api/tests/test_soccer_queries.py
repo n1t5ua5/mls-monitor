@@ -60,7 +60,7 @@ class FakeCommentQueries:
         ]
 
     def create_comment(self, comment: str, username: str):
-        return {"comment_id": 3, "text": comment, "username": username}
+        return {"id": "3", "comment": comment, "username": username}
 
     def delete_comment(self, comment_id: str, username: str):
         if comment_id == "1" and username == "testuser":
@@ -72,22 +72,14 @@ def mock_user():
     return {"username": "testuser"}
 
 
-def test_create_comment():
-    app.dependency_overrides[
-        authenticator.try_get_current_account_data
-    ] = mock_user
+def test_list_comment():
     app.dependency_overrides[CommentsQueries] = FakeCommentQueries
-
-    comment_id = {"comment": "Beckham bends it!"}
-
-    response = client.post("/api/create-comment/", json=comment_id)
-    data = response.json()
+    response = client.get("/api/comments")
     assert response.status_code == 200
-    assert data == {
-        "comment_id": 3,
-        "comment": "Beckham bends it!",
-        "username": "testuser",
-    }
+    assert response.json() == [
+            {"comment_id": 1, "text": "I just want both teams to have fun!"},
+            {"comment_id": 2, "text": "Messi is messy!"},
+        ]
 
     app.dependency_overrides = {}
 
@@ -99,59 +91,9 @@ def test_delete_comment():
     app.dependency_overrides[CommentsQueries] = FakeCommentQueries
 
     response = client.delete(
-        "/api/delete-comment/", params={"comment_id": "1"}
+        "/api/comment/", params={"comment_id": "1"}
     )
     assert response.status_code == 200
     assert response.json() == True
 
     app.dependency_overrides = {}
-
-
-# def fake_get_current_account_data():
-#     return {"id": "1000", "username": "testuser@.com"}
-
-
-# class FakeAccountQueries:
-#     def create(
-#         self, info: AccountIn, hashed_password: str
-#     ) -> AccountOutWithPassword:
-#         if info.email == "duplicate@.com":
-#             raise DuplicateAccountError()
-#         account_data = info.dict()
-#         account_data["id"] = "fake-id"
-#         account_data["hashed_password"] = hashed_password
-#         return AccountOutWithPassword(**account_data)
-
-#     def get(self, email: str) -> AccountOutWithPassword:
-#         return AccountOutWithPassword(
-#             id="1000",
-#             email="testuser@.com",
-#             username="testuser",
-#             full_name="Test User",
-#             hashed_password=authenticator.hash_password("testpassword"),
-#         )
-
-
-# def test_create_account():
-#     app.dependency_overrides[AccountQueries] = FakeAccountQueries
-#     app.dependency_overrides[
-#         authenticator.try_get_current_account_data
-#     ] = fake_get_current_account_data
-
-#     account_data = {
-#         "id": "1000",
-#         "email": "newuser@.com",
-#         "username": "newuser",
-#         "password": "newpassword",
-#         "full_name": "New User",
-#     }
-
-#     response = client.post("/api/accounts", json=account_data)
-#     data = response.json()
-#     print(data, "XXXXXXXXXXXXXXXXXXXXX")
-#     assert response.status_code == 200
-#     assert data["account"]["id"] == "1000"
-#     assert data["account"]["email"] == "newuser@.com"
-#     assert data["account"]["username"] == "newuser"
-#     assert "hashed_password" in data["account"]
-#     assert data["account"]["full_name"] == "New User"
