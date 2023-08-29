@@ -1,3 +1,35 @@
+## August 28, 2023
+
+Today, I worked on:
+
+* Testing and troubleshooting our backend code..
+
+My team and I worked on testing and troubleshooting the team details test, create a comment test, and delete a comment test to verify the functionality of our backend code.
+
+## August 25, 2023
+
+Today, I worked on:
+
+* Completing our backend code and running tests.
+
+My team and I worked on completing the backend code including the quesries and routers functions and files. We began testing and troubleshooting our backend code.
+
+## August 24, 2023
+
+Today, I worked on:
+
+* Creating and completing our python functions in our routers files for accouts, comments and soccer.
+
+My team and I worked on the routers functions and files. We created the python functions for accounts, comments, and soccer. Also, we created the account token, and other backend details.
+
+## August 23, 2023
+
+Today, I worked on:
+
+* Creating the python function to enable a comment feature on our website.
+
+My team and I worked on the queries files and routers files, creating the backend code. We made python functions to enable a comment section on our website, and began working on our "favorites" function as well.
+
 ## August 22, 2023
 
 Today, I worked on:
