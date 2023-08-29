@@ -4,6 +4,9 @@ WORKDIR /app
 
 # Copy the top-level files in your service's directory
 # Modify these instructions to do that
+COPY authenticator.py authenticator.py
+COPY main.py main.py
+COPY models.py models.py
 COPY requirements.txt requirements.txt
 COPY main.py main.py
 
@@ -11,6 +14,8 @@ COPY main.py main.py
 # Modify these instructions to do that
 # COPY queries queries
 # COPY routers routers
+COPY queries quieres
+COPY routers routers
 
 RUN python -m pip install -r requirements.txt
 
