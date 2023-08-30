@@ -1,35 +1,26 @@
-import { useEffect, useState } from "react";
-import Construct from "./Construct.js";
-import ErrorNotification from "./ErrorNotification";
-import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { AuthProvider } from "@galvanize-inc/jwtdown-for-react";
+import Nav from "./Nav";
+import TeamDetail from './TeamDetail';
+import CreateAccount from "./CreateAccount";
+import Login from "./Login";
+import Logout from "./Logout";
 
-function App() {
-  const [launchInfo, setLaunchInfo] = useState([]);
-  const [error, setError] = useState(null);
 
-  useEffect(() => {
-    async function getData() {
-      let url = `${process.env.REACT_APP_API_HOST}/api/launch-details`;
-      console.log("fastapi url: ", url);
-      let response = await fetch(url);
-      console.log("------- hello? -------");
-      let data = await response.json();
-
-      if (response.ok) {
-        console.log("got launch data!");
-        setLaunchInfo(data.launch_details);
-      } else {
-        console.log("drat! something happened");
-        setError(data.message);
-      }
-    }
-    getData();
-  }, []);
-
+function App(props) {
   return (
-    <div>
-      <ErrorNotification error={error} />
-      <Construct info={launchInfo} />
+    <div className="container-fluid">
+      <BrowserRouter>
+        <AuthProvider>
+          <Nav />
+          <Routes>
+            <Route path="/" element={<TeamDetail />}></Route>
+            <Route path="/" element={<CreateAccount />}></Route>
+            <Route path="/" element={<Login />}></Route>
+            <Route path="/" element={<Logout />}></Route>
+          </Routes>
+        </AuthProvider>
+      </BrowserRouter>
     </div>
   );
 }
