@@ -50,7 +50,7 @@
  -->
 
   <!-- 8/29/23
-    Our group huddle / standup started early around 11:30am & we brainstormed on how to finish up the unit tests, but we still couldn't crack the code so we went to visit the instructors to get their advice. After awhile we re-evaluated what we had, simplified it & then got it to work. Now on to the front end of everything.
+    Our group huddle / standup started early around 11:30am & we brainstormed on how to finish up the unit tests, but we still couldn't crack the code so we went to visit the instructors to get their advice. After awhile we re-evaluated what we had, simplified it & then got it to work. Now on to the front end of everything. We got our nav.js file started along with making some other important javascript files.
  -->
 
   <!-- 8/30/23
