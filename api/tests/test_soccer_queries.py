@@ -59,9 +59,6 @@ class FakeCommentQueries:
             {"comment_id": 2, "text": "Messi is messy!"},
         ]
 
-    def create_comment(self, comment: str, username: str):
-        return {"id": "3", "comment": comment, "username": username}
-
     def delete_comment(self, comment_id: str, username: str):
         if comment_id == "1" and username == "testuser":
             return True
@@ -77,9 +74,9 @@ def test_list_comment():
     response = client.get("/api/comments")
     assert response.status_code == 200
     assert response.json() == [
-            {"comment_id": 1, "text": "I just want both teams to have fun!"},
-            {"comment_id": 2, "text": "Messi is messy!"},
-        ]
+        {"comment_id": 1, "text": "I just want both teams to have fun!"},
+        {"comment_id": 2, "text": "Messi is messy!"},
+    ]
 
     app.dependency_overrides = {}
 
@@ -90,9 +87,7 @@ def test_delete_comment():
     ] = mock_user
     app.dependency_overrides[CommentsQueries] = FakeCommentQueries
 
-    response = client.delete(
-        "/api/comment/", params={"comment_id": "1"}
-    )
+    response = client.delete("/api/comment/", params={"comment_id": "1"})
     assert response.status_code == 200
     assert response.json() == True
 
