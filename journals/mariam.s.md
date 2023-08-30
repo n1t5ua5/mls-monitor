@@ -1,3 +1,11 @@
+## August 29, 2023
+
+Today, I worked on:
+
+* Creating our frontend pages in REACT.
+
+My team and I worked on testing and troubleshooting our backend code to ensure we passed all tests. Next, we created and began working on our frontend code in REACT including creating our index page, login page, logout page, and navigation page.
+
 ## August 28, 2023
 
 Today, I worked on:
