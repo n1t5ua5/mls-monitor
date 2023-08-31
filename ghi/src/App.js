@@ -1,12 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "@galvanize-inc/jwtdown-for-react";
 import Nav from "./Nav";
-import TeamDetail from './TeamDetail';
+import TeamDetail from "./TeamDetail";
 import CreateAccount from "./CreateAccount";
 import Login from "./Login";
 import Logout from "./Logout";
 import Home from "./Home";
-
 
 function App(props) {
   return (
