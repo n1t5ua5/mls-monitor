@@ -5,6 +5,7 @@ import TeamDetail from './TeamDetail';
 import CreateAccount from "./CreateAccount";
 import Login from "./Login";
 import Logout from "./Logout";
+import Home from "./Home";
 
 
 function App(props) {
@@ -14,10 +15,11 @@ function App(props) {
         <AuthProvider>
           <Nav />
           <Routes>
-            <Route path="/" element={<TeamDetail />}></Route>
-            <Route path="/" element={<CreateAccount />}></Route>
-            <Route path="/" element={<Login />}></Route>
-            <Route path="/" element={<Logout />}></Route>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/TeamDetail" element={<TeamDetail />}></Route>
+            <Route path="/CreateAccount" element={<CreateAccount />}></Route>
+            <Route path="/Login" element={<Login />}></Route>
+            <Route path="/Logout" element={<Logout />}></Route>
           </Routes>
         </AuthProvider>
       </BrowserRouter>
