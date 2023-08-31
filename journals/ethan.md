@@ -29,3 +29,5 @@ Today, I worked on:
 - Completely finishing authentication
 
 The group worked with Riley per SEIRs' recommendations and discovered a slight typo in the accounts.py file in the queries directory.
+
+TEST TEST TEST
