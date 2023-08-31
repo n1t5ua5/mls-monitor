@@ -55,7 +55,7 @@
  -->
 
   <!-- 8/31/23
-    ???
+   Today I got deep into configuring our nav.js file. After watching a lot more from Riley's video on Redux, I assembled an apiSplice.js file, store.js & searchSlice.js file. Then I realized I needed to do some tinkering with the index.js file too. After getting most of that done, we grouped back together to do the ol' push / pull routine & get everyone caught up. I need to keep watching that redux video though because not only do I need to learn a little more but our frontend pages still aren't connected to nav.js either.
  -->
 
   <!-- 9/5/23
