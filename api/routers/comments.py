@@ -4,17 +4,17 @@ from authenticator import authenticator
 router = APIRouter()
 
 
-@router.get("/api/")
-def get_comments(comment_id: str, repo: CommentsQueries = Depends()):
-    return repo.get_comment(comment_id)
+@router.get("/api/get-comment")
+def get_comments(comments: str, repo: CommentsQueries = Depends()):
+    return repo.get_comment(comments)
 
 
-@router.get("/api/list-comments")
+@router.get("/api/comments")
 def get_all_comments(repo: CommentsQueries = Depends()):
     return repo.get_all()
 
 
-@router.post("/api/create-comment/")
+@router.post("/api/comments/")
 def create_comment(comment_id: str, user: dict = Depends(
     authenticator.try_get_current_account_data),
     repo: CommentsQueries = Depends()):
