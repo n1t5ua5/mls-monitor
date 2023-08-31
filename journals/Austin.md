@@ -1,33 +1,30 @@
 <!-- 8/14/23
-    Got everything setup. Skeleton is configured in vscode, everyone has cloned the repo
-    & we added in Riley, Michael & Josh as members in Gitlab too. Everyone has created
-    their journals & we are ready to go. This project will monitor the standings
-    of all 30 teams in the MLS (Major League Soccer), the biggest soccer league in the U.S.A & Canada.
+    Got everything setup. Skeleton is configured in vscode, everyone has cloned the repo & we added in Riley, Michael & Josh as members in Gitlab too. Everyone has created their journals & we are ready to go. This project will monitor the standings of all 30 teams in the MLS (Major League Soccer), the biggest soccer league in the U.S.A & Canada.
 -->
 
 
 <!-- 8/15/23
-    Working on getting Docker up & running. Trying to get the .yml file organized but it's proving to be more difficult than expected. Looked over lessons from Riley for some inspiration & eventually figured it out.
+    Working on getting Docker up & running. Trying to get the .yml file organized but it's proving to be more difficult than expected. Looked over lessons from Riley for some inspiration & eventually we got everything figured it out.
  -->
 
 
 <!-- 8/16/23
-    We got the authorization almost set up & running with MongoDB. I need to keep watching the videos with Curtis & check out the pokemon project from Riley for references on everything. Had to check out around 8pm est & call it a day.
+    We got the authorization almost set up & running with MongoDB. I need to keep watching the videos with Curtis as the main character & also check out the pokemon project from Riley for references on everything that we covered in class. I had to check out around 8pm est & call it a day.
  -->
 
 
 <!-- 8/17/23
-    Authorization is up & running now thanks to the resilience of my partner Deontay & our instructor Riley. Tidying up the backend up & now preparing for next week. We're off to a good start & I'm happy with all the progress we've made so far.
+    Authorization is up & running now thanks to the resilience of my partner Deontay & the videos from our instructor Riley. We're working on tidying up the backend up now & discussing what we should be doing for next week. We're off to a good start & I'm happy with all the progress we've made so far.
  -->
 
 
 <!-- 8/21/23
-    We got around to creating all of our models & placed them inside of our models.py file. We encountered a bug in our .file & had to work with the SEIR's for a bit but figured it out. Called it a night around 9pm EST.
+    Team got around to creating all of our models & placed them inside of our models.py file. We encountered a bug in of our other files though & had to work with the SEIR's for a bit but eventually figured it out. We agreed to call it a night when they bell rang at 9pm EST.
  -->
 
 
 <!-- 8/22/23
-    I had a doctor's appointment & had to miss a chunk of the day. My teammeates worked diligently to get our backend to successfully pull data from our Major League Soccer Standings API that we found on RapidAPI. Started working on the comments function up until closing time.
+    I had a doctor's appointment & unofrtunately had to miss a decent chunk of the day. My teammeates worked diligently to get our backend to successfully pull data from our Major League Soccer Standings API that we found on RapidAPI. Started working on the comments function up until closing time.
  -->
 
 
@@ -42,7 +39,7 @@
 
 
   <!-- 8/25/23
-    We started working on our unit tests & got most of them completed by the end of the day, but the one's pertaining to comments gave us the most trouble.
+    We started working on creating all of our unit tests & we've got most of them completed by the end of the day today, but the one's pertaining to comments are giving us the most trouble but we're determined to figure this out & get our project to be ready for testing.
  -->
 
   <!-- 8/28/23
@@ -54,7 +51,7 @@
  -->
 
   <!-- 8/30/23
-    ???
+    We split up & started working on the most important pages of the frontend: Nav.js, Login.js, Logout.js & CreateAccount.js. I started making what could be a functioning nav.js file, but I need to also work inside app.js & create a useToken.js page. We got the login page to work which is an amazing step forward. Now we need to build of it to get the nav inside of it running, a table to hold the login form & footer, same goes for the rest of the main javascript pages we're currenly working with.
  -->
 
   <!-- 8/31/23
