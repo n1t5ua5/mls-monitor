@@ -1,7 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "@galvanize-inc/jwtdown-for-react";
-import Nav from "./MLS/Nav";
-import Login from "./MLS/Login";
+import Nav from "./Nav";
+import TeamDetail from './TeamDetail';
+import CreateAccount from "./CreateAccount";
+import Login from "./Login";
+import Logout from "./Logout";
+import Home from "./Home";
+
 
 function App(props) {
   return (
@@ -10,10 +15,11 @@ function App(props) {
         <AuthProvider>
           <Nav />
           <Routes>
-            {/* <Route path="/" element={<TeamDetail />}></Route>
-            <Route path="/" element={<CreateAccount />}></Route> */}
-            <Route path="/login" element={<Login />}></Route>
-            {/* <Route path="/" element={<Logout />}></Route> */}
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/TeamDetail" element={<TeamDetail />}></Route>
+            <Route path="/CreateAccount" element={<CreateAccount />}></Route>
+            <Route path="/Login" element={<Login />}></Route>
+            <Route path="/Logout" element={<Logout />}></Route>
           </Routes>
         </AuthProvider>
       </BrowserRouter>

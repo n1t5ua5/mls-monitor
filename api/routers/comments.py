@@ -14,12 +14,11 @@ def get_all_comments(repo: CommentsQueries = Depends()):
     return repo.get_all()
 
 
-@router.post("/api/comments/")
-def create_comment(comment_id: str, user: dict = Depends(
-    authenticator.try_get_current_account_data),
-    repo: CommentsQueries = Depends()):
+@router.post("/api/create-comment/")
+def create_comment(comment_id: str, user: dict = Depends(authenticator.try_get_current_account_data), repo: CommentsQueries = Depends()):
     if user is None:
-        raise HTTPException(status_code=401, detail="Please Login to add a comment")
+        raise HTTPException(
+            status_code=401, detail="Please Login to add a comment")
     return repo.create_comment(comment_id, user["username"])
 
 
