@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function CreateAccount() {
+function CreateAccount() {
   const [formData, setFormData] = useState({
     username: "",
     password: "",
@@ -53,8 +53,10 @@ export default function CreateAccount() {
             required
           />
         </div>
-        <button type="submit">Create Accounte</button>
+        <button type="submit">Create Account</button>
       </form>
     </div>
   );
 }
+
+export default CreateAccount;

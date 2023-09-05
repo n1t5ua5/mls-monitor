@@ -14,11 +14,14 @@ function App(props) {
         <AuthProvider>
           <Nav />
           <Routes>
-            <Route path="/" element={<Home />}></Route>
-            <Route path="/TeamDetail" element={<TeamDetail />}></Route>
-            <Route path="/CreateAccount" element={<CreateAccount />}></Route>
-            <Route path="/Login" element={<Login />}></Route>
-            <Route path="/Logout" element={<Logout />}></Route>
+            {/* <Route path="/" element={<Home />}></Route>
+            <Route path="/TeamDetail" element={<TeamDetail />}></Route> */}
+            <Route
+              path="/CreateAccountmls/create-account"
+              element={<CreateAccount />}
+            ></Route>
+            {/* <Route path="/Login" element={<Login />}></Route>
+            <Route path="/Logout" element={<Logout />}></Route> */}
           </Routes>
         </AuthProvider>
       </BrowserRouter>

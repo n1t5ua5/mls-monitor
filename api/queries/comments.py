@@ -42,7 +42,7 @@ class CommentsQueries(Queries):
         print(result, "lhlhlhlhlhlhlhlhlhlhlhlhlhlhlhlhlhlhl")
         if result:
             result["id"] = str(result["_id"])
-            result["comment"] = str(result["comment"])
+            result["comment"] = str(result["_comment"])
             return CommentOut(**result)
 
     def create_comment(self, comment: str, username: str) -> CommentOut:
@@ -53,5 +53,7 @@ class CommentsQueries(Queries):
             return self.get_comment(str(result.inserted_id))
 
     def delete_comment(self, comment_id: str, username) -> bool:
-        result = self.collection.delete_one({"_id": ObjectId(comment_id), "username": username})
+        result = self.collection.delete_one(
+            {"_id": ObjectId(comment_id), "username": username}
+        )
         return result.deleted_count > 0
