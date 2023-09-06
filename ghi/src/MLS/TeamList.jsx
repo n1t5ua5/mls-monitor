@@ -1,6 +1,6 @@
-import TeamCard from './MLS/TeamCard';
+import TeamCard from './TeamCard';
 import { useSelector } from 'react-redux';
-import { useGetAllTeamsQuery } from './MLS/app/apiSlice';
+import { useGetAllTeamsQuery } from './app/apiSlice';
 
 const TeamList = () => {
     const searchCriteria = useSelector(state => state.search.vale);

@@ -1,5 +1,5 @@
-import TeamCard from "./MLS/TeamCard";
-import { useGetFavoritesForAccountQuery } from "./MLS/app/apiSlice";
+import TeamCard from "./TeamCard";
+import { useGetFavoritesForAccountQuery } from "./app/apiSlice";
 
 const Favorites = () => {
     const { data: favorites, isLoading } = useGetFavoritesForAccountQuery()

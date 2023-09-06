@@ -3,47 +3,60 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { Provider } from "react-redux";
 import App from './App';
-import ErrorPage from './ErrorPage';
-import Home from './Home';
-import Comments from './Comments';
-import Login from './Login';
-// import TeamDetail from './TeamDetail';
-// import CreateAccount from './CreateAccount';
+import Home from "./MLS/Home";
+import Favorites from './MLS/Favorites';
+import Login from "./MLS/Login";
+import TeamDetail from "./MLS/TeamDetail";
+import CreateAccount from "./MLS/CreateAccount";
+import TeamList from "./MLS/TeamList";
+import TeamCard from "./MLS/TeamCard";
+import Search from "./MLS/Search";
 import './index.css';
-import { store } from './app/Store';
+import { store } from './MLS/app/store';
 import reportWebVitals from './reportWebVitals';
 
 const router = createBrowserRouter([
   {
     element: <App />,
-    errorElement: <ErrorPage />,
     children: [
       {
-        path: '/',
+        path: "/",
         element: <Home />,
       },
       {
-        path: '/login',
-        element: <Login />
+        path: "./login",
+        element: <Login />,
       },
       {
-        path: '/create-account',
-        element: <Login />
+        path: "./create-account",
+        element: <CreateAccount />,
       },
       {
-        path: '/team-detail',
-        element: <Login />
+        path: "./team-detail",
+        element: <TeamDetail />,
       },
       {
-        path: '/comments',
-        element: <Comments />
+        path: "./favorites",
+        element: <Favorites />,
       },
       {
-        path: '/home',
+        path: "./home",
         element: <Home />,
       },
-    ]
-  }
+      {
+        path: "./team-card",
+        element: <TeamCard />,
+      },
+      {
+        path: "./team-list",
+        element: <TeamList />,
+      },
+      {
+        path: "./search",
+        element: <Search />,
+      },
+    ],
+  },
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux'
 import { useState } from 'react';
-import { search, reset } from '.MLS/app/searchSlice';
+import { search, reset } from './app/searchSlice';
 
 
 const Search = () => {

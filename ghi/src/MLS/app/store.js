@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
-import { mlsApi } from './MLS/app/apiSlice';
-import searchReducer from "./MLS/app/searchSlice";
+import { mlsApi } from './apiSlice';
+import searchReducer from './searchSlice';
 
 export const store = configureStore({
     reducer: {
