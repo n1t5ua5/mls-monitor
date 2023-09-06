@@ -6,8 +6,8 @@ const TeamList = () => {
     const searchCriteria = useSelector(state => state.search.vale);
     const { data, isLoading } = useGetAllTeamsQuery();
 
-    if (isLoading) return <>isLoading...</>
-
+    if (isLoading) return <>Loading...</>
+    
     const filteredData = () => {
         if (searchCriteria) return data.filter(team => team.name.includes(searchCriteria))
         return data;

@@ -42,25 +42,31 @@
     We started working on creating all of our unit tests & we've got most of them completed by the end of the day today, but the one's pertaining to comments are giving us the most trouble but we're determined to figure this out & get our project to be ready for testing.
  -->
 
+
   <!-- 8/28/23
     We picked up where we left off with the final unit tests but by the end of the day we actually still couldn't figure out what the deal was.
  -->
+
 
   <!-- 8/29/23
     Our group huddle / standup started early around 11:30am & we brainstormed on how to finish up the unit tests, but we still couldn't crack the code so we went to visit the instructors to get their advice. After awhile we re-evaluated what we had, simplified it & then got it to work. Now on to the front end of everything. We got our nav.js file started along with making some other important javascript files.
  -->
 
+
   <!-- 8/30/23
     We split up & started working on the most important pages of the frontend: Nav.js, Login.js, Logout.js & CreateAccount.js. I started making what could be a functioning nav.js file, but I need to also work inside app.js & create a useToken.js page. We got the login page to work which is an amazing step forward. Now we need to build of it to get the nav inside of it running, a table to hold the login form & footer, same goes for the rest of the main javascript pages we're currenly working with.
  -->
+
 
   <!-- 8/31/23
    Today I got deep into configuring our nav.js file. After watching a lot more from Riley's video on Redux, I assembled an apiSplice.js file, store.js & searchSlice.js file. Then I realized I needed to do some tinkering with the index.js file too. After getting most of that done, we grouped back together to do the ol' push / pull routine & get everyone caught up. I need to keep watching that redux video though because not only do I need to learn a little more but our frontend pages still aren't connected to nav.js either.
  -->
 
+
   <!-- 9/5/23
-    After our practice test today we regrouped & started watching Riley's video on React Redux again to get a better understanding of how all this frontend stuff works. We're mostly finished at this point, but we still have maybe a day's worth of work at most to start moving forward & making each page more intricate & finally styling it all. 
+    After our practice test today we regrouped & started watching Riley's video on React Redux again to get a better understanding of how all this frontend stuff works. We're mostly finished at this point, but we still have maybe a day's worth of work at most to start moving forward & making each page more intricate & finally styling it all. We are diverging from our original path slighty too whereas originally commenting was one of the main features of an account. Now it will be for favorites becuase in the future we don't want to have to monitor user behavior.
  -->
+
 
    <!-- 9/6/23
     ???
@@ -73,5 +79,15 @@
 
 
   <!-- 9/8/23
+    ???
+ -->
+
+
+  <!-- 9/9/23
+    ???
+ -->
+
+
+   <!-- 9/10/23
     ???
  -->
