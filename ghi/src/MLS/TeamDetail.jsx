@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import { useGetTeamByNameQuery, useGetFavoritesForTeamsQuery, useGetTokenQuery } from 'mls/app/apiSlice';
+import { useGetTeamByNameQuery, useGetFavoritesForTeamsQuery, useGetTokenQuery } from './app/apiSlice';
 import { Link } from "react-router-dom";
-import FavoriteButton from "mls/FavoriteButtons";
+import FavoriteButton from "./FavoriteButtons";
 
 const TeamDetails = () => {
     const {data: account } = useGetTokenQuery();
