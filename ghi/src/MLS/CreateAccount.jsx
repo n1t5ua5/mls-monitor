@@ -1,17 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
+import { useDispatch, useSelector } from 'react-redux';
+import { setFormData } from './apiSlice.js'
 
 function CreateAccount() {
-  const [formData, setFormData] = useState({
-    username: "",
-    password: "",
-    email: "",
-  });
+  const dispatch = useDispatch():
+  const formData = useSelector(state => state.user.formData);
 
   const handleChange = (e) => {
-    setFormData({
+    const newFormData = {
       ...formData,
       [e.target.name]: e.target.value,
-    });
+    };
+    dispatch(setFormData(newFormData));
   };
 
   const handleSubmit = (e) => {

@@ -39,7 +39,6 @@ class CommentsQueries(Queries):
 
     def get_comment(self, comment_id: str) -> CommentOut:
         result = self.collection.find_one({"_id": ObjectId(comment_id)})
-        print(result, "lhlhlhlhlhlhlhlhlhlhlhlhlhlhlhlhlhlhl")
         if result:
             result["id"] = str(result["_id"])
             result["comment"] = str(result["_comment"])
@@ -48,7 +47,6 @@ class CommentsQueries(Queries):
     def create_comment(self, comment: str, username: str) -> CommentOut:
         comment_to_add = {"comment": comment, "username": username}
         result = self.collection.insert_one(comment_to_add)
-        print(result, "llllllllllllllllllll")
         if result.inserted_id:
             return self.get_comment(str(result.inserted_id))
 
