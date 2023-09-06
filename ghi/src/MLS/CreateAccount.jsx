@@ -1,10 +1,10 @@
 import React from "react";
-import { useDispatch, useSelector } from 'react-redux';
-import { setFormData } from './apiSlice.js'
+import { useDispatch, useSelector } from "react-redux";
+import { setFormData } from "./apiSlice.js";
 
 function CreateAccount() {
-  const dispatch = useDispatch():
-  const formData = useSelector(state => state.user.formData);
+  const dispatch = useDispatch();
+  const formData = useSelector((state) => state.user.formData);
 
   const handleChange = (e) => {
     const newFormData = {
