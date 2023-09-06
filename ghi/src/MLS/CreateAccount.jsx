@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useCreateAccountMutation } from "./apiSlice.js";
+import { useCreateAccountMutation } from "./app/apiSlice";
 import { useNavigate } from "react-router-dom";
 
 function CreateAccount() {
