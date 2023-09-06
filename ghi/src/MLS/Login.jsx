@@ -1,11 +1,10 @@
-import useToken from "@galvanize-inc/jwtdown-for-react";
 import React, { useState } from "react";
 import { useLoginMutation } from "./app/apiSlice";
 
 const LoginForm = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const { login } = useToken();
+  const { login } = useLoginMutation();
 
   const handleSubmit = (e) => {
     e.preventDefault();
