@@ -96,3 +96,18 @@ export const mlsApi = createApi({
         }),
     }),
 });
+
+
+export const {
+    useGetAllTeamsQuery,
+    useGetTeamByNameQuery,
+    useGetFavoritesForTeamsQuery,
+    useGetFavoritesForAccountQuery,
+    useDeleteFavoriteMutation,
+    useCreateFavoriteMutation,
+    useGetTokenQuery,
+    useLoginMutation,
+    useLogoutMutation,
+    useCreateAccountMutation,
+
+} = mlsApi;
