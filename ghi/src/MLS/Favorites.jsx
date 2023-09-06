@@ -1,8 +1,8 @@
-import TeamCard from "./TeamCard.jsx";
-import { useGetFavoritesForAccountQuery } from "mls/app/apiSlice";
+import TeamCard from "./TeamCard";
+import { useGetFavoritesForAccountQuery } from "./app/apiSlice";
 
 const Favorites = () => {
-    const { data: Favorites, isLoading } = useGetFavoritesForAccountQuery()
+    const { data: favorites, isLoading } = useGetFavoritesForAccountQuery()
 
     if (isLoading) return <div>Loading...</div>
 

@@ -1,6 +1,6 @@
 import useToken from "@galvanize-inc/jwtdown-for-react";
 import React, { useState } from "react";
-import { useLoginMutation } from "./apiSlice";
+import { useLoginMutation } from "./app/apiSlice";
 
 const LoginForm = () => {
   const [username, setUsername] = useState("");
