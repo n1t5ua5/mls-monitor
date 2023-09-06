@@ -1,68 +1,79 @@
-import React from "react";
-import { useDispatch, useSelector } from 'react-redux';
+import React, { useState, useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useCreateAccountMutation } from "./app/apiSlice";
+import { useNavigate } from "react-router-dom";
 
 function CreateAccount() {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
-  const formData = useSelector(state => state.user.formData);
-  const [ createaccount ] = useCreateAccountMutation();
 
-  const handleChange = (e) => {
-    const newFormData = {
-      ...formData,
-      [e.target.name]: e.target.value,
-    };
-    dispatch(setFormData(newFormData));
-  };
+  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSubmit = async (e) => {
+  const [createaccount, createAccountResponse] = useCreateAccountMutation();
+
+  useEffect(() => {
+    if (createAccountResponse.isSuccess) navigate("/");
+  }, [createAccountResponse]);
+
+  const handleSubmit = (e) => {
     e.preventDefault();
-    try {
-      const response = await createaccount(formData);
-      if (response.data) {
-        console.log("Account created successfully:", response.data);
-      }
-    } catch (error) {
-      console.log("Failed to create account", error);
-    }
+    createaccount({ username, email, password });
   };
 
   return (
-    <div className="create-account">
-      <h2>Create Account</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label>Username:</label>
-          <input
-            type="text"
-            name="username"
-            value={formData.username}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <label>Email:</label>
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <label>Password:</label>
-          <input
-            type="password"
-            name="password"
-            value={formData.password}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <button type="submit">Create Account</button>
-      </form>
+    <div className="row">
+      <div className="col-md-6 offset-md-3">
+        <h1>Create Account</h1>
+        {errorMessage && (
+          <div className="alert alert-danger" role="alert">
+            {errorMessage}
+          </div>
+        )}
+        <form onSubmit={handleSubmit}>
+          <div className="mb-3">
+            <label htmlFor="CreateAccount__username" className="form-label">
+              Username
+            </label>
+            <input
+              type="text"
+              className="form-control"
+              id="CreateAccount__username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+            />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="CreateAccount__email" className="form-label">
+              Email:
+            </label>
+            <input
+              type="email"
+              className="form-control"
+              id="CreateAccount__email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="CreateAccount__password" className="form-label">
+              Password:
+            </label>
+            <input
+              type="password"
+              className="form-control"
+              id="CreateAccount__password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+          <button type="submit" className="btn btn-success">
+            Create Account
+          </button>
+        </form>
+      </div>
     </div>
   );
 }
