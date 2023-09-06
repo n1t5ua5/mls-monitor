@@ -1,11 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "@galvanize-inc/jwtdown-for-react";
-import Nav from "./Nav";
-import TeamDetail from "./TeamDetail";
-import CreateAccount from "./CreateAccount";
-import Login from "./Login";
-import Logout from "./Logout";
-import Home from "./Home";
+import Nav from "./MLS/Nav";
+import TeamDetail from "./MLS/TeamDetail";
+import CreateAccount from "./MLS/CreateAccount";
+import LoginForm from "./MLS/Login";
+import Home from "./MLS/Home";
+import Favorites from "./MLS/Favorites";
+import Search from "./MLS/Search";
+import TeamList from "./MLS/TeamList";
+import TeamCard from "./MLS/TeamCard";
 
 function App(props) {
   return (
@@ -14,14 +17,14 @@ function App(props) {
         <AuthProvider>
           <Nav />
           <Routes>
-            {/* <Route path="/" element={<Home />}></Route>
-            <Route path="/TeamDetail" element={<TeamDetail />}></Route> */}
-            <Route
-              path="/CreateAccountmls/create-account"
-              element={<CreateAccount />}
-            ></Route>
-            {/* <Route path="/Login" element={<Login />}></Route>
-            <Route path="/Logout" element={<Logout />}></Route> */}
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/TeamDetail" element={<TeamDetail />}></Route>
+            <Route path="/CreateAccount" element={<CreateAccount />}></Route>
+            <Route path="/Login" element={<LoginForm />}></Route>
+            <Route path="/Favorites" element={<Favorites />}></Route>
+            <Route path="/Search" element={<Search />}></Route>
+            <Route path="/TeamList" element={<TeamList />}></Route>
+            <Route path="/TeamCard" element={<TeamCard />}></Route>
           </Routes>
         </AuthProvider>
       </BrowserRouter>

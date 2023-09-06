@@ -1,11 +1,11 @@
 import React from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { useCreateAccountMutation } from "./apiSlice.js";
+import { useDispatch, useSelector } from 'react-redux';
+import { useCreateAccountMutation } from './apiSlice.js'
 
 function CreateAccount() {
   const dispatch = useDispatch();
-  const formData = useSelector((state) => state.user.formData);
-  const [createaccount] = useCreateAccountMutation();
+  const formData = useSelector(state => state.user.formData);
+  const [ createaccount, { isLoading, isError, isSuccess }] = useCreateAccountMutation();
 
   const handleChange = (e) => {
     const newFormData = {
@@ -22,8 +22,6 @@ function CreateAccount() {
       if (response.data) {
         console.log("Account created successfully:", response.data);
       }
-    } catch (error) {
-      console.log("Failed to create account:", error);
     }
   };
 

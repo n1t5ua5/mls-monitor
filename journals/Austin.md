@@ -69,7 +69,7 @@
 
 
    <!-- 9/6/23
-    ???
+    We're making a lot of progress on gettting redux setup but its proving to be tougher than expected. At this point, we think most of our errors are coming down to naming convention issues, but its possible we're wrong too. 
  -->
 
 

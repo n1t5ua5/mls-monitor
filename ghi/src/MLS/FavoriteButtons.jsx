@@ -2,7 +2,7 @@ import {
     useGetFavoritesForAccountQuery,
     useDeleteFavoriteMutation,
     useCreateFavoriteMutation
-} from "mls/app/apiSlice";
+} from "./app/apiSlice";
 import { useState, useEffect } from "react";
 
 const FavoriteButtons = ({name}) => {
