@@ -101,14 +101,13 @@ export const mlsApi = createApi({
 export const {
     useGetAllTeamsQuery,
     useGetTeamByNameQuery,
-    useGetCommentsForTeamsQuery,
-    useGetCommentQuery,
-    useGetAllCommentsQuery,
-    useDeleteCommentMutation,
-    useCreateCommentQuery,
+    useGetFavoritesForTeamsQuery,
+    useGetFavoritesForAccountQuery,
+    useDeleteFavoriteMutation,
+    useCreateFavoriteMutation,
     useGetTokenQuery,
     useLoginMutation,
     useLogoutMutation,
-    useSignupMutation,
+    useCreateAccountMutation,
 
 } = mlsApi;

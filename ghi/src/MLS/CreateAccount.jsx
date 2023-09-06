@@ -1,10 +1,11 @@
 import React from "react";
 import { useDispatch, useSelector } from 'react-redux';
-import { setFormData } from './apiSlice.js'
+import { useCreateAccountMutation } from './apiSlice.js'
 
 function CreateAccount() {
   const dispatch = useDispatch();
   const formData = useSelector(state => state.user.formData);
+  const [ createaccount, { isLoading, isError, isSuccess }] = useCreateAccountMutation();
 
   const handleChange = (e) => {
     const newFormData = {
@@ -16,7 +17,12 @@ function CreateAccount() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Account data submitted:", formData);
+    try {
+      const response = await signup(formData);
+      if (response.data) {
+        console.log("Account created successfully:", response.data);
+      }
+    }
   };
 
   return (
