@@ -1,16 +1,16 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
-import { useGetTeamByNameQuery, useGetCommentsForTeamQuery, useGetTokenQuery } from 'mls/app/apiSlice';
+import { useGetTeamByNameQuery, useGetFavoritesForTeamsQuery, useGetTokenQuery } from 'mls/app/apiSlice';
 import { Link } from "react-router-dom";
-import CommentButtons from "./CommentButtons";
+import FavoriteButton from "mls/FavoriteButtons.jsx";
 
 const TeamDetails = () => {
     const {data: account } = useGetTokenQuery();
     const { name } = useParams();
     const { data: teams, isLoading } = useGetTeamByNameQuery(name);
-    const { data: comments, isLoading: isLoadingComments } = useGetCommentsForTeamsQuery(name);
+    const { data: favorites, isLoading: isLoadingFavorites } = useGetFavoritesForTeamsQuery(name);
 
-    if (isLoading || isLoadingComments) return <div>Loading...</div>
+    if (isLoading || isLoadingFavorites) return <div>Loading...</div>
 
     return (
         <div>
@@ -19,12 +19,15 @@ const TeamDetails = () => {
                 <h1>{teams.name.toUpperCase()}</h1>
             </div>
             <div className="col-4 text-end">
-                {account ? <CommentButtons name={name} /> : <Link to={'/login'} className="btn btn-outline-primary">Login</Link>}
+                {account ? <FavoriteButton name={name} /> : <Link to={'/login'} className="btn btn-outline-primary">Login</Link>}
             </div>
         </div>
         <ul className="list-group">
             <li className="list-group-item">
-                Comments: {comments.length}
+                Favorites: {favorites.length}
+            </li>
+            <li className="list-group-item">
+                Stats: {teams.length}
             </li>
             <li className="list-group-item">
                 Order: {teams.order}
