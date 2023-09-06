@@ -59,7 +59,7 @@
  -->
 
   <!-- 9/5/23
-    ???
+    After our practice test today we regrouped & started watching Riley's video on React Redux again to get a better understanding of how all this frontend stuff works. We're mostly finished at this point, but we still have maybe a day's worth of work at most to start moving forward & making each page more intricate & finally styling it all. 
  -->
 
    <!-- 9/6/23
