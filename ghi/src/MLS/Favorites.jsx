@@ -1,4 +1,4 @@
-import TeamCard from "./TeamCard";
+import TeamCard from "./TeamCard.jsx";
 import { useGetFavoritesForAccountQuery } from "mls/app/apiSlice";
 
 const Favorites = () => {
