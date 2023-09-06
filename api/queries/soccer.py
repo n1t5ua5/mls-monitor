@@ -17,8 +17,6 @@ class TeamQueries:
 
     def get_team_details(self, name: str) -> Optional[dict]:
         data = self.list_teams()
-        print(data, "kdkdkdkdkdkdkdkdkdkdkdkdkdkdididdkdkdkdkdkdkdkddkdkdkdk")
-
         all_teams = []
 
         for conference in data:
