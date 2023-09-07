@@ -69,12 +69,12 @@
 
 
    <!-- 9/6/23
-    We're making a lot of progress on gettting redux setup but its proving to be tougher than expected. At this point, we think most of our errors are coming down to naming convention issues, but its possible we're wrong too. Met with the SEIR's who helped point us in the right direction, we're fixing the rest now.
+    We're making a lot of progress on gettting redux setup but its proving to be tougher than expected. At this point, we think most of our errors are coming down to naming convention issues, but its possible we're wrong too. Met with the SEIR's who helped point us in the right direction, we're fixing the rest now. The team pulled through today Mariam, Deontay, Ethan & we finally got redux up & running. Now it's time to make everything pretty.
  -->
 
 
   <!-- 9/7/23
-    ???
+    I started off by adding in an error page, Deontay got the login function to start working. & now we are going back & looking through the entire project to tidy it up & make sure we are following the project rubric requirements completely. Then we will venture back to the frontend again & start making the other pages look good, followed by adding in the CSS on the final day, Monday.
  -->
 
 
@@ -83,11 +83,11 @@
  -->
 
 
-  <!-- 9/9/23
+   <!-- 9/8/23
     ???
  -->
 
 
-   <!-- 9/10/23
+  <!-- 9/11/23
     ???
  -->

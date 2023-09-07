@@ -1,3 +1,27 @@
+## September 5, 2023
+
+Today, I worked on:
+
+* Creating our frontend pages in REACT.
+
+My team and I worked on testing and troubleshooting our frontend code to remove all errors. Next, we worked on our frontend code in REACT including adding react redux and ensuring functionality within our home page, login page, logout page, create team page, team detail page, favorites page, and search page.
+
+## August 31, 2023
+
+Today, I worked on:
+
+* Troubleshooting our frontend pages in REACT.
+
+My team and I worked on testing and troubleshooting our frontend code to ensure we passed all tests. Next, we created and began working on our frontend code in REACT including creating our index page, login page, logout page, and navigation page.
+
+## August 30, 2023
+
+Today, I worked on:
+
+* Creating our frontend page's code in REACT and reviewing the React Redux setup.
+
+My team and I worked on creating our frontend code in REACT including creating our index page, login page, logout page, and navigation page. In addition, we reviewed the react redux installation.
+
 ## August 29, 2023
 
 Today, I worked on:
