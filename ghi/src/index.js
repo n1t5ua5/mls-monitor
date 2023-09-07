@@ -10,6 +10,7 @@ import TeamDetail from "./MLS/TeamDetail";
 import CreateAccount from "./MLS/CreateAccount";
 import TeamList from "./MLS/TeamList";
 import TeamCard from "./MLS/TeamCard";
+import ErrorPage from "./MLS/ErrorPage";
 import Search from "./MLS/Search";
 import './index.css';
 import { store } from './MLS/app/store';
@@ -54,6 +55,10 @@ const router = createBrowserRouter([
       {
         path: "/search",
         element: <Search />,
+      },
+      {
+        path: "/error-page",
+        element: <ErrorPage />,
       },
     ],
   },

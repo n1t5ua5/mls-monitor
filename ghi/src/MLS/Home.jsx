@@ -1,12 +1,13 @@
-import React from "react";
+import Search from "./Search";
+import TeamList from "./TeamList";
 
-function Home() {
+const Home = () => {
     return (
-        <div>
-            <h1>THE MLS MONITOR</h1>
-            <p>Welcome</p>
-        </div>
-    );
+        <>
+            <Search />
+            <TeamList />
+        </>
+    )
 }
 
 export default Home;
