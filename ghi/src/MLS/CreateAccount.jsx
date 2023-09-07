@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { useCreateAccountMutation } from "./app/apiSlice";
 import { useNavigate } from "react-router-dom";
 
@@ -10,7 +10,7 @@ function CreateAccount() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
+  const [errorMessage] = useState("");
 
   const [createaccount, createAccountResponse] = useCreateAccountMutation();
 
