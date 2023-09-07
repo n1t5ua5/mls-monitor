@@ -10,6 +10,7 @@ function CreateAccount() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [full_name, setFullName] = useState("");
   const [errorMessage] = useState("");
 
   const [createaccount, createAccountResponse] = useCreateAccountMutation();
@@ -20,7 +21,7 @@ function CreateAccount() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    createaccount({ username, email, password });
+    createaccount({ username, email, password, full_name });
   };
 
   return (
@@ -67,6 +68,18 @@ function CreateAccount() {
               id="CreateAccount__password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+            />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="CreateAccount__password" className="form-label">
+              Full Name:
+            </label>
+            <input
+              type="text"
+              className="form-control"
+              id="CreateAccount__full_name"
+              value={full_name}
+              onChange={(e) => setFullName(e.target.value)}
             />
           </div>
           <button type="submit" className="btn btn-success">
