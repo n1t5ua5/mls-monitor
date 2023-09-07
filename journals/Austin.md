@@ -74,7 +74,7 @@
 
 
   <!-- 9/7/23
-    ???
+    I started off by adding in an error page, Deontay got the login function to start working. & now we are going back & looking through the entire project to tidy it up & make sure we are following the project rubric requirements completely. Then we will venture back to the frontend again & start making the other pages look good, followed by adding in the CSS on the final day, Monday.
  -->
 
 
@@ -83,11 +83,11 @@
  -->
 
 
-  <!-- 9/9/23
+   <!-- 9/8/23
     ???
  -->
 
 
-   <!-- 9/10/23
+  <!-- 9/11/23
     ???
  -->
