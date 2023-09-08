@@ -29,11 +29,11 @@ const router = createBrowserRouter([
         element: <Login />,
       },
       {
-        path: "/create-account",
+        path: "/accounts",
         element: <CreateAccount />,
       },
       {
-        path: "/team-detail",
+        path: "/teams/:name",
         element: <TeamDetail />,
       },
       {
@@ -41,11 +41,11 @@ const router = createBrowserRouter([
         element: <Favorites />,
       },
       {
-        path: "/team-card",
+        path: "/team",
         element: <TeamCard />,
       },
       {
-        path: "/team-list",
+        path: "/teams",
         element: <TeamList />,
       },
       {

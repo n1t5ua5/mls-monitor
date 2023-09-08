@@ -2,7 +2,9 @@ import { Link, NavLink } from "react-router-dom";
 import { useGetTokenQuery, useLogoutMutation } from "./app/apiSlice";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import { useGetTeamByNameQuery } from "./app/apiSlice";
 
+const card_id = "Philadelphia Union";
 const Nav = () => {
   const navigate = useNavigate();
   const { data: account } = useGetTokenQuery();
@@ -37,15 +39,15 @@ const Nav = () => {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink to={"/create-account"} className={"nav-link"}>
+              <NavLink to={"/accounts"} className={"nav-link"}>
                 Create Account
               </NavLink>
             </li>
             {account && (
               <li className="nav-item">
-                <NavLink to={"/team-detail"} className={"nav-link"}>
+                <Link to={`/teams/${card_id}`} state={card_id}>
                   Team Detail
-                </NavLink>
+                </Link>
               </li>
             )}
             <li className="nav-item">
