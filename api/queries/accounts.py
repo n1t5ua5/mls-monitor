@@ -1,4 +1,3 @@
-from pydantic import BaseModel
 from .client import Queries
 from pymongo.errors import DuplicateKeyError
 from models import AccountIn, AccountOutWithPassword
