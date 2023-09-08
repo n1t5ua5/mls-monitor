@@ -23,7 +23,7 @@ class FakeFavoritesQueries:
 
 
 def mock_user():
-    return {"username": "testuser"}
+    return {"username": "testuser", "id": "testuser_id"}
 
 
 def test_create_favorite():
@@ -31,12 +31,12 @@ def test_create_favorite():
         authenticator.try_get_current_account_data
     ] = mock_user
     app.dependency_overrides[FavoritesQueries] = FakeFavoritesQueries
-    body = {"team_name": "Inter Miami",
-            "id": "99hfhd7474h7d7"
-            # "account_id": "23448fnf90k"
-            }
-    print(json.dumps(body))
-    res = client.post("/api/favorites", json=json.dumps(body), params={account_id})
+    body = {
+        "team_name": "Inter Miami",
+        "id": "99hfhd7474h7d7"
+        # "account_id": "23448fnf90k"
+    }
+    res = client.post("/api/favorites", json=body)
     data = res.json()
 
     assert res.status_code == 200
@@ -55,7 +55,7 @@ def test_delete_favorite():
     ] = mock_user
     app.dependency_overrides[FavoritesQueries] = FakeFavoritesQueries
 
-    response = client.delete("/api/favorites/64f95feac3386ed6755d6c36")
+    response = client.delete("/api/favorites/1")
     assert response.status_code == 200
     assert response.json() == {"eureka": True}
 
