@@ -1,15 +1,16 @@
 #####  OUR READ.ME JOURNAL  #####
 
+
         THE MLS MONITOR
 
-        created by...
+        created by....
 
         Deontay Bell
         Ethan Wilson
         Mariam Sheikh
         & Austin Sekel
 
-        featuring...
+        featuring....
 
         - data models
         - GHI magic
@@ -17,13 +18,12 @@
         - API design
 
 
-Easy to read rankings & stats for every team in Major League Soccer.
+PURPOSE: Easy to read, up-to-date rankings & stats for every team in Major League Soccer.
 
+INTENDED MARKET: Soccer / Football fans in the U.S., Canada & Mexico. With the arrival of Leo Messi in Miami & the upcoming World Cup in '26 that's hosted by the previously mentioned trio; fans new & old need a way to follow the teams they love at the fastest rate possible. If you Google search "Who is 1st in the MLS right now", our site will guide the way + show team stats & more.  ( Est. Traffic: +1M per day )
 
-INTENDED MARKET: Soccer / Football fans in the U.S., Canada & Mexico. With the arrival of Leo Messi in Miami & the upcoming World Cup in '26 that's hosted by the previously mentioned trio; fans new & old need a way to follow the teams they love at the fastest rate possible. If you Google search "Who is 1st in the MLS right now", our site will guide the way + show team stats & more . ( Est. Traffic: +1M per day )
+FUNCTIONALITY: visitors may create an account to like any of the teams they support most.
 
-
-FUNCTIONALITY: visitors may create an account to like the teams they support.
 
 - If someone online types in www.MLSmonitor.live, they will be directed to the "Home-Page" of our site
 - Visitors will notice a NavBar towards the top that contains four options: "Home", "Create Account", "Login" & "About"
@@ -46,7 +46,6 @@ INITIALIZATION: to use this application on your local machine, please follow the
 5. Run docker compose up
 6. Run docker exec -it mls-monitor-inventory-api-1 bash
 7. Run python manage.py loaddata products.json
-8. Exit the container's CLI & enjoy the MLS Monitor!
+8. Exit the container's CLI & enjoy the MLS Monitor
 
-
-STRETCH GOALS: Adding an 'About Us' page to showcase our individual portfolio's & our project repository on gitlab would be an awesome addition to this neat little application of ours.
+STRETCH GOALS: Adding an 'About' page to showcase our individual portfolio's & our team's repository on Gitlab would be an good addition to this neat little application of ours. I think getting a better API that's paid for would be worth it too given the potential traffic it could receive.
