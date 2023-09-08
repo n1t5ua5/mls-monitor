@@ -1,5 +1,4 @@
 from fastapi.testclient import TestClient
-import json
 from main import app
 from queries.favorites import FavoritesQueries
 from models import FavoriteIn
@@ -12,8 +11,7 @@ class FakeFavoritesQueries:
     def create(self, favorite_in: FavoriteIn, account_id: str):
         favorite = favorite_in.dict()
         favorite["account_id"] = account_id
-        favorite["id"] = "mongoid"
-
+        favorite["id"] = "1q2w3e4r5t6y"
         return favorite
 
     def delete(self, favorite_id: str, username: str):
@@ -23,7 +21,7 @@ class FakeFavoritesQueries:
 
 
 def mock_user():
-    return {"username": "testuser"}
+    return {"username": "testuser", "id": "44456"}
 
 
 def test_create_favorite():
@@ -32,18 +30,18 @@ def test_create_favorite():
     ] = mock_user
     app.dependency_overrides[FavoritesQueries] = FakeFavoritesQueries
     body = {"team_name": "Inter Miami",
-            "id": "99hfhd7474h7d7"
-            # "account_id": "23448fnf90k"
+            "id": "1q2w3e4r5t6y",
+            "account_id": "44456"
             }
-    print(json.dumps(body))
-    res = client.post("/api/favorites", json=json.dumps(body), params={account_id})
+    res = client.post(
+        "/api/favorites", json=body, params={"account_id": body["account_id"]})
     data = res.json()
 
     assert res.status_code == 200
     assert data == {
         "team_name": "Inter Miami",
-        "id": "99hfhd7474h7d7"
-        # "account_id": "23448fnf90k",
+        "id": "1q2w3e4r5t6y",
+        "account_id": "44456"
     }
 
     app.dependency_overrides = {}
@@ -55,8 +53,8 @@ def test_delete_favorite():
     ] = mock_user
     app.dependency_overrides[FavoritesQueries] = FakeFavoritesQueries
 
-    response = client.delete("/api/favorites/64f95feac3386ed6755d6c36")
+    response = client.delete("/api/favorites/1")
     assert response.status_code == 200
-    assert response.json() == {"eureka": True}
+    assert response.json() == {"success": False}
 
     app.dependency_overrides = {}
