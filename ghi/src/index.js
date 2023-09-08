@@ -41,10 +41,6 @@ const router = createBrowserRouter([
         element: <Favorites />,
       },
       {
-        path: "/home",
-        element: <Home />,
-      },
-      {
         path: "/team-card",
         element: <TeamCard />,
       },

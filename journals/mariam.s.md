@@ -1,3 +1,19 @@
+## September 7, 2023
+
+Today, I worked on:
+
+* Troubleshooting our favorites feature backend code and running tests.
+
+My team and I worked on testing and troubleshooting our favorites feature backend and frontend code. We removed all errors and worked on passing all the tests.
+
+## September 6, 2023
+
+Today, I worked on:
+
+* Troubleshooting react redux and our favorites feature.
+
+My team and I worked on testing and troubleshooting our frontend code to remove all errors. We worked on our frontend react redux code to ensuring functionality between our backend and frontend code. Also, we added our favorites feature backend and frontend code.
+
 ## September 5, 2023
 
 Today, I worked on:

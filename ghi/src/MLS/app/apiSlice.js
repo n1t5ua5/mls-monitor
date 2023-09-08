@@ -75,7 +75,7 @@ export const mlsApi = createApi({
     login: builder.mutation({
       query: (info) => {
         const formData = new FormData();
-        formData.append("username", info.username);
+        formData.append("username", info.email);
         formData.append("password", info.password);
         return {
           url: "/token",

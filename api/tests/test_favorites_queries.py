@@ -29,19 +29,21 @@ def test_create_favorite():
         authenticator.try_get_current_account_data
     ] = mock_user
     app.dependency_overrides[FavoritesQueries] = FakeFavoritesQueries
-    body = {"team_name": "Inter Miami",
-            "id": "1q2w3e4r5t6y",
-            "account_id": "44456"
-            }
+    body = {
+        "team_name": "Inter Miami",
+        "id": "1q2w3e4r5t6y",
+        "account_id": "44456",
+    }
     res = client.post(
-        "/api/favorites", json=body, params={"account_id": body["account_id"]})
+        "/api/favorites", json=body, params={"account_id": body["account_id"]}
+    )
     data = res.json()
 
     assert res.status_code == 200
     assert data == {
         "team_name": "Inter Miami",
         "id": "1q2w3e4r5t6y",
-        "account_id": "44456"
+        "account_id": "44456",
     }
 
     app.dependency_overrides = {}
