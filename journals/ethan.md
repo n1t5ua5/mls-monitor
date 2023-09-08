@@ -22,7 +22,7 @@ Today, I worked on:
 
 The group followed along with Curtis' video and Riley's recording on backend authentication. Got stuck with recurring "missing value error" for the hashed_password. Worked with SEIRs who also could not resolve issue.
 
-## August 16, 2023
+## August 17, 2023
 
 Today, I worked on:
 
@@ -30,4 +30,10 @@ Today, I worked on:
 
 The group worked with Riley per SEIRs' recommendations and discovered a slight typo in the accounts.py file in the queries directory.
 
-TEST TEST TEST
+## August 17, 2023
+
+Today, I worked on:
+
+- Completely finishing authentication
+
+The group worked with Riley per SEIRs' recommendations and discovered a slight typo in the accounts.py file in the queries directory.
