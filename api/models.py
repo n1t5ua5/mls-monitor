@@ -1,6 +1,6 @@
+
 from pydantic import BaseModel
-from typing import List, Optional
-from jwtdown_fastapi.authentication import Token
+from typing import List
 
 
 class TeamIn(BaseModel):
@@ -44,3 +44,20 @@ class AccountOut(BaseModel):
 
 class AccountOutWithPassword(AccountOut):
     hashed_password: str
+
+
+class FavoriteIn(BaseModel):
+    team_name: str
+
+
+class FavoriteOut(FavoriteIn):
+    id: str
+    account_id: str
+
+
+class FavoritesList(BaseModel):
+    favorites: List[FavoriteOut]
+
+
+class DeleteStatus(BaseModel):
+    success: bool

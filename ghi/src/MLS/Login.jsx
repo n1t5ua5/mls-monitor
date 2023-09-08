@@ -2,14 +2,13 @@ import React, { useState } from "react";
 import { useLoginMutation } from "./app/apiSlice";
 
 const LoginForm = () => {
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { login } = useLoginMutation();
+  const [login] = useLoginMutation();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    login(username, password);
-    e.target.reset();
+    login({ email, password });
   };
 
   return (
@@ -17,7 +16,7 @@ const LoginForm = () => {
       <div className="offset-3 col-6">
         <div className="shadow p-4 mt-4">
           <h1>Login</h1>
-          <form onSubmit={(e) => handleSubmit(e)}>
+          <form onSubmit={handleSubmit}>
             <div className="form-floating mb-3 text-dark">
               <input
                 placeholder="Email"
@@ -26,24 +25,28 @@ const LoginForm = () => {
                 name="username"
                 id="username"
                 className="form-control"
-                onChange={(e) => setUsername(e.target.value)}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
               />
-              <label htmlFor="username">Username</label>
+              <label htmlFor="username">Email</label>
             </div>
 
             <div className="form-floating mb-3 text-dark">
               <input
                 placeholder="Password"
                 required
-                type="text"
+                type="password"
                 name="Password"
                 id="password"
                 className="form-control"
+                value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
               <label htmlFor="password">Password</label>
             </div>
-            <input className="btn btn-primary" type="submit" value="Login" />
+            <button className="btn btn-primary" type="submit">
+              Submit
+            </button>
           </form>
         </div>
       </div>

@@ -11,7 +11,7 @@ const Favorites = () => {
             {favorites.map(p => <TeamCard key={p.team_name} name={p.team_name} />)}
         </div>)
     }
-    return <div>You don't have any useGetFavoritesForAccountQuery... yet</div>
+    return <div>You don't have any favorites... yet</div>
 }
 
 export default Favorites;
