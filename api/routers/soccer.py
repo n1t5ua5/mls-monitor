@@ -5,7 +5,7 @@ from queries.soccer import TeamQueries
 router = APIRouter()
 
 
-@router.get("/api/teams")
+@router.get("/api/")
 def list_teams(repo: TeamQueries = Depends()):
     return repo.list_teams()
 
