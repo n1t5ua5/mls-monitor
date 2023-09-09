@@ -79,7 +79,7 @@
 
 
   <!-- 9/8/23
-    ???
+    This morning I was able to finish making the unit tests which I was really proud of. I wasn't mocking the fake data correctly as I initially thought it could be less precise. Now we're trying to get the Team Detail page to work to ensure all of our frontend pages are running properly at the base level. As of today, Create Account, Login & Home are good, but Team Detail is the last major hurdle. Once it's good, we'll begin making the Home page more detailed along with the others.
  -->
 
 
