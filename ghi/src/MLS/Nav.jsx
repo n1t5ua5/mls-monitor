@@ -3,7 +3,6 @@ import { useGetTokenQuery, useLogoutMutation } from "./app/apiSlice";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { useGetTeamByNameQuery } from "./app/apiSlice";
-
 const card_id = "Philadelphia Union";
 const Nav = () => {
   const navigate = useNavigate();
@@ -13,7 +12,6 @@ const Nav = () => {
   useEffect(() => {
     if (logoutResponse && logoutResponse.data) navigate("/");
   }, [logoutResponse, navigate]);
-
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">

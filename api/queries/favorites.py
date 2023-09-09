@@ -13,7 +13,7 @@ class FavoritesQueries(Queries):
         for row in results:
             row["id"] = str(row["_id"])
             row["favorite"] = str(row["favorite"])
-            favorite = FavoriteOut(**row)
+            favorite = FavoriteOut(row)
             favorites.append(favorite)
         return favorites
 
@@ -22,18 +22,15 @@ class FavoritesQueries(Queries):
         if result:
             result["id"] = str(result["_id"])
             result["favorite"] = str(result["_favorite"])
-            return FavoriteOut(**result)
+            return FavoriteOut(result)
 
     def create(self, favorite_in: FavoriteIn, account_id: str):
         favorite = favorite_in.dict()
         favorite["account_id"] = account_id
-        print(favorite)
         search = self.collection.find_one({"team_name": favorite["team_name"], "account_id": favorite["account_id"]})
-        print("=============",search)
         if search:
             return search
-        self.collection.insert_one(favorite) # had result = before just in case
-        # result.save()
+        self.collection.insert_one(favorite)
         found = self.collection.find_one({"team_name": favorite["team_name"]})
         favorite["id"] = str(found["_id"])
         return favorite

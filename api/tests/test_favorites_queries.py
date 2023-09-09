@@ -55,7 +55,7 @@ def test_delete_favorite():
     ] = mock_user
     app.dependency_overrides[FavoritesQueries] = FakeFavoritesQueries
 
-    response = client.delete("/api/favorites/64f95feac3386ed6755d6c36")
+    response = client.delete("/api/favorites/1")
     assert response.status_code == 200
     assert response.json() == {"success": False}
 
