@@ -66,3 +66,32 @@
   <!-- 9/5/23
     After our practice test today we regrouped & started watching Riley's video on React Redux again to get a better understanding of how all this frontend stuff works. We're mostly finished at this point, but we still have maybe a day's worth of work at most to start moving forward & making each page more intricate & finally styling it all. We are diverging from our original path slighty too whereas originally commenting was one of the main features of an account. Now it will be for favorites becuase in the future we don't want to have to monitor user behavior.
  -->
+
+<!-- 9/6/23
+    We're making a lot of progress on gettting redux setup but its proving to be tougher than expected. At this point, we think most of our errors are coming down to naming convention issues, but its possible we're wrong too. Met with the SEIR's who helped point us in the right direction, we're fixing the rest now. The team pulled through today Mariam, Deontay, Ethan & we finally got redux up & running. Now it's time to make everything pretty.
+ -->
+
+
+  <!-- 9/7/23
+    I started off by adding in an error page, Deontay got the login function to start working. & now we are going back & looking through the entire project to tidy it up & make sure we are following the project rubric requirements completely. Then we will venture back to the frontend again & start making the other pages look good, followed by adding in the CSS on the final day, Monday. The unit tests took a lot longer to configure then expected. We have two that are still working, but since we reverted back to using favorites over comments, we had to change ours. We'll finish the unit tests up tomorrow in the morning.
+ -->
+
+
+  <!-- 9/8/23
+    This morning I was able to finish making the unit tests which I was really proud of. I wasn't mocking the fake data correctly as I initially thought it could be less precise. Now we're trying to get the Team Detail page to work to ensure all of our frontend pages are running properly at the base level. As of today, Create Account, Login & Home are good, but Team Detail is the last major hurdle. Once it's good, we'll begin making the Home page more detailed along with the others. We incurred some git issues towards the end of the day, but thankfully we were able to resolve them thanks to some guidance from the SEIRs too.
+ -->
+
+
+ <!-- 9/9/23
+    ???
+ -->
+
+
+  <!-- 9/10/23
+    ???
+ -->
+
+
+  <!-- 9/10/23
+    ???
+ -->

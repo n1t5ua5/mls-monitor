@@ -11,10 +11,10 @@
 
         featuring....
 
-data models
-GHI magic
-integrations
-API design
+        data models
+        GHI magic
+        integrations
+        API design
 
 PURPOSE: Easy to read, up-to-date rankings & stats for every team in Major League Soccer.
 
