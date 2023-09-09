@@ -1,3 +1,11 @@
+## September 8, 2023
+
+Today, I worked on:
+
+* Troubleshooting our favorites feature backend code, running tests, and wrking on the nav.jsx file's functionality.
+
+My team and I worked on testing and troubleshooting our favorites feature backend and frontend code. We removed all errors and worked on passing all the tests. Finally, we worked on the nav.jsx file by troubleshooting the errors and quality assessing our project's funtionality.
+
 ## September 7, 2023
 
 Today, I worked on:
