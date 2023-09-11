@@ -1,7 +1,8 @@
 import React from "react";
 import TeamList from "./TeamList";
-import { useGetAllTeamsQuery } from "./app/apiSlice";
+import { useGetAllTeamsQuery, useGetFavoritesForAccountQuery } from "./app/apiSlice";
 import TeamCard from "./TeamCard";
+import FavoriteButtons from "./FavoriteButtons";
 
 function Home() {
   const { data: teams, isLoading, isError } = useGetAllTeamsQuery();
@@ -20,13 +21,15 @@ function Home() {
       <p>Welcome</p>
       <div className="row mt-3">
         {sortedTeams.map((entry) => (
+          <div key={entry.team.name}>
           <TeamCard
-            key={entry.team.name}
             name={entry.team.name}
             logo={entry.team.logo}
             ranking={entry.stats.rank}
             stats={{ wins: entry.stats.wins, losses: entry.stats.losses }}
           />
+          <FavoriteButtons name={entry.team.name} />
+          </div>
         ))}
       </div>
     </div>

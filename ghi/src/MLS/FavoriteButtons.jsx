@@ -7,36 +7,54 @@ import { useState, useEffect } from "react";
 
 const FavoriteButtons = ({name}) => {
     const [deleteFavorite] = useDeleteFavoriteMutation();
-    const [createFavorite, createFavoriteStatus] = useCreateFavoriteMutation();
+    const [createFavorite] = useCreateFavoriteMutation();
     const [favorite, setFavorite] = useState();
     const { data: favorites } = useGetFavoritesForAccountQuery();
-
-    console.log({createFavoriteStatus})
 
     useEffect(() => {
         if (favorites) {
             const match = favorites.find(f => f.team_name === name)
             setFavorite(match);
         }
-    }, [favorites])
+    }, [favorites, name])
 
     return (
         <>
-            {!favorite && <button
-                className="btn btn-success"
-                onClick={() => createFavorite({team_name: name})}
-            >
-                Favorite
-            </button>}
-            {favorite && <button
-                className="btn btn-danger"
-                onClick={() => deleteFavorite(favorite)}
-            >
-                Unfavorite
-            </button>
-                }
+            {!favorite ? (
+                <button
+                    className="btn btn-success"
+                    onClick={() => {
+                        console.log("Trying to favorite:", name);
+                        createFavorite({team_name: name})
+                            .then(response => {
+                                console.log("Successfully favorited:", response);
+                            })
+                            .catch(error => {
+                                console.error("error, Error, ERROR!!!!:", error);
+                            });
+                    }}
+                >
+                    Favorite
+                </button>
+            ) : (
+                <button
+                    className="btn btn-danger"
+                    onClick={() => {
+                        console.log("Trying to unfavorite:", name);
+                        deleteFavorite(favorite)
+                            .then(response => {
+                                console.log("Successfully unfavorited:", response);
+                            })
+                            .catch(error => {
+                                console.error("Error unfavoriting:", error);
+                            });
+                    }}
+                >
+                    Unfavorite
+                </button>
+            )}
         </>
-    )
-}
+    );
+};
 
 export default FavoriteButtons;

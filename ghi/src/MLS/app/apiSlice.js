@@ -21,14 +21,16 @@ export const mlsApi = createApi({
       providesTags: (response, error, arg) => {
         return [{ type: "Favorites", id: arg }];
       },
-      getFavoritesForAccount: builder.query({
-        query: () => ({
-          url: "/api/favorites/mine",
-          credentials: "include",
-        }),
-        transformResponse: (response) => response.favorites,
-        providesTags: [{ type: "Favorites", id: "MINE" }],
+    }),
+    getFavoritesForAccount: builder.query({
+      query: () => ({
+        url: "/api/favorites/mine",
+        credentials: "include",
       }),
+      transformResponse: (response) => response.favorites,
+      providesTags: (response, error, arg) => {
+        return [{ type: "Favorites", id: arg }];
+      },
     }),
     deleteFavorite: builder.mutation({
       query: (favorite) => ({

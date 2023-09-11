@@ -1,6 +1,6 @@
 import TeamCard from "./TeamCard";
 import { useGetFavoritesForAccountQuery } from "./app/apiSlice";
-import FavoriteButtons from "./FavoriteButtons";
+
 
 const Favorites = () => {
     const { data: favorites, isLoading } = useGetFavoritesForAccountQuery()
