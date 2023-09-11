@@ -67,6 +67,7 @@
     After our practice test today we regrouped & started watching Riley's video on React Redux again to get a better understanding of how all this frontend stuff works. We're mostly finished at this point, but we still have maybe a day's worth of work at most to start moving forward & making each page more intricate & finally styling it all. We are diverging from our original path slighty too whereas originally commenting was one of the main features of an account. Now it will be for favorites becuase in the future we don't want to have to monitor user behavior.
  -->
 
+
 <!-- 9/6/23
     We're making a lot of progress on gettting redux setup but its proving to be tougher than expected. At this point, we think most of our errors are coming down to naming convention issues, but its possible we're wrong too. Met with the SEIR's who helped point us in the right direction, we're fixing the rest now. The team pulled through today Mariam, Deontay, Ethan & we finally got redux up & running. Now it's time to make everything pretty.
  -->
@@ -88,10 +89,15 @@
 
 
   <!-- 9/10/23
-    ???
+    Last day of the weekend to work on this ol' project of ours. Got together in the evening & started to work on the home detail page. Ethan created an Issue in Gitlab & I went to resolve it later that night but we still had some work to do. Mariam made the login & create account forms look really nice with CSS. In the meantime, I scanned our files for unncessary comments, console logs & print statements. There weren't many left, but that's another small thing taken care of too. Ethan worked until really late at night & got most of the frontend working.
  -->
 
 
-  <!-- 9/10/23
+  <!-- 9/11/23
+    We started the morning by looking over
+ -->
+
+
+  <!-- 9/12/23
     ???
  -->
