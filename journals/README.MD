@@ -1,5 +1,6 @@
 ##### OUR READ.ME JOURNAL
 
+
         THE MLS MONITOR
 
         created by....
@@ -14,7 +15,9 @@
         data models
         GHI magic
         integrations
-        API design
+        API desig
+        & much more
+
 
 PURPOSE: Easy to read, up-to-date rankings & stats for every team in Major League Soccer.
 
@@ -22,16 +25,16 @@ INTENDED MARKET: Soccer / Football fans in the U.S., Canada & Mexico. With the a
 
 FUNCTIONALITY: visitors may create an account to like any of the teams they support most.
 
-If someone online types in www.MLSmonitor.live, they will be directed to the "Home-Page" of our site
-Visitors will notice a NavBar towards the top that contains four options: "Home", "Create Account", "Login" & "About"
-To gain access the visitor must click on "Create Account" to fill out a form in order to become a user
-The form asks for an e-mail address, name, password & gives them the option to choose any MLS logo for their account
-After it's been submitted, the account is created & the new user will be immediately redirected to the "Home"
-Then, they will be able to like the teams they love best on the "Home" page & delete them if necessary
-Once logged in, the user will notice the NavBar now consists of "Home", "Create Account", "Logout" & "About"
-In order to logout, the user must click on the "Logout" tab & then they will be redirected to the home page
-Once logged out, the favorite option will dissapear completely unless you choose to log back in
-To login, click on the login tab located in the NavBar & footer which leads you to a form asking for your e-mail address & password
+- If someone online types in www.MLSmonitor.live, they will be directed to the "Home-Page" of our site
+- Visitors will notice a NavBar towards the top that contains four options: "Home", "Create Account", "Login" & "About"
+- To gain access the visitor must click on "Create Account" to fill out a form in order to become a user
+- The form asks for an e-mail address, name, password & gives them the option to choose any MLS logo for their account
+- After it's been submitted, the account is created & the new user will be immediately redirected to the "Home"
+- Then, they will be able to like the teams they love best on the "Home" page & delete them if necessary
+- Once logged in, the user will notice the NavBar now consists of "Home", "Create Account", "Logout" & "About"
+- In order to logout, the user must click on the "Logout" tab & then they will be redirected to the home page
+- Once logged out, the favorite option will dissapear completely unless you choose to log back in
+- To login, click on the login tab located in the NavBar & footer which leads you to a form asking for your e-mail address & password
 
 INITIALIZATION: to use this application on your local machine, please follow the steps below
 
