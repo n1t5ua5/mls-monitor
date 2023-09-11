@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useLoginMutation } from "./app/apiSlice";
+import "./styles/Login.css"
 
 const LoginForm = () => {
   const [email, setEmail] = useState("");
@@ -19,44 +20,40 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="row">
-      <div className="offset-3 col-6">
-        <div className="shadow p-4 mt-4">
-          <h1>Login</h1>
-          <form onSubmit={handleSubmit}>
-            <div className="form-floating mb-3 text-dark">
-              <input
-                placeholder="Email"
-                required
-                type="text"
-                name="username"
-                id="username"
-                className="form-control"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-              <label htmlFor="username">Email</label>
-            </div>
-
-            <div className="form-floating mb-3 text-dark">
-              <input
-                placeholder="Password"
-                required
-                type="password"
-                name="Password"
-                id="password"
-                className="form-control"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-              />
-              <label htmlFor="password">Password</label>
-            </div>
-            <button className="btn btn-primary" type="submit">
-              Submit
-            </button>
-          </form>
+    <div className="wrapper">
+      <h2>Login</h2>
+      <form onSubmit={handleSubmit}>
+        <div className="input-box">
+          <input
+            placeholder="Email"
+            required
+            type="text"
+            name="username"
+            id="username"
+            className="form-control"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <label htmlFor="username"></label>
         </div>
-      </div>
+
+        <div className="input-box">
+          <input
+            placeholder="Password"
+            required
+            type="password"
+            name="Password"
+            id="password"
+            className="form-control"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <label htmlFor="password"></label>
+        </div>
+        <button className="button" type="submit">
+          Submit
+        </button>
+      </form>
     </div>
   );
 };

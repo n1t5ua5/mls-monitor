@@ -2,6 +2,10 @@ import { Link, NavLink } from "react-router-dom";
 import { useGetTokenQuery, useLogoutMutation } from "./app/apiSlice";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import "./styles/Nav.css";
+import MMLogo2 from './styles/MMlogo2.png';
+import { useGetTeamByNameQuery } from "./app/apiSlice";
+const card_id = "Philadelphia Union";
 const Nav = () => {
   const navigate = useNavigate();
   const { data: account } = useGetTokenQuery();
