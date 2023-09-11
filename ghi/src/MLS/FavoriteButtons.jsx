@@ -1,7 +1,7 @@
 import {
-    useGetFavoritesForAccountQuery,
-    useDeleteFavoriteMutation,
-    useCreateFavoriteMutation
+  useGetFavoritesForAccountQuery,
+  useDeleteFavoriteMutation,
+  useCreateFavoriteMutation,
 } from "./app/apiSlice";
 import { useState, useEffect } from "react";
 

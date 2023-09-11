@@ -141,3 +141,11 @@ Today, I worked on:
 - Home page functionality
 
 I had to modify some code in the Home.jsx, TeamCard.jsx, TeamList.jsx, index.js, Nav.jsx, and App.jsx files to get some functionality in the Home page. I shared my changes with the group and now we are working on the TeamDetails.jsx file before finishing up styling. We will have to work over the weekend.
+
+## September 11, 2023
+
+Today, I worked on:
+
+- Integrating CSS styling into the Home page
+
+I worked with Mariam to better understand how to implement CSS styling into the Home page. The team then coordinated in closing issues in GitLab and finalized journal entries and documentation to complete project.
