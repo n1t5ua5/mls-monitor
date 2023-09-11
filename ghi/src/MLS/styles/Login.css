@@ -2,17 +2,17 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: black;
+    background: rgb(247, 247, 247);
 }
 .wrapper{
-    top: 50%;
-    left: 50%;
+    top: 100%;
+    left: 100%;
     position: fixed;
     transform: translate(-50%, -50%);
     max-width: 430px;
     width: 100%;
     background: #fff;
-    padding: 34px;
+    padding: 20px;
     border-radius: 6px;
     border-color: aqua;
     border-width: 10%;

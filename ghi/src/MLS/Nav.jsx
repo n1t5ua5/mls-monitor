@@ -2,10 +2,10 @@ import { Link, NavLink } from "react-router-dom";
 import { useGetTokenQuery, useLogoutMutation } from "./app/apiSlice";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import "./styles/Nav.css";
-import MMLogo2 from './styles/MMlogo2.png';
-import { useGetTeamByNameQuery } from "./app/apiSlice";
-const card_id = "Philadelphia Union";
+// import "./styles/Nav.css";
+
+
+
 const Nav = () => {
   const navigate = useNavigate();
   const { data: account } = useGetTokenQuery();
@@ -43,11 +43,20 @@ const Nav = () => {
                 Home
               </NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink to={"/accounts"} className={"nav-link"}>
-                Create Account
-              </NavLink>
-            </li>
+            {account && (
+              <li className="nav-item">
+                <NavLink to={"/favorites"} className={"nav-link"}>
+                  Favorites
+                </NavLink>
+              </li>
+            )}
+            {account ? null : (
+              <li className="nav-item">
+                <NavLink to={"/accounts"} className={"nav-link"}>
+                  Create Account
+                </NavLink>
+              </li>
+            )}
             {account ? null : (
               <li className="nav-item">
                 <NavLink to={"/login"} className={"nav-link"}>

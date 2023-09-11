@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { useGetAllTeamsQuery } from "./app/apiSlice";
 import TeamCard from "./TeamCard";
-import "../styles/Home.css";
-
+import "./styles/Home.css";
 function Home() {
   const { data: teams, isLoading, isError } = useGetAllTeamsQuery();
 
