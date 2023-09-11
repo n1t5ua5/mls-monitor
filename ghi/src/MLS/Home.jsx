@@ -2,6 +2,7 @@ import React from "react";
 import TeamList from "./TeamList";
 import { useGetAllTeamsQuery } from "./app/apiSlice";
 import TeamCard from "./TeamCard";
+import "../styles/Home.css";
 
 function Home() {
   const { data: teams, isLoading, isError } = useGetAllTeamsQuery();
@@ -15,7 +16,7 @@ function Home() {
       : [];
 
   return (
-    <div>
+    <div className="home-container">
       <h1>THE MLS MONITOR</h1>
       <p>Welcome</p>
       <div className="row mt-3">

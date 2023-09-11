@@ -5,18 +5,21 @@ import { useNavigate } from "react-router-dom";
 
 function CreateAccount() {
   const navigate = useNavigate();
-  const dispatch = useDispatch();
 
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [full_name, setFullName] = useState("");
-  const [errorMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
 
   const [createaccount, createAccountResponse] = useCreateAccountMutation();
 
   useEffect(() => {
-    if (createAccountResponse.isSuccess) navigate("/");
+    if (createAccountResponse.isSuccess) {
+      navigate("/");
+    } else if (createAccountResponse.isError) {
+      setErrorMessage("Could not create account");
+    }
   }, [createAccountResponse]);
 
   const handleSubmit = (e) => {
