@@ -83,7 +83,7 @@
 
 
  <!-- 9/9/23
-    ???
+    We met up in the afternoon on Saturday & got everyone's projects up to date by pushing & pulling etc. We did a run through of the site together & can happily announce that the Home Page is up, the Create Account page is working & most importantly so far, you can login & logout successfully. Deontay is working on the Search bar, Mariam is working on the CSS & Ethan & I are working on the Home Page to get all the teams with their rankings showing. Tomorrow we'll meet again in the afternoon & work on the frontend some more while on Monday we'll do some house cleaning with the site, take a tour of the site again & finish polishing the front.
  -->
 
 
