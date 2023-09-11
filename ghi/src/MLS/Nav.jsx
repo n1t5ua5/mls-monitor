@@ -2,12 +2,15 @@ import { Link, NavLink } from "react-router-dom";
 import { useGetTokenQuery, useLogoutMutation } from "./app/apiSlice";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-import { useGetTeamByNameQuery } from "./app/apiSlice";
-const card_id = "Philadelphia Union";
 const Nav = () => {
   const navigate = useNavigate();
   const { data: account } = useGetTokenQuery();
   const [logout, logoutResponse] = useLogoutMutation();
+
+   const handleLogout = () => {
+     logout();
+     window.location.reload();
+   };
 
   useEffect(() => {
     if (logoutResponse && logoutResponse.data) navigate("/");
@@ -41,21 +44,16 @@ const Nav = () => {
                 Create Account
               </NavLink>
             </li>
-            {account && (
+            {account ? null : (
               <li className="nav-item">
-                <Link to={`/teams/${card_id}`} state={card_id}>
-                  Team Detail
-                </Link>
+                <NavLink to={"/login"} className={"nav-link"}>
+                  Login
+                </NavLink>
               </li>
             )}
-            <li className="nav-item">
-              <NavLink to={"/login"} className={"nav-link"}>
-                Login
-              </NavLink>
-            </li>
           </ul>
           {account && (
-            <button className="btn btn-outline-danger" onClick={logout}>
+            <button className="btn btn-outline-danger" onClick={handleLogout}>
               Logout
             </button>
           )}

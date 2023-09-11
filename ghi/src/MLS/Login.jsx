@@ -6,9 +6,16 @@ const LoginForm = () => {
   const [password, setPassword] = useState("");
   const [login] = useLoginMutation();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    login({ email, password });
+    try {
+      await login({ email, password });
+      // Redirect to the home page after successful login
+      window.location.href = "/"; // Replace "/" with the actual URL of your home page
+    } catch (error) {
+      // Handle login error here
+      console.error("Login failed:", error);
+    }
   };
 
   return (
