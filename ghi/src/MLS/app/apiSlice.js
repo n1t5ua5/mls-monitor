@@ -8,7 +8,9 @@ export const mlsApi = createApi({
   endpoints: (builder) => ({
     getAllTeams: builder.query({
       query: () => "/api/teams",
-      transformResponse: (response) => response.teams,
+      transformResponse: (response) => {
+        return response.flatMap((conference) => conference.entries);
+      },
     }),
     getTeamByName: builder.query({
       query: (name) => `/api/teams/${name}`,
@@ -75,7 +77,7 @@ export const mlsApi = createApi({
     login: builder.mutation({
       query: (info) => {
         const formData = new FormData();
-        formData.append("username", info.username);
+        formData.append("username", info.email);
         formData.append("password", info.password);
         return {
           url: "/token",
