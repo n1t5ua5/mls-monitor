@@ -2,7 +2,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: black;
+    background: rgb(241, 236, 236);
 }
 .wrapper{
     top: 50%;

@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { useGetAllTeamsQuery } from "./app/apiSlice";
 import TeamCard from "./TeamCard";
-import "../styles/Home.css";
-
+import "./styles/Home.css";
 function Home() {
 
 
@@ -36,7 +35,7 @@ function Home() {
   }
 
   return (
-    <div className="home-container">
+    <div>
       <h1>THE MLS MONITOR</h1>
       <div className="search-bar">
         <input
