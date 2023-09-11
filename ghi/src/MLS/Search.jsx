@@ -19,7 +19,7 @@ const Search = () => {
                 <input
                     className="form-control form-control-lg"
                     type="text"
-                    placeholder="mlslogo"
+                    placeholder="MMlogo"
                     value={searchInput}
                     onChange={(e) => setSearchInput(e.target.value)}
                 />
