@@ -15,7 +15,7 @@ const FavoriteButtons = ({name}) => {
 
     useEffect(() => {
         if (favorites) {
-            const match = favorites.find(f => f.pokemon_name === name)
+            const match = favorites.find(f => f.team_name === name)
             setFavorite(match);
         }
     }, [favorites])
@@ -24,7 +24,7 @@ const FavoriteButtons = ({name}) => {
         <>
             {!favorite && <button
                 className="btn btn-success"
-                onClick={() => createFavorite({pokemon_name: name})}
+                onClick={() => createFavorite({team_name: name})}
             >
                 Favorite
             </button>}
