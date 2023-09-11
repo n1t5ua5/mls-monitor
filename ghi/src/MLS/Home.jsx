@@ -5,7 +5,6 @@ import TeamCard from "./TeamCard";
 
 function Home() {
   const { data: teams, isLoading, isError } = useGetAllTeamsQuery();
-  console.log(teams);
 
   if (isLoading) return <div>Loading...</div>;
   if (isError) return <div>Error fetching teams.</div>;
