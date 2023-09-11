@@ -18,9 +18,9 @@ For these frontend changes, please follow the below steps to ensure my code work
 1. localhost:3000 (or the initial page your test starts on)
 2. click X button
 
-   before: X was broken
+  before: X was broken
 
-   now: X works
+  now: X works
 
 Screenshots or working page:
 

@@ -1,4 +1,4 @@
-#####  OUR READ.ME JOURNAL  #####
+##### OUR READ.ME JOURNAL
 
 
         THE MLS MONITOR
@@ -12,18 +12,18 @@
 
         featuring....
 
-        - data models
-        - GHI magic
-        - integrations
-        - API design
+        data models
+        GHI magic
+        integrations
+        API desig
+        & much more
 
 
 PURPOSE: Easy to read, up-to-date rankings & stats for every team in Major League Soccer.
 
-INTENDED MARKET: Soccer / Football fans in the U.S., Canada & Mexico. With the arrival of Leo Messi in Miami & the upcoming World Cup in '26 that's hosted by the previously mentioned trio; fans new & old need a way to follow the teams they love at the fastest rate possible. If you Google search "Who is 1st in the MLS right now", our site will guide the way + show team stats & more.  ( Est. Traffic: +1M per day )
+INTENDED MARKET: Soccer / Football fans in the U.S., Canada & Mexico. With the arrival of Leo Messi in Miami & the upcoming World Cup in '26 that's hosted by the previously mentioned trio; fans new & old need a way to follow the teams they love at the fastest rate possible. If you Google search "Who is 1st in the MLS right now", our site will guide the way + show team stats & more. ( Est. Traffic: +1M per day )
 
 FUNCTIONALITY: visitors may create an account to like any of the teams they support most.
-
 
 - If someone online types in www.MLSmonitor.live, they will be directed to the "Home-Page" of our site
 - Visitors will notice a NavBar towards the top that contains four options: "Home", "Create Account", "Login" & "About"
@@ -36,16 +36,15 @@ FUNCTIONALITY: visitors may create an account to like any of the teams they supp
 - Once logged out, the favorite option will dissapear completely unless you choose to log back in
 - To login, click on the login tab located in the NavBar & footer which leads you to a form asking for your e-mail address & password
 
-
 INITIALIZATION: to use this application on your local machine, please follow the steps below
 
-1. Clone the repository down to your local machine
-2. CD into the new project directory
-3. Run docker volume create mls-monitor
-4. Run docker compose build
-5. Run docker compose up
-6. Run docker exec -it mls-monitor-inventory-api-1 bash
-7. Run python manage.py loaddata products.json
-8. Exit the container's CLI & enjoy the MLS Monitor
+Clone the repository down to your local machine
+CD into the new project directory
+Run docker volume create mls-monitor
+Run docker compose build
+Run docker compose up
+Run docker exec -it mls-monitor-inventory-api-1 bash
+Run python manage.py loaddata products.json
+Exit the container's CLI & enjoy the MLS Monitor
 
 STRETCH GOALS: Adding an 'About' page to showcase our individual portfolio's & our team's repository on Gitlab would be an good addition to this neat little application of ours. I think getting a better API that's paid for would be worth it too given the potential traffic it could receive.

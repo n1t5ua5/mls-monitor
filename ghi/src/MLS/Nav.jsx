@@ -5,7 +5,6 @@ import { useEffect } from "react";
 import "./styles/Nav.css";
 import MMLogo2 from './styles/MMlogo2.png';
 import { useGetTeamByNameQuery } from "./app/apiSlice";
-
 const card_id = "Philadelphia Union";
 const Nav = () => {
   const navigate = useNavigate();
@@ -15,7 +14,6 @@ const Nav = () => {
   useEffect(() => {
     if (logoutResponse && logoutResponse.data) navigate("/");
   }, [logoutResponse, navigate]);
-
   return (
     <nav className="nav">
       <Link to={"/"} className="nav-link">

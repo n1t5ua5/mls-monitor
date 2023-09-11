@@ -1,35 +1,48 @@
+import React from "react";
 import { useParams } from "react-router-dom";
-import {
-    useGetTeamByNameQuery,
-    //   useGetFavoritesForTeamsQuery,
-    useGetTokenQuery,
-    } from "./app/apiSlice";
+import { useGetAllTeamsQuery, useGetTokenQuery } from "./app/apiSlice";
 
-    const TeamDetail = () => {
-    const params = useParams();
-    console.log(params, "W333333333");
-    const { data: teams, isLoading } = useGetTeamByNameQuery(params.name);
-    //   const { data: favorites, isLoading: isLoadingFavorites } =
-    //     useGetFavoritesForTeamsQuery(params.name);
+function TeamDetails() {
+  const { name } = useParams()
+  const { data: teams, isLoading, isError } = useGetAllTeamsQuery()
+  const { data: account } = useGetTokenQuery();
 
-    if (isLoading) return <div>Loading...</div>;
-    console.log(teams, "LLLLLLLLLLLLLLLLL");
-    //   console.log(favorites, "1111111111111");
+  if (!account) {
+    return <div>You must be logged in to view this page.</div>;
+  }
 
-    return (
-        <div>
-        <div className="row">
-            <div className="col-8">
-            <h1>{teams.team.name}</h1>
-            </div>
+
+  if (isLoading) return <div>Be patient </div>
+  if (isError) return <div>Error getting team.</div>
+
+  const team = teams.find((entry) => entry.team.name === name)
+  console.log(team, "4444444")
+
+  if(!team) return <div>Team not found.</div>
+
+  return (
+    <div>
+      <div className="row">
+        <div className="col-8">
+          <h1>{team.team.name}</h1>
+          <img src={team.team.logo} alt={team.team.logo} style={{ width: '200px', height: '200px' }} />
         </div>
-        {/* <ul className="list-group">
-            <li className="list-group-item">Favorites: {favorites.length}</li>
-            <li className="list-group-item">Stats: {teams.length}</li>
-            <li className="list-group-item">Order: {teams.order}</li>
-        </ul> */}
-        </div>
-    );
+      </div>
+      <ul className="list-group">
+        <li className="list-group-item">Abbreviation: {team.team.abbreviation}</li>
+        <li className="list-group-item">Wins: {team.stats.wins}</li>
+        <li className="list-group-item">Losses: {team.stats.losses}</li>
+        <li className="list-group-item">Ties: {team.stats.ties}</li>
+        <li className="list-group-item">Games Played: {team.stats.gamesPlayed}</li>
+        <li className="list-group-item">Goals For: {team.stats.goalsFor}</li>
+        <li className="list-group-item">Goals Against: {team.stats.goalsAgainst}</li>
+        <li className="list-group-item">Points: {team.stats.points}</li>
+        <li className="list-group-item">Rank: {team.stats.rank}</li>
+        <li className="list-group-item">Goal Difference: {team.stats.goalDifference}</li>
+      </ul>
+    </div>
+  );
 };
 
-export default TeamDetail;
+
+export default TeamDetails;

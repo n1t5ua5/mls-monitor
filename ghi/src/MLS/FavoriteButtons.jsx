@@ -1,21 +1,21 @@
 import {
-    useGetFavoritesForAccountQuery,
-    useDeleteFavoriteMutation,
-    useCreateFavoriteMutation
+  useGetFavoritesForAccountQuery,
+  useDeleteFavoriteMutation,
+  useCreateFavoriteMutation,
 } from "./app/apiSlice";
 import { useState, useEffect } from "react";
 
-const FavoriteButtons = ({name}) => {
-    const [deleteFavorite] = useDeleteFavoriteMutation();
-    const [createFavorite, createFavoriteStatus] = useCreateFavoriteMutation();
-    const [favorite, setFavorite] = useState();
-    const { data: favorites } = useGetFavoritesForAccountQuery();
+const FavoriteButtons = ({ name }) => {
+  const [deleteFavorite] = useDeleteFavoriteMutation();
+  const [createFavorite, createFavoriteStatus] = useCreateFavoriteMutation();
+  const [favorite, setFavorite] = useState();
+  const { data: favorites } = useGetFavoritesForAccountQuery();
 
-    console.log({createFavoriteStatus})
+  console.log({ createFavoriteStatus });
 
     useEffect(() => {
         if (favorites) {
-            const match = favorites.find(f => f.pokemon_name === name)
+            const match = favorites.find(f => f.team_name === name)
             setFavorite(match);
         }
     }, [favorites])
@@ -24,7 +24,7 @@ const FavoriteButtons = ({name}) => {
         <>
             {!favorite && <button
                 className="btn btn-success"
-                onClick={() => createFavorite({pokemon_name: name})}
+                onClick={() => createFavorite({team_name: name})}
             >
                 Favorite
             </button>}

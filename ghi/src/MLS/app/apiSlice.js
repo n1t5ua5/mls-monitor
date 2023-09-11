@@ -8,7 +8,9 @@ export const mlsApi = createApi({
   endpoints: (builder) => ({
     getAllTeams: builder.query({
       query: () => "/api/teams",
-      transformResponse: (response) => response.teams,
+      transformResponse: (response) => {
+        return response.flatMap((conference) => conference.entries);
+      },
     }),
     getTeamByName: builder.query({
       query: (name) => `/api/teams/${name}`,
