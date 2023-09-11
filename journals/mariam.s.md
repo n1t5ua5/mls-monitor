@@ -1,8 +1,24 @@
+## September 10, 2023
+
+Today, I worked on:
+
+* Putting the finishing touches on some of the CSS files.
+
+My team and I worked on testing our favorites feature's code. We also put the finishing touches on some of our CSS files for the login, create account, and nav files.
+
+## September 9, 2023
+
+Today, I worked on:
+
+* Troubleshooting our favorites feature backend code, running tests, working on the nav.jsx file's functionality, and creating CSS pages for the login, create account, and nav files.
+
+My team and I worked on testing and troubleshooting our favorites feature backend and frontend code. Also, we worked on the nav.jsx file's funtionality and created css files for our project.
+
 ## September 8, 2023
 
 Today, I worked on:
 
-* Troubleshooting our favorites feature backend code, running tests, and wrking on the nav.jsx file's functionality.
+* Troubleshooting our favorites feature backend code, running tests, and working on the nav.jsx file's functionality.
 
 My team and I worked on testing and troubleshooting our favorites feature backend and frontend code. We removed all errors and worked on passing all the tests. Finally, we worked on the nav.jsx file by troubleshooting the errors and quality assessing our project's funtionality.
 
