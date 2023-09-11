@@ -3,7 +3,7 @@ import { useGetTokenQuery, useLogoutMutation } from "./app/apiSlice";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { useGetTeamByNameQuery } from "./app/apiSlice";
-// const card_id = "Philadelphia Union";
+const card_id = "Philadelphia Union";
 const Nav = () => {
   const navigate = useNavigate();
   const { data: account } = useGetTokenQuery();
@@ -43,9 +43,9 @@ const Nav = () => {
             </li>
             {account && (
               <li className="nav-item">
-                {/* <Link to={`/teams/${card_id}`} state={card_id}> */}
-                Team Detail
-                {/* </Link> */}
+                <Link to={`/teams/${card_id}`} state={card_id}>
+                  Team Detail
+                </Link>
               </li>
             )}
             <li className="nav-item">
