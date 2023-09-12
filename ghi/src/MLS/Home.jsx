@@ -4,10 +4,6 @@ import TeamCard from "./TeamCard";
 import "./styles/Home.css";
 import "./styles/Nav.css"
 function Home() {
-
-
-
-
   const { data: teams, isLoading, isError } = useGetAllTeamsQuery();
 
   const [searchQuery, setSearchQuery] = useState("")
@@ -20,20 +16,20 @@ function Home() {
 
   const sortedTeams =
     teams && Array.isArray(teams)
-      ? [...teams].sort((a,b) => a.ranking - b.ranking)
+      ? [...teams].sort((a, b) => a.ranking - b.ranking)
       : [];
 
-  const handleSearchChange = (e) => {
-    const query = e.target.value.toLowerCase()
-    setSearchQuery(query)
+const handleSearchChange = (e) => {
+  const query = e.target.value.toLowerCase();
+  setSearchQuery(query);
 
-    const filtered = sortedTeams.filter(
-      (team) =>
+const filtered = sortedTeams.filter(
+    (team) =>
       team.team.name.toLowerCase().includes(query) ||
       team.stats.rank.toString().includes(query)
-      );
-      setFilteredTeams(filtered);
-  }
+  );
+  setFilteredTeams(filtered);
+}
 
   return (
     <div className="home-container">
@@ -50,6 +46,7 @@ function Home() {
       <div className="team-card-container">
         <div className="team-card-column">
           <p className="confereence-title"> Eastern Conference</p>
+          <h2>Eastern Conference</h2>
           {(searchQuery ? filteredTeams : sortedTeams)
             .slice(0, 14)
             .map((entry) => (
@@ -64,6 +61,7 @@ function Home() {
         </div>
         <div className="team-card-column">
           <p className="confereence-title">Western Conference</p>
+          <h2>Western Conference</h2>
           {(searchQuery ? filteredTeams : sortedTeams)
             .slice(15, 33)
             .map((entry) => (
@@ -79,6 +77,6 @@ function Home() {
       </div>
     </div>
   );
-}
+};
 
 export default Home;
