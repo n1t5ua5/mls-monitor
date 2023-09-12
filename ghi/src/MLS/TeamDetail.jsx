@@ -1,33 +1,63 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { useParams } from "react-router-dom";
-import { useGetAllTeamsQuery, useGetTokenQuery } from "./app/apiSlice";
+import { useGetAllTeamsQuery, useGetTokenQuery} from "./app/apiSlice";
 
 function TeamDetails() {
   const { name } = useParams()
   const { data: teams, isLoading, isError } = useGetAllTeamsQuery()
   const { data: account } = useGetTokenQuery();
 
+  const [isFavorite, setIsFavorite]=useState(false);
+
+  useEffect(() => {
+    const favorites=JSON.parse(localStorage.getItem("favorites")) || [];
+    setIsFavorite(favorites.includes(name));
+  },[name]);
+
   if (!account) {
-    return <div>You must be logged in to view this page.</div>;
+    return <h1>You must login to view this page.</h1>;
   }
 
-
-  if (isLoading) return <div>Be patient </div>
+  if (isLoading) return <div>Almost there... </div>
   if (isError) return <div>Error getting team.</div>
 
-  const team = teams.find((entry) => entry.team.name === name)
-  console.log(team, "4444444")
+  const team = teams.find((entry) => entry.team.name === name);
 
   if(!team) return <div>Team not found.</div>
 
+  const toggleFavorite = () => {
+    const favorites = JSON.parse(localStorage.getItem("favorites")) || [];
+
+    if (isFavorite) {
+      const updatedFavorites = favorites.filter((fav) => fav !== name);
+      localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+    } else {
+      favorites.push(name);
+      localStorage.setItem("favorites", JSON.stringify(favorites))
+    }
+    setIsFavorite(!isFavorite)
+  };
+
   return (
-    <div>
-      <div className="row">
-        <div className="col-8">
-          <h1>{team.team.name}</h1>
-          <img src={team.team.logo} alt={team.team.logo} style={{ width: '200px', height: '200px' }} />
+      <div>
+        <div className="row">
+          <div className="col-8">
+            <h1>{team.team.name}</h1>
+            <img
+              src={team.team.logo}
+              alt={team.team.logo}
+              style={{ width: '200px', height: '200px' }}
+            />
+          </div>
+          <div className="col-4">
+          <button
+            onClick={toggleFavorite}
+            className={isFavorite ? "btn btn-danger":"btn btn-primary"}
+            >
+              {isFavorite ? "Remove from Favorites": "Add to Favorites"}
+            </button>
+          </div>
         </div>
-      </div>
       <ul className="list-group">
         <li className="list-group-item">Abbreviation: {team.team.abbreviation}</li>
         <li className="list-group-item">Wins: {team.stats.wins}</li>

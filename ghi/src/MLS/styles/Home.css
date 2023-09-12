@@ -6,7 +6,7 @@ body {
 
 .home-container {
   position: relative;
-  max-width: 430px;
+  max-width: 100%;
   margin: 0 auto;
   background: #fff;
   padding: 34px;
@@ -15,7 +15,6 @@ body {
   border-width: 10%;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   width: 100%;
-  max-width: none;
 }
 
 .home-container h1 {

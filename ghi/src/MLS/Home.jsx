@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useGetAllTeamsQuery } from "./app/apiSlice";
 import TeamCard from "./TeamCard";
 import "./styles/Home.css";
+import "./styles/Nav.css"
 function Home() {
 
 
@@ -14,7 +15,7 @@ function Home() {
 
 
 
-  if (isLoading) return <div>Loading...</div>;
+  if (isLoading) return <div>Be patient...</div>;
   if (isError) return <div>Error fetching teams.</div>;
 
   const sortedTeams =
@@ -35,7 +36,7 @@ function Home() {
   }
 
   return (
-    <div>
+    <div className="home-container">
       <h1>THE MLS MONITOR</h1>
       <div className="search-bar">
         <input
@@ -48,7 +49,7 @@ function Home() {
       </div>
       <div className="team-card-container">
         <div className="team-card-column">
-          <p>Eastern Conference</p>
+          <p className="confereence-title"> Eastern Conference</p>
           {(searchQuery ? filteredTeams : sortedTeams)
             .slice(0, 14)
             .map((entry) => (
@@ -62,7 +63,7 @@ function Home() {
             ))}
         </div>
         <div className="team-card-column">
-          <p>Western Conference</p>
+          <p className="confereence-title">Western Conference</p>
           {(searchQuery ? filteredTeams : sortedTeams)
             .slice(15, 33)
             .map((entry) => (
