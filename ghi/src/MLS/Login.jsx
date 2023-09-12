@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useLoginMutation } from "./app/apiSlice";
-import "./styles/Login.css"
+import "./styles/Login.css";
 
 const LoginForm = () => {
   const [email, setEmail] = useState("");
@@ -11,10 +11,9 @@ const LoginForm = () => {
     e.preventDefault();
     try {
       await login({ email, password });
-      // Redirect to the home page after successful login
-      window.location.href = "/"; // Replace "/" with the actual URL of your home page
+
+      window.location.href = "/";
     } catch (error) {
-      // Handle login error here
       console.error("Login failed:", error);
     }
   };

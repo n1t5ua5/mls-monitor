@@ -2,38 +2,33 @@ import React, { useState } from "react";
 import { useGetAllTeamsQuery } from "./app/apiSlice";
 import TeamCard from "./TeamCard";
 import "../styles/Home.css";
+import "./styles/Nav.css";
 
 function Home() {
-
-
-
-
   const { data: teams, isLoading, isError } = useGetAllTeamsQuery();
 
-  const [searchQuery, setSearchQuery] = useState("")
-  const [filteredTeams, setFilteredTeams] = useState([])
-
-
+  const [searchQuery, setSearchQuery] = useState("");
+  const [filteredTeams, setFilteredTeams] = useState([]);
 
   if (isLoading) return <div>Loading...</div>;
   if (isError) return <div>Error fetching teams.</div>;
 
   const sortedTeams =
     teams && Array.isArray(teams)
-      ? [...teams].sort((a,b) => a.ranking - b.ranking)
+      ? [...teams].sort((a, b) => a.ranking - b.ranking)
       : [];
 
   const handleSearchChange = (e) => {
-    const query = e.target.value.toLowerCase()
-    setSearchQuery(query)
+    const query = e.target.value.toLowerCase();
+    setSearchQuery(query);
 
     const filtered = sortedTeams.filter(
       (team) =>
-      team.team.name.toLowerCase().includes(query) ||
-      team.stats.rank.toString().includes(query)
-      );
-      setFilteredTeams(filtered);
-  }
+        team.team.name.toLowerCase().includes(query) ||
+        team.stats.rank.toString().includes(query)
+    );
+    setFilteredTeams(filtered);
+  };
 
   return (
     <div className="home-container">
@@ -49,9 +44,9 @@ function Home() {
       </div>
       <div className="team-card-container">
         <div className="team-card-column">
-          <p>Eastern Conference</p>
+          <p className="conference-title">Eastern Conference</p>
           {(searchQuery ? filteredTeams : sortedTeams)
-            .slice(0, 14)
+            .slice(0, Math.ceil(sortedTeams.length / 2))
             .map((entry) => (
               <TeamCard
                 key={entry.team.name}
@@ -63,9 +58,9 @@ function Home() {
             ))}
         </div>
         <div className="team-card-column">
-          <p>Western Conference</p>
+          <p className="conference-title">Western Conference</p>
           {(searchQuery ? filteredTeams : sortedTeams)
-            .slice(15, 33)
+            .slice(Math.ceil(sortedTeams.length / 2))
             .map((entry) => (
               <TeamCard
                 key={entry.team.name}

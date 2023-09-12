@@ -142,6 +142,22 @@ Today, I worked on:
 
 I had to modify some code in the Home.jsx, TeamCard.jsx, TeamList.jsx, index.js, Nav.jsx, and App.jsx files to get some functionality in the Home page. I shared my changes with the group and now we are working on the TeamDetails.jsx file before finishing up styling. We will have to work over the weekend.
 
+## September 9, 2023
+
+Today, I worked on:
+
+- Integrating Team List statistics into the Home page
+
+I am struggling to integrate information from the API into the Home page. Currently it is not displaying any information or listing team information as we planned in our wireframe. I believe it has to do with the level of information we are getting from the API. I will continue to troubleshoot tomorrow.
+
+## September 10, 2023
+
+Today, I worked on:
+
+- Integrating API info into the Home page
+
+After tons of research I learned we were not reaching into the API dictionary to the appropriate level. Our API is essentially providing team information within two dictionaries: an eastern conference dictionary and a western conference dictionary with multiple entries in each which contain the teams themselves with associated stats. I adjusted code within the Home.jsx and TeamCard.jsx files and can now see the desired information on the Home page.....I hate how long this took.
+
 ## September 11, 2023
 
 Today, I worked on:

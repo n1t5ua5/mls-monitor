@@ -1,6 +1,7 @@
 import TeamCard from "./TeamCard";
 import { useSelector } from "react-redux";
 import { useGetAllTeamsQuery } from "./app/apiSlice";
+
 const TeamList = () => {
   const searchCriteria = useSelector((state) => state.search.value);
   const { data = [], isLoading, isError } = useGetAllTeamsQuery();
@@ -12,6 +13,7 @@ const TeamList = () => {
       return data.filter((team) => team.name.includes(searchCriteria));
     return data;
   };
+
   return (
     <>
       <h1 className="mt-3">

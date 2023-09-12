@@ -1,49 +1,57 @@
-nav{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #fff;
-    padding: 20px 80px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
-    border-radius: 6px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-#navbar{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 20px 80px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  border-radius: 6px;
+  width: 100%;
+  max-width: none;
 }
 
-#navbar ul{
-    display: flex;
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#navbar li{
-    list-style: none;
-    padding: 0 20px;
-    position: relative;
+#navbar ul {
+  display: flex;
 }
 
-#navbar li a{
-    text-decoration: none;
-    font-size: 1.3rem;
-    font-weight: 600;
-    color: #2b6cb0;
-    transition: 0.3s ease-in-out;
+#navbar li {
+  list-style: none;
+  padding: 0 20px;
+  position: relative;
+}
+
+#navbar li a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2b6cb0;
+  transition: 0.3s ease-in-out;
 }
 
 #navbar li a:hover,
-#navbar li a:active{
-    color: #afaeae;
+#navbar li a:active {
+  color: #afaeae;
 }
 
 #navbar li a:hover::after,
-#navbar li a.active::after{
-    content: "";
-    width: 30%;
-    height: 2px;
-    background: #2b6cb0;
-    position: absolute;
-    bottom: -4px;
-    left: 20px;
+#navbar li a.active::after {
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: #2b6cb0;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
 }
