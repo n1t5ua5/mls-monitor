@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import { useGetAllTeamsQuery } from "./app/apiSlice";
 import TeamCard from "./TeamCard";
-import "../styles/Home.css";
-import "./styles/Nav.css";
-
+import "./styles/Home.css";
+import "./styles/Nav.css"
 function Home() {
   const { data: teams, isLoading, isError } = useGetAllTeamsQuery();
 
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredTeams, setFilteredTeams] = useState([]);
 
-  if (isLoading) return <div>Loading...</div>;
+
+
+  if (isLoading) return <div>Be patient...</div>;
   if (isError) return <div>Error fetching teams.</div>;
 
   const sortedTeams =
@@ -18,17 +19,17 @@ function Home() {
       ? [...teams].sort((a, b) => a.ranking - b.ranking)
       : [];
 
-  const handleSearchChange = (e) => {
-    const query = e.target.value.toLowerCase();
-    setSearchQuery(query);
+const handleSearchChange = (e) => {
+  const query = e.target.value.toLowerCase();
+  setSearchQuery(query);
 
-    const filtered = sortedTeams.filter(
-      (team) =>
-        team.team.name.toLowerCase().includes(query) ||
-        team.stats.rank.toString().includes(query)
-    );
-    setFilteredTeams(filtered);
-  };
+const filtered = sortedTeams.filter(
+    (team) =>
+      team.team.name.toLowerCase().includes(query) ||
+      team.stats.rank.toString().includes(query)
+  );
+  setFilteredTeams(filtered);
+}
 
   return (
     <div className="home-container">
@@ -44,7 +45,8 @@ function Home() {
       </div>
       <div className="team-card-container">
         <div className="team-card-column">
-          <p className="conference-title">Eastern Conference</p>
+          <p className="confereence-title"> Eastern Conference</p>
+          <h2>Eastern Conference</h2>
           {(searchQuery ? filteredTeams : sortedTeams)
             .slice(0, Math.ceil(sortedTeams.length / 2))
             .map((entry) => (
@@ -58,7 +60,8 @@ function Home() {
             ))}
         </div>
         <div className="team-card-column">
-          <p className="conference-title">Western Conference</p>
+          <p className="confereence-title">Western Conference</p>
+          <h2>Western Conference</h2>
           {(searchQuery ? filteredTeams : sortedTeams)
             .slice(Math.ceil(sortedTeams.length / 2))
             .map((entry) => (
@@ -74,6 +77,6 @@ function Home() {
       </div>
     </div>
   );
-}
+};
 
 export default Home;

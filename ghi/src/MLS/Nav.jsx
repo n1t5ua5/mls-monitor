@@ -14,7 +14,6 @@ const Nav = () => {
     logout();
     window.location.reload();
   };
-
   useEffect(() => {
     if (logoutResponse && logoutResponse.data) navigate("/");
   }, [logoutResponse, navigate]);
@@ -31,11 +30,20 @@ const Nav = () => {
                 Home
               </NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink to={"/accounts"} className={"nav-link"}>
-                Create Account
-              </NavLink>
-            </li>
+            {account ? null : (
+              <li className="nav-item">
+                <NavLink to={"/accounts"} className={"nav-link"}>
+                  Create Account
+                </NavLink>
+              </li>
+            )}
+            {account && (
+              <li className="nav-item">
+                <NavLink to={"/favorites"} className={"nav-link"}>
+                  Favorites
+                </NavLink>
+              </li>
+            )}
             {account && (
               <li className="nav-item">
                 <Link
@@ -47,11 +55,13 @@ const Nav = () => {
                 </Link>
               </li>
             )}
-            <li className="nav-item">
-              <NavLink to={"/login"} className={"nav-link"}>
-                Login
-              </NavLink>
-            </li>
+            {account ? null : (
+              <li className="nav-item">
+                <NavLink to={"/login"} className={"nav-link"}>
+                  Login
+                </NavLink>
+              </li>
+            )}
           </ul>
           {account && (
             <button className="nav-logout" onClick={logout}>

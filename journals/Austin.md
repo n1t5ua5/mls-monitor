@@ -94,7 +94,7 @@ Last day of the weekend to work on this ol' project of ours. Got together in the
 
 
 <!-- 9/11/23
-Group 18 started the morning by looking over Ethan's code, then I merged to confirm everything was working on my end. Deontay started working on the Team Detail page again & confirmed it worked on his end so now pretty much everything is good. Now we're going to do our merge request & ensure everyone is up to date with all of the proper code. 
+Group 18 started the morning by looking over Ethan's new code, then I merged to confirm everything was working on my end too. Deontay started working on the Team Detail page again & confirmed it worked on his end so now most of the functionality is done with. Were working on the favorites functionality together & were just about finished before our last break at 4:45 CT. Now we're going to do our merge request & ensure everyone is up to date with all of the proper code. I'm really proud of how our project has turned out so far, we really are a good team.
 -->
 
 
