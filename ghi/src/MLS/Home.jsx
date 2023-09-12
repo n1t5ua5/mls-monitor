@@ -1,15 +1,17 @@
 import React, { useState } from "react";
 import { useGetAllTeamsQuery } from "./app/apiSlice";
 import TeamCard from "./TeamCard";
-import "../styles/Home.css";
-
+import "./styles/Home.css";
+import "./styles/Nav.css"
 function Home() {
   const { data: teams, isLoading, isError } = useGetAllTeamsQuery();
 
-  const [searchQuery, setSearchQuery] = useState("");
-  const [filteredTeams, setFilteredTeams] = useState([]);
+  const [searchQuery, setSearchQuery] = useState("")
+  const [filteredTeams, setFilteredTeams] = useState([])
 
-  if (isLoading) return <div>Loading...</div>;
+
+
+  if (isLoading) return <div>Be patient...</div>;
   if (isError) return <div>Error fetching teams.</div>;
 
   const sortedTeams =
@@ -30,7 +32,7 @@ const filtered = sortedTeams.filter(
 }
 
   return (
-    <div>
+    <div className="home-container">
       <h1>THE MLS MONITOR</h1>
       <div className="search-bar">
         <input
@@ -43,6 +45,7 @@ const filtered = sortedTeams.filter(
       </div>
       <div className="team-card-container">
         <div className="team-card-column">
+          <p className="confereence-title"> Eastern Conference</p>
           <h2>Eastern Conference</h2>
           {(searchQuery ? filteredTeams : sortedTeams)
             .slice(0, 14)
@@ -57,6 +60,7 @@ const filtered = sortedTeams.filter(
             ))}
         </div>
         <div className="team-card-column">
+          <p className="confereence-title">Western Conference</p>
           <h2>Western Conference</h2>
           {(searchQuery ? filteredTeams : sortedTeams)
             .slice(15, 33)

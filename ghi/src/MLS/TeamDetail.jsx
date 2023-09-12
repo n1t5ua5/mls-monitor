@@ -15,7 +15,7 @@ function TeamDetails() {
   },[name]);
 
   if (!account) {
-    return <div>You must login to view this page.</div>;
+    return <h1>You must login to view this page.</h1>;
   }
 
   if (isLoading) return <div>Almost there... </div>
@@ -35,7 +35,6 @@ function TeamDetails() {
       favorites.push(name);
       localStorage.setItem("favorites", JSON.stringify(favorites))
     }
-
     setIsFavorite(!isFavorite)
   };
 

@@ -11,43 +11,51 @@ const Nav = () => {
   const { data: account } = useGetTokenQuery();
   const [logout, logoutResponse] = useLogoutMutation();
 
-   const handleLogout = () => {
-     logout();
-     window.location.reload();
-   };
-
+  const handleLogout = () => {
+    logout();
+    window.location.reload();
+  };
   useEffect(() => {
     if (logoutResponse && logoutResponse.data) navigate("/");
   }, [logoutResponse, navigate]);
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
-      <div className="container-fluid">
-        <Link to={"/"} className="navbar-brand">
-          The MLS Monitor
-        </Link>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+    <nav className="nav">
+      <Link to={"/"} className="nav-link">
+        <img src={MMLogo2} alt="MLS Logo" width="80" height="80"></img>
+      </Link>
+      <div className="nav-container">
+        <div className="nav-list" id="navbar">
+          <ul className="nav-items">
             <li className="nav-item">
               <NavLink to={"/"} className={"nav-link"}>
                 Home
               </NavLink>
             </li>
-            <li className="nav-item">
-              <NavLink to={"/accounts"} className={"nav-link"}>
-                Create Account
-              </NavLink>
-            </li>
+            {account ? null : (
+              <li className="nav-item">
+                <NavLink to={"/accounts"} className={"nav-link"}>
+                  Create Account
+                </NavLink>
+              </li>
+            )}
+            {account && (
+              <li className="nav-item">
+                <NavLink to={"/favorites"} className={"nav-link"}>
+                  Favorites
+                </NavLink>
+              </li>
+            )}
+            {account && (
+              <li className="nav-item">
+                <Link
+                  to={`/teams/${card_id}`}
+                  className="nav-link"
+                  state={card_id}
+                >
+                  Team Detail
+                </Link>
+              </li>
+            )}
             {account ? null : (
               <li className="nav-item">
                 <NavLink to={"/login"} className={"nav-link"}>
