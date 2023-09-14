@@ -165,3 +165,11 @@ Today, I worked on:
 - Integrating CSS styling into the Home page
 
 I worked with Mariam to better understand how to implement CSS styling into the Home page. The team then coordinated in closing issues in GitLab and finalized journal entries and documentation to complete project.
+
+## September 13, 2023
+
+Today, I worked on:
+
+- A job test while the team presented
+
+The team presented our project today and secured a passing grade.
