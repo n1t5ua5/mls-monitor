@@ -1,5 +1,4 @@
 from .client import Queries
-from pymongo.errors import DuplicateKeyError
 from models import AccountIn, AccountOutWithPassword
 
 
@@ -20,7 +19,8 @@ class AccountQueries(Queries):
     def create(
             self, info: AccountIn, hashed_password: str
             ) -> AccountOutWithPassword:
-        exists = self.collection.find_one({"$or": [{"username": info.username}, {"email": info.email}]})
+        exists = self.collection.find_one(
+            {"$or": [{"username": info.username}, {"email": info.email}]})
         if exists:
             raise DuplicateAccountError("Username or email already exists")
         props = info.dict()

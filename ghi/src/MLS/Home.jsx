@@ -3,15 +3,17 @@ import { useGetAllTeamsQuery } from "./app/apiSlice";
 import TeamCard from "./TeamCard";
 import "./styles/Home.css";
 import "./styles/Nav.css"
+import "./styles/Footer.css";
+import Footer from "./Footer";
+
+
 function Home() {
   const { data: teams, isLoading, isError } = useGetAllTeamsQuery();
 
   const [searchQuery, setSearchQuery] = useState("")
   const [filteredTeams, setFilteredTeams] = useState([])
 
-
-
-  if (isLoading) return <div>Be patient...</div>;
+  if (isLoading) return <div>Almost there...</div>;
   if (isError) return <div>Error fetching teams.</div>;
 
   const sortedTeams =
@@ -29,7 +31,7 @@ const filtered = sortedTeams.filter(
       team.stats.rank.toString().includes(query)
   );
   setFilteredTeams(filtered);
-}
+};
 
   return (
     <div className="home-container">
@@ -75,6 +77,7 @@ const filtered = sortedTeams.filter(
             ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

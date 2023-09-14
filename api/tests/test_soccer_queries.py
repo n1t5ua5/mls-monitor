@@ -21,7 +21,7 @@ class FakeTeamQueries:
 def test_list_teams():
     app.dependency_overrides[TeamQueries] = FakeTeamQueries
 
-    response = client.get("/api/")
+    response = client.get("/api/teams")
     assert response.status_code == 200
     assert response.json() == [
         {"team_id": 1, "name": "Team A"},
@@ -34,11 +34,8 @@ def test_list_teams():
 def test_get_team_details():
     app.dependency_overrides[TeamQueries] = FakeTeamQueries
 
-    response = client.get("/api/")
+    response = client.get("/api/teams/1")
     assert response.status_code == 200
-    assert response.json() == [
-        {"team_id": 1, "name": "Team A"},
-        {"team_id": 2, "name": "Team B"},
-    ]
+    assert response.json() == {"team_id": 1, "name": "Team A"}
 
     app.dependency_overrides = {}
