@@ -1,4 +1,3 @@
-from pydantic import BaseModel
 import requests
 import os
 from typing import Optional

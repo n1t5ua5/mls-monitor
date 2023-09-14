@@ -27,7 +27,10 @@ class FavoritesQueries(Queries):
     def create(self, favorite_in: FavoriteIn, account_id: str):
         favorite = favorite_in.dict()
         favorite["account_id"] = account_id
-        search = self.collection.find_one({"team_name": favorite["team_name"], "account_id": favorite["account_id"]})
+        search = self.collection.find_one(
+            {"team_name": favorite["team_name"],
+             "account_id": favorite["account_id"]}
+            )
         if search:
             return search
         self.collection.insert_one(favorite)
