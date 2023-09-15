@@ -9,12 +9,11 @@ body {
   max-width: 100%;
   margin: 0 auto;
   background: #fff;
-  padding: 34px;
+  padding: 20px 34px;
   border-radius: 6px;
   border-color: aqua;
   border-width: 10%;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  width: 100%;
 }
 
 .home-container h1 {

@@ -21,7 +21,7 @@ const Nav = () => {
   return (
     <nav className="nav">
       <Link to={"/"} className="nav-link">
-        <img src={MMLogo2} alt="MLS Logo" width="80" height="80"></img>
+        <img src={MMLogo2} alt="MLS Logo" width="99" height="99"></img>
       </Link>
       <div className="nav-container">
         <div className="nav-list" id="navbar">
