@@ -10,8 +10,8 @@ import Footer from "./Footer";
 function Home() {
   const { data: teams, isLoading, isError } = useGetAllTeamsQuery();
 
-  const [searchQuery, setSearchQuery] = useState("")
-  const [filteredTeams, setFilteredTeams] = useState([])
+  const [searchQuery, setSearchQuery] = useState("");
+  const [filteredTeams, setFilteredTeams] = useState([]);
 
   if (isLoading) return <div>Almost there...</div>;
   if (isError) return <div>Error fetching teams.</div>;
@@ -50,7 +50,7 @@ const filtered = sortedTeams.filter(
           <p className="confereence-title"> Eastern Conference</p>
           <h2>Eastern Conference</h2>
           {(searchQuery ? filteredTeams : sortedTeams)
-            .slice(0, 14)
+            .slice(0, Math.ceil(sortedTeams.length / 2))
             .map((entry) => (
               <TeamCard
                 key={entry.team.name}
@@ -65,7 +65,7 @@ const filtered = sortedTeams.filter(
           <p className="confereence-title">Western Conference</p>
           <h2>Western Conference</h2>
           {(searchQuery ? filteredTeams : sortedTeams)
-            .slice(15, 33)
+            .slice(Math.ceil(sortedTeams.length / 2))
             .map((entry) => (
               <TeamCard
                 key={entry.team.name}

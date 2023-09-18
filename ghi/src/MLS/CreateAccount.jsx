@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
 import { useCreateAccountMutation } from "./app/apiSlice";
 import { useNavigate } from "react-router-dom";
-import "./styles/CreateAccount.css"
+import "./styles/CreateAccount.css";
 
 function CreateAccount() {
   const navigate = useNavigate();
@@ -46,8 +45,7 @@ function CreateAccount() {
             value={username}
             onChange={(e) => setUsername(e.target.value)}
           />
-          <label htmlFor="CreateAccount__username">
-          </label>
+          <label htmlFor="CreateAccount__username"></label>
         </div>
         <div className="input-box">
           <input
@@ -58,8 +56,7 @@ function CreateAccount() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <label htmlFor="CreateAccount__email">
-          </label>
+          <label htmlFor="CreateAccount__email"></label>
         </div>
         <div className="input-box">
           <input
@@ -70,8 +67,10 @@ function CreateAccount() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <label htmlFor="CreateAccount__password" className="form-label">
-          </label>
+          <label
+            htmlFor="CreateAccount__password"
+            className="form-label"
+          ></label>
         </div>
         <div className="input-box">
           <input
@@ -82,8 +81,10 @@ function CreateAccount() {
             value={full_name}
             onChange={(e) => setFullName(e.target.value)}
           />
-          <label htmlFor="CreateAccount__password" className="form-label">
-          </label>
+          <label
+            htmlFor="CreateAccount__password"
+            className="form-label"
+          ></label>
         </div>
         <button type="submit" className="button">
           Create Account

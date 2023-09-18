@@ -12,7 +12,7 @@ const TeamCard = ({ name, logo, ranking, stats }) => {
         />
         <div className="card mb-3">
           <div className="card-body">
-            <h5 className="card-title">
+            <h5 className="card-title team-name">
               {name[0].toUpperCase() + name.slice(1)}
             </h5>
             <p>Ranking: {ranking}</p>

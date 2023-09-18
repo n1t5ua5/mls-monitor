@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useLoginMutation } from "./app/apiSlice";
-import "./styles/Login.css"
+import "./styles/Login.css";
 
 const LoginForm = () => {
   const [email, setEmail] = useState("");

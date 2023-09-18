@@ -3,8 +3,7 @@ import { useGetTokenQuery, useLogoutMutation } from "./app/apiSlice";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import "./styles/Nav.css";
-import MMLogo2 from './styles/MMlogo2.png';
-import { useGetTeamByNameQuery } from "./app/apiSlice";
+import MMLogo2 from "./styles/MMlogo2.png";
 const card_id = "Philadelphia Union";
 const Nav = () => {
   const navigate = useNavigate();
@@ -65,7 +64,7 @@ const Nav = () => {
             )}
           </ul>
           {account && (
-            <button className="btn btn-outline-danger" onClick={handleLogout}>
+            <button className="nav-logout" onClick={logout}>
               Logout
             </button>
           )}
