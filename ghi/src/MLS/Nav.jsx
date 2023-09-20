@@ -10,10 +10,10 @@ const Nav = () => {
   const { data: account } = useGetTokenQuery();
   const [logout, logoutResponse] = useLogoutMutation();
 
-  const handleLogout = () => {
-    logout();
-    window.location.reload();
-  };
+  // const handleLogout = () => {
+  //   logout();
+  //   window.location.reload();
+  // };
   useEffect(() => {
     if (logoutResponse && logoutResponse.data) navigate("/");
   }, [logoutResponse, navigate]);
