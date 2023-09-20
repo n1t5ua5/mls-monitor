@@ -1,4 +1,3 @@
-// eslint-disable
 import React, { useState, useEffect } from "react";
 import { useCreateAccountMutation } from "./app/apiSlice";
 import { useNavigate } from "react-router-dom";
@@ -21,7 +20,7 @@ function CreateAccount() {
     } else if (createAccountResponse.isError) {
       setErrorMessage("Could not create account");
     }
-  }, [createAccountResponse]);
+  }, [createAccountResponse, navigate]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
