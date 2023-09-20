@@ -15,6 +15,12 @@ import "./index.css";
 import { store } from "./MLS/app/store";
 import reportWebVitals from "./reportWebVitals";
 
+
+const domain = /https:\/\/[^/]+/;
+const basename = process.env.REACT_APP_MLS_MONITOR
+                  ? process.env.REACT_APP_MLS_MONITOR.replace(domain, '')
+                  : '';
+
 const router = createBrowserRouter([
   {
     element: <App />,
@@ -52,6 +58,7 @@ const router = createBrowserRouter([
         element: <Search />,
       },
     ],
+    basename: basename
   },
 ]);
 
