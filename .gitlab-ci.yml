@@ -24,6 +24,9 @@ api-unit-tests-job:
     - cd api
     - pip install -r requirements.txt
     - python -m pytest
+  variables:
+    GITLAB_IMAGE: ${SIGNING_KEY}/api
+    GITLAB_IMAGE: ${DB_NAME}/api
 
 # Build API Image:
 build-api-image:
