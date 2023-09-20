@@ -5,7 +5,7 @@ DATABASE_URL = os.environ.get("DATABASE_URL")
 DB_NAME = os.environ.get("DB_NAME")
 
 client = MongoClient(DATABASE_URL)
-db = client[DB_NAME]
+db = client["hack_reactor_hacks_db"]
 
 
 class Queries:
