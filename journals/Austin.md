@@ -98,6 +98,6 @@ Group 18 started the morning by looking over Ethan's new code, then I merged to 
 -->
 
 
-<!-- 9/12/23
-???
+<!-- 9/12/23 - 9/21/23
+Since we finished the project in school I've been working on a number of updates to make it more functional. I messed around with the css to make the nav align with the content displayed below it, the api is also now pulling updated information for this years MLS season as opposed to last years like it was before. I also went around to the .yml, .yaml & .env files to get the application ready to be deployed via GitLab. I've added variables inside of GitLab too to get everything connected & as of yesterday all of the pipelines were passing again after recieving many failures.
 -->
