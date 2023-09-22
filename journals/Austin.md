@@ -99,5 +99,9 @@ Group 18 started the morning by looking over Ethan's new code, then I merged to 
 
 
 <!-- 9/12/23 - 9/21/23
-Since we finished the project in school I've been working on a number of updates to make it more functional. I messed around with the css to make the nav align with the content displayed below it, the api is also now pulling updated information for this years MLS season as opposed to last years like it was before. I also went around to the .yml, .yaml & .env files to get the application ready to be deployed via GitLab. I've added variables inside of GitLab too to get everything connected & as of yesterday all of the pipelines were passing again after recieving many failures.
+After we submitted the project for grading, I started working on a number of updates to make our application more functional. I messed around with the css a little to make the nav align with the content displayed below it, the api is also now pulling updated information for this years MLS season as opposed to last years like it was before. Next I went around to the .yml, .yaml & .env files to get the application ready to be deployed via GitLab. I've added variables inside of GitLab too to get everything connected & as of yesterday all of the pipelines were passing again after recieving many failures but I still have some work to do. I'd say that I'm about 90% of the way there.
+-->
+
+<!-- 9/25/23
+???
 -->

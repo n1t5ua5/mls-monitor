@@ -27,12 +27,12 @@ services:
 
   fastapi:
     environment:
-      DATABASE_URL: ${DATABASE_URL}
+      DATABASE_URL: ${REACT_APP_DATABASE_URL}
       DB_NAME: hack_reactor_hacks_db
       CORS_HOST: http://localhost:3000
-      SIGNING_KEY: ${SIGNING_KEY}
-      API_KEY: ${API_KEY}
-      MLS_MONITOR: https://mls-monitor:8000
+      SIGNING_KEY: ${REACT_APP_SIGNING_KEY}
+      API_KEY: ${REACT_APP_API_KEY}
+      MLS_MONITOR: https://fastapi:8000
     build:
       context: api
       dockerfile: Dockerfile.dev
