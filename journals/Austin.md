@@ -103,5 +103,5 @@ After we submitted the project for grading, I started working on a number of upd
 -->
 
 <!-- 9/25/23
-???
+Meeting up with some of the Hack Reactor alumni this afternoon to get this thing completely deployed.
 -->
