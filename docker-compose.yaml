@@ -32,7 +32,7 @@ services:
       CORS_HOST: http://localhost:3000
       REACT_APP_SIGNING_KEY: ${REACT_APP_SIGNING_KEY}
       REACT_APP_API_KEY: ${REACT_APP_API_KEY}
-      MLS_MONITOR: https://localhost:8000
+      REACT_APP_MLS_MONITOR: https://fastapi:8000
     build:
       context: api
       dockerfile: Dockerfile.dev

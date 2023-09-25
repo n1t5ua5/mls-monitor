@@ -53,7 +53,7 @@ build-front-end-job:
     # If either of these variables is defined in the GitLab
     # CI/CD variables, that value will override the value here.
     PUBLIC_URL: https://hack-reactor-hacks-18.gitlab.io/mls-monitor
-    REACT_APP_API_HOST: https://may-14-ct-mls-monitor.mod3projects.com
+    REACT_APP_API_HOST: https://mls-monitor.mod3projects.com
   script:
     - cd ghi
     - npm install
