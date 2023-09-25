@@ -103,5 +103,5 @@ After we submitted the project for grading, I started working on a number of upd
 -->
 
 <!-- 9/25/23
-Meeting up with some of the Hack Reactor alumni this afternoon to get this thing completely deployed. Worked with Bryan a little & then with Deontay a little after that. Then I worked on my own for a few hours, SwaggerAPI stopped worked but I got it up & running again. 
+Meeting up with some of the Hack Reactor alumni this afternoon to get this thing completely deployed. Worked with Bryan a little & then with Deontay a little after that. Then I worked on my own for a few hours, SwaggerAPI stopped worked but I got it up & running again. Ran into issues with SSL protocol but I think I reoslved most of them... 
 -->
