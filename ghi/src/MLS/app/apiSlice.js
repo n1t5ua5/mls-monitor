@@ -1,5 +1,7 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
+console.log("API Host:", process.env.REACT_APP_API_HOST);
+
 export const mlsApi = createApi({
   reducerPath: "mlsApi",
   baseQuery: fetchBaseQuery({
@@ -9,7 +11,9 @@ export const mlsApi = createApi({
     getAllTeams: builder.query({
       query: () => "/api/teams",
       transformResponse: (response) => {
-        console.log("TransformResponse received:", response);
+        if (response.message) {
+          throw new Error(response.message);
+        }
         return response.flatMap((conference) => conference.entries);
       },
     }),
