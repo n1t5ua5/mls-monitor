@@ -27,7 +27,7 @@ services:
 
   fastapi:
     environment:
-      DATABASE_URL: ${DATABASE_URL}
+      DATABASE_URL: mongodb://hacks:soccer@mongo/hack_reactor_hacks_db
       DB_NAME: hack_reactor_hacks_db
       CORS_HOST: http://localhost:3000
       SIGNING_KEY: ${SIGNING_KEY}

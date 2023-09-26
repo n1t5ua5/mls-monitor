@@ -9,6 +9,7 @@ export const mlsApi = createApi({
     getAllTeams: builder.query({
       query: () => "/api/teams",
       transformResponse: (response) => {
+        console.log("TransformResponse received:", response);
         return response.flatMap((conference) => conference.entries);
       },
     }),
