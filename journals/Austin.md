@@ -102,6 +102,12 @@ Group 18 started the morning by looking over Ethan's new code, then I merged to 
 After we submitted the project for grading, I started working on a number of updates to make our application more functional. I messed around with the css a little to make the nav align with the content displayed below it, the api is also now pulling updated information for this years MLS season as opposed to last years like it was before. Next I went around to the .yml, .yaml & .env files to get the application ready to be deployed via GitLab. I've added variables inside of GitLab too to get everything connected & as of yesterday all of the pipelines were passing again after recieving many failures but I still have some work to do. I'd say that I'm about 90% of the way there.
 -->
 
+
 <!-- 9/25/23
-Meeting up with some of the Hack Reactor alumni this afternoon to get this thing completely deployed. Worked with Bryan a little & then with Deontay a little after that. Then I worked on my own for a few hours, SwaggerAPI stopped worked but I got it up & running again. Ran into issues with SSL protocol but I think I reoslved most of them. Had some issues with RapidAPI too.
+Meeting up with some of the Hack Reactor alumni this afternoon to get this thing completely deployed. Worked with Bryan a little & then with Deontay a little after that. Then I worked on my own for a few hours, SwaggerAPI stopped worked but I got it up & running again. Ran into issues with SSL protocol but I think I reoslved most of them + I had some issues with RapidAPI too but I fixed it by around 9pm.
+-->
+
+
+<!-- 9/26/23
+Got the database to deploy in the afternoon & then I had to backtrack to deploy the api again, I missed a few steps previously on accident.
 -->
