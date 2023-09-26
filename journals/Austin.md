@@ -109,5 +109,5 @@ Meeting up with some of the Hack Reactor alumni this afternoon to get this thing
 
 
 <!-- 9/26/23
-Got the database to deploy in the afternoon & then I had to backtrack to deploy the api again, I missed a few steps previously on accident. Once it's up & running officially, I'm going to refocus on css for the next day or so to add some final touches.
+Got the database to deploy in the afternoon & then I had to backtrack to deploy the api again, I missed a few steps previously on accident but I finally, finally got it all deployed. However I'm still getting a 404 error in the browser... think I know what the issue is though. Once this thing is actually live I'm going to refocus on css for the next day or so to add some final touches.
 -->
