@@ -1,8 +1,8 @@
 from pymongo import MongoClient
 import os
 
-DATABASE_URL = os.environ.get("DATABASE_URL")
-DB_NAME = os.environ.get("DB_NAME")
+DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb://localhost:27017/")
+DB_NAME = os.environ.get("DB_NAME", "default_db_name")
 
 client = MongoClient(DATABASE_URL)
 db = client[DB_NAME]
@@ -11,5 +11,5 @@ db = client[DB_NAME]
 class Queries:
     @property
     def collection(self):
-        db_instance = client.hack_reactor_hacks_db
+        db_instance = client[DB_NAME]
         return db_instance[self.COLLECTION]
