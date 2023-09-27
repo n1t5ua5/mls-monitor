@@ -26,7 +26,6 @@ api-unit-tests-job:
     - python -m pytest
   variables:
     SIGNING_KEY: ${SIGNING_KEY}
-    DB_NAME: ${DB_NAME}
 
 # Build API Image:
 build-api-image:
