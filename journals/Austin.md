@@ -99,7 +99,7 @@ Group 18 started the morning by looking over Ethan's new code, then I merged to 
 
 
 <!-- 9/12/23 - 9/21/23
-After we submitted the project for grading, I started working on a number of updates to make our application more functional. I messed around with the css a little to make the nav align with the content displayed below it, the api is also now pulling updated information for this years MLS season as opposed to last years like it was before. Next I went around to the .yml, .yaml & .env files to get the application ready to be deployed via GitLab. I've added variables inside of GitLab too to get everything connected & as of yesterday all of the pipelines were passing again after recieving many failures but I still have some work to do. I'd say that I'm about 90% of the way there.
+After we submitted the project for grading, I started working on a number of updates to make our application more functional. I messed around with the css a little to make the nav align with the content displayed below it, the api is also now pulling updated information for this years MLS season as opposed to last years like it was before. Next I went around to the .yml, .yaml & .env files to get the application ready to be deployed via GitLab. I've added variables inside of GitLab too to get everything connected & as of yesterday all of the pipelines were passing again after recieving many failures but I still have some work to do. I'd say that as of now, I'm about 90 percent of the way there.
 -->
 
 
@@ -110,4 +110,9 @@ Meeting up with some of the Hack Reactor alumni this afternoon to get this thing
 
 <!-- 9/26/23
 Got the database to deploy in the afternoon & then I had to backtrack to deploy the api again, I missed a few steps previously on accident but I finally, finally got it all deployed. However I'm still getting a 404 error in the browser... think I know what the issue is though. Once this thing is actually live I'm going to refocus on css for the next day or so to add some final touches.
+-->
+
+
+<!-- 9/27/23
+Started the day off trying to resolve these 404 & 502 errors I keep incurring in the browser.
 -->
