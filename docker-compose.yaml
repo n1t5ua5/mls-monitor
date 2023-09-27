@@ -23,7 +23,7 @@ services:
     environment:
       ME_CONFIG_MONGODB_ADMINUSERNAME: hacks
       ME_CONFIG_MONGODB_ADMINPASSWORD: soccer
-      ME_CONFIG_MONGODB_URL: mongodb://hacks:soccer@mongo
+      ME_CONFIG_MONGODB_URL: mongodb://hacks:soccer@mongo:27017/
 
   fastapi:
     environment:
