@@ -47,8 +47,7 @@ const filtered = sortedTeams.filter(
       </div>
       <div className="team-card-container">
         <div className="team-card-column">
-          <p className="confereence-title"> Eastern Conference</p>
-          <h2>Eastern Conference</h2>
+          <p className="conference-title"> Eastern Conference</p>
           {(searchQuery ? filteredTeams : sortedTeams)
             .slice(0, Math.ceil(sortedTeams.length / 2))
             .map((entry) => (
@@ -62,8 +61,7 @@ const filtered = sortedTeams.filter(
             ))}
         </div>
         <div className="team-card-column">
-          <p className="confereence-title">Western Conference</p>
-          <h2>Western Conference</h2>
+          <p className="conference-title">Western Conference</p>
           {(searchQuery ? filteredTeams : sortedTeams)
             .slice(Math.ceil(sortedTeams.length / 2))
             .map((entry) => (

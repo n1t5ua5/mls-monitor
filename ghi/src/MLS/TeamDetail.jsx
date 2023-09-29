@@ -1,6 +1,10 @@
 import React, {useState, useEffect} from "react";
 import { useParams } from "react-router-dom";
 import { useGetAllTeamsQuery, useGetTokenQuery} from "./app/apiSlice";
+import "./styles/TeamDetail.css";
+import "./styles/Footer.css";
+import Footer from "./Footer";
+
 
 function TeamDetails() {
   const { name } = useParams()
@@ -39,6 +43,7 @@ function TeamDetails() {
   };
 
   return (
+    <div className="team-detail-container">
       <div>
         <div className="row">
           <div className="col-8">
@@ -46,30 +51,40 @@ function TeamDetails() {
             <img
               src={team.team.logo}
               alt={team.team.logo}
-              style={{ width: '200px', height: '200px' }}
+              style={{ width: "200px", height: "200px" }}
             />
           </div>
           <div className="col-4">
-          <button
-            onClick={toggleFavorite}
-            className={isFavorite ? "btn btn-danger":"btn btn-primary"}
+            <button
+              onClick={toggleFavorite}
+              className={isFavorite ? "btn btn-danger" : "btn btn-primary"}
             >
-              {isFavorite ? "Remove from Favorites": "Add to Favorites"}
+              {isFavorite ? "Remove from Favorites" : "Add to Favorites"}
             </button>
           </div>
         </div>
-      <ul className="list-group">
-        <li className="list-group-item">Abbreviation: {team.team.abbreviation}</li>
-        <li className="list-group-item">Wins: {team.stats.wins}</li>
-        <li className="list-group-item">Losses: {team.stats.losses}</li>
-        <li className="list-group-item">Ties: {team.stats.ties}</li>
-        <li className="list-group-item">Games Played: {team.stats.gamesPlayed}</li>
-        <li className="list-group-item">Goals For: {team.stats.goalsFor}</li>
-        <li className="list-group-item">Goals Against: {team.stats.goalsAgainst}</li>
-        <li className="list-group-item">Points: {team.stats.points}</li>
-        <li className="list-group-item">Rank: {team.stats.rank}</li>
-        <li className="list-group-item">Goal Difference: {team.stats.goalDifference}</li>
-      </ul>
+        <ul className="list-group">
+          <li className="list-group-item">
+            Abbreviation: {team.team.abbreviation}
+          </li>
+          <li className="list-group-item">Wins: {team.stats.wins}</li>
+          <li className="list-group-item">Losses: {team.stats.losses}</li>
+          <li className="list-group-item">Ties: {team.stats.ties}</li>
+          <li className="list-group-item">
+            Games Played: {team.stats.gamesPlayed}
+          </li>
+          <li className="list-group-item">Goals For: {team.stats.goalsFor}</li>
+          <li className="list-group-item">
+            Goals Against: {team.stats.goalsAgainst}
+          </li>
+          <li className="list-group-item">Points: {team.stats.points}</li>
+          <li className="list-group-item">Rank: {team.stats.rank}</li>
+          <li className="list-group-item">
+            Goal Difference: {team.stats.goalDifference}
+          </li>
+        </ul>
+        <Footer />
+      </div>
     </div>
   );
 };

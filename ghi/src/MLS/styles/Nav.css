@@ -3,7 +3,7 @@ nav{
     align-items: center;
     justify-content: space-between;
     background: #fff;
-    padding: 20px 34px;
+    padding: 20px 35px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
     border-radius: 6px;
 }
@@ -25,25 +25,30 @@ nav{
 }
 
 #navbar li a {
-  text-decoration: none;
   font-size: 1.3rem;
   font-weight: 600;
-  color: #2b6cb0;
-  transition: 0.3s ease-in-out;
 }
 
-#navbar li a:hover,
-#navbar li a:active {
+#navbar li a:hover {
   color: #afaeae;
 }
 
-#navbar li a:hover::after,
-#navbar li a.active::after {
+#navbar li a:hover::after {
   content: "";
   width: 30%;
   height: 2px;
-  background: #2b6cb0;
   position: absolute;
   bottom: -4px;
   left: 20px;
+}
+
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-logout {
+  margin-top: 3px;
+  margin-left: 15px;
 }

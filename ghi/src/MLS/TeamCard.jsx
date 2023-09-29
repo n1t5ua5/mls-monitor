@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import "./styles/Home.css";
+
 
 const TeamCard = ({ name, logo, ranking, stats }) => {
   return (

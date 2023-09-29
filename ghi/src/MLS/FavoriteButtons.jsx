@@ -5,6 +5,7 @@ import {
 } from "./app/apiSlice";
 import { useState, useEffect } from "react";
 
+
 const FavoriteButtons = ({name}) => {
     const [deleteFavorite] = useDeleteFavoriteMutation();
     const [createFavorite] = useCreateFavoriteMutation();

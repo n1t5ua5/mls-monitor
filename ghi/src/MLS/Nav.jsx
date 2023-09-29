@@ -4,24 +4,20 @@ import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import "./styles/Nav.css";
 import MMLogo2 from "./styles/MMlogo2.png";
+
+
 const card_id = "Philadelphia Union";
 const Nav = () => {
   const navigate = useNavigate();
   const { data: account } = useGetTokenQuery();
   const [logout, logoutResponse] = useLogoutMutation();
 
-  // const handleLogout = () => {
-  //   logout();
-  //   window.location.reload();
-  // };
   useEffect(() => {
     if (logoutResponse && logoutResponse.data) navigate("/");
   }, [logoutResponse, navigate]);
   return (
     <nav className="nav">
-      <Link to={"/"} className="nav-link">
         <img src={MMLogo2} alt="MLS Logo" width="99" height="99"></img>
-      </Link>
       <div className="nav-container">
         <div className="nav-list" id="navbar">
           <ul className="nav-items">

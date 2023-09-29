@@ -2,6 +2,7 @@ import TeamCard from "./TeamCard";
 import { useSelector } from "react-redux";
 import { useGetAllTeamsQuery } from "./app/apiSlice";
 
+
 const TeamList = () => {
   const searchCriteria = useSelector((state) => state.search.value);
   const { data = [], isLoading, isError } = useGetAllTeamsQuery();

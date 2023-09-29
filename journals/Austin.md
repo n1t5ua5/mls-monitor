@@ -113,6 +113,11 @@ Got the database to deploy in the afternoon & then I had to backtrack to deploy 
 -->
 
 
-<!-- 9/27/23
-Started the day off trying to resolve these 404 & 502 errors I keep incurring in the browser.
+<!-- 9/27/23 - 9/29/23
+Started the day off trying to resolve these same old 404 & 502 errors that I keep incurring in the browser. I went back & forth with my friend for another two days via Slack too & though I've made progress & incurred a new error (503) we're still not up & running. It's discouraging in a way, but I'm learning to love challenging myself & being resilient. I've got some research to do on networking errors this weekend + I will finally begin to finsih making all of these CSS changes that must take place given that the site is 99% functional otherwise at this point.
+-->
+
+
+<!-- 10/2/23
+Met with a friend via Zoom to help push this thing past the finish line. 
 -->
