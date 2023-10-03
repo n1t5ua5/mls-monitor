@@ -3,9 +3,10 @@ nav{
     align-items: center;
     justify-content: space-between;
     background: #fff;
-    padding: 20px 35px;
+    padding: 15px 35px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
     border-radius: 6px;
+    margin-top: 10px;
 }
 
 #navbar {

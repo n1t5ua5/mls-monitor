@@ -39,7 +39,7 @@ const filtered = sortedTeams.filter(
       <div className="search-bar">
         <input
           type="text"
-          placeholder="Search for a team or ranking"
+          placeholder="search for a team or ranking"
           value={searchQuery}
           onChange={handleSearchChange}
           style={{ width: "300px" }}

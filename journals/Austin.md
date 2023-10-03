@@ -13,7 +13,7 @@
 
 
 <!-- 10/3/23
-Met with my former instructor & a former peer to ask for his advice to push this thing past the finish line. I think it's almsot there... eureka!!! https://hack-reactor-hacks-18.gitlab.io/mls-monitor/ - but it still needs some more updates regarding the logic in page navigation & styling for all the pages. I'm hoping to be done with it before the week is over so it's full speed ahead from here. I'm also making a quick change before I go to lunch that will alter this whole file. As of 1:12pm ET on 10/3/23, the last update to this journal was written on line 127 of this file, but I'm reversing the order so that new updates will be made on the top of the page instead of the bottom.
+Met with my former instructor & a former peer to ask for his advice to push this thing past the finish line. I think it's almsot there... eureka!!! https://hack-reactor-hacks-18.gitlab.io/mls-monitor/. I'm hoping to be completely done with this project before the week is over so it's full speed ahead from here. I'm also making a quick change before I go to lunch that will alter this whole file. As of 1pm ET on 10/3/23, the last update to this journal was written on line 127 of this file, but I'm reversing the order so that new updates will be made on the top of the page instead of the bottom. Three steps remain: implementing a dark mode button in the footer, making the application mobile friendly & potentially fixing some of the logic in regards to page navigation.
 -->
 
 
