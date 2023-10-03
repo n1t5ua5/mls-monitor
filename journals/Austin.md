@@ -119,5 +119,10 @@ Started the day off trying to resolve these same old 404 & 502 errors that I kee
 
 
 <!-- 10/2/23
-Met with a friend via Zoom to help push this thing past the finish line. 
+Worked on the CSS changes that I wanted to make for awhile where the homepage is a little more organized, same goes for the rest of the pages. They all align with the Nav better than before, but I'm still not finished. I want to refocus on deployment & then make the last update.
+-->
+
+
+<!-- 10/3/23
+Met with my former instructor & a former peer to ask for his advice to push this thing past the finish line. I think it's almsot there...
 -->
