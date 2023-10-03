@@ -13,6 +13,8 @@ class AccountQueries(Queries):
 
     def get(self, email: str) -> AccountOutWithPassword:
         props = self.collection.find_one({"email": email})
+        if props is None:
+            return None
         props["id"] = str(props["_id"])
         return AccountOutWithPassword(**props)
 

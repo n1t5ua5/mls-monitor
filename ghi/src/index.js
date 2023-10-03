@@ -55,9 +55,8 @@ const router = createBrowserRouter([
         element: <Search />,
       },
     ],
-    basename: basename
   },
-]);
+],{basename});
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

@@ -42,13 +42,11 @@ body {
 }
 
 .team-card-container {
-
   display: flex;
   justify-content: space-between;
 }
 
 .team-card-column {
-
   flex: 1;
 }
 
