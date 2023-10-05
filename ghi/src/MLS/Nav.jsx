@@ -1,12 +1,12 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useGetTokenQuery, useLogoutMutation } from "./app/apiSlice";
-import { useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import "./styles/Nav.css";
 import MMLogo2 from "./styles/MMlogo2.png";
 
 
-const card_id = "Philadelphia Union";
+const card_id = "Inter Miami CF";
+
 const Nav = () => {
   const navigate = useNavigate();
   const { data: account } = useGetTokenQuery();
@@ -15,10 +15,17 @@ const Nav = () => {
   useEffect(() => {
     if (logoutResponse && logoutResponse.data) navigate("/");
   }, [logoutResponse, navigate]);
+
   return (
     <nav className="nav">
-        <img src={MMLogo2} alt="MLS Logo" width="99" height="99"></img>
-      <div className="nav-container">
+      <img
+        src={MMLogo2}
+        className="logo"
+        alt="MLS Logo"
+        width="99"
+        height="99"
+      />
+      <div className="nav-content">
         <div className="nav-list" id="navbar">
           <ul className="nav-items">
             <li className="nav-item">
@@ -59,12 +66,14 @@ const Nav = () => {
               </li>
             )}
           </ul>
-          {account && (
+        </div>
+        {account && (
+          <div className="nav-logout-container">
             <button className="nav-logout" onClick={logout}>
               Logout
             </button>
-          )}
-        </div>
+          </div>
+        )}
       </div>
     </nav>
   );

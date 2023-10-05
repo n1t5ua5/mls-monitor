@@ -1,13 +1,17 @@
-nav{
+nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     background: #fff;
-    padding: 15px 35px;
+    padding: 15px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
     border-radius: 6px;
-    margin-top: 10px;
+    margin-top: 5px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
+
 
 #navbar {
   display: flex;
@@ -15,9 +19,11 @@ nav{
   justify-content: center;
 }
 
+
 #navbar ul {
   display: flex;
 }
+
 
 #navbar li {
   list-style: none;
@@ -25,14 +31,17 @@ nav{
   position: relative;
 }
 
+
 #navbar li a {
   font-size: 1.3rem;
   font-weight: 600;
 }
 
+
 #navbar li a:hover {
   color: #afaeae;
 }
+
 
 #navbar li a:hover::after {
   content: "";
@@ -43,13 +52,50 @@ nav{
   left: 20px;
 }
 
+
 .search-bar {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 5px;
 }
+
 
 .nav-logout {
   margin-top: 3px;
   margin-left: 15px;
+}
+
+
+.nav-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.nav-logout-container {
+  margin-top: 10px;
+}
+
+
+.logo {
+    display: block;
+    height: 70px;
+    width: auto;
+  }
+
+
+@media only screen and (max-width: 768px) {
+
+  #navbar li a {
+    font-size: .65rem;
+    font-weight: 800;
+  }
+
+  .nav-logout-mobile {
+    margin-top: 20px;
+  }
+
+
 }

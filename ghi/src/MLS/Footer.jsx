@@ -1,12 +1,11 @@
-import React from "react";
 import "./styles/Footer.css";
-
+import React from "react";
 
 function Footer() {
     return (
-    <div className="footer-container">
+        <div className="footer-container">
         <p className="footer-text">© 2023 MLS Monitor - all rights reserved.</p>
-    </div>
+        </div>
     );
 }
 

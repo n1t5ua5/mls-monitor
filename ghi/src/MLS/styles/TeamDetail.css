@@ -4,3 +4,8 @@
     align-items: center;
     padding: 10px;
 }
+
+.card-body h5,
+.card-body p {
+    margin-bottom: 20px;
+}

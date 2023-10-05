@@ -4,16 +4,23 @@
 -->
 
 
+<!-- 10/6/23
+Trying to figure out why the API has pulled from different MLS season & then fix some of the page logic so when you login you get redirected to the homepage.
+-->
 
+
+<!-- 10/5/23
+Today centered the team's info beneath their logo using css. To finish today, I'm going to implement Bootstrap to place a dark / light mode button in the footer of the app.
+-->
 
 
 <!-- 10/4/23
-?????
+I started making the application mobile friendly. It took a long time today but the site is ready according to Chrome Developer Tools. Next I'll add the dark mode button, make the team stats line up in the center & figure out why the API keeps going back & forth with which data we get. To reiterate, it originally fetched data from the previous MLS season, then suddenly it fetched this years data & now it's back to the old again - I'll figure it out. & lastly I'll worry about the page navigation logic & .yml file unit testing issues.
 -->
 
 
 <!-- 10/3/23
-Met with my former instructor & a former peer to ask for his advice to push this thing past the finish line. I think it's almsot there... eureka!!! https://hack-reactor-hacks-18.gitlab.io/mls-monitor/. I'm hoping to be completely done with this project before the week is over so it's full speed ahead from here. I'm also making a quick change before I go to lunch that will alter this whole file. As of 1pm ET on 10/3/23, the last update to this journal was written on line 127 of this file, but I'm reversing the order so that new updates will be made on the top of the page instead of the bottom. Three steps remain: implementing a dark mode button in the footer, making the application mobile friendly & potentially fixing some of the logic in regards to page navigation.
+A peer of mine & I met with our former instructor to ask for his advice on getting the fastapi deployed properly. I think it's almost there... eureka!!! https://hack-reactor-hacks-18.gitlab.io/mls-monitor/. I'm hoping to be completely done with this project before the week is over so it's full speed ahead from here. I'm also making a quick change before I go to lunch that will alter this whole file. As of 1pm ET on 10/3/23, the last update to this journal was written on line 127 of this file, but I'm reversing the order so that new updates will be made on the top of the page instead of the bottom. A half a dozen hurdles remain: implementing a dark mode button, make the application mobile friendly, fix some of the logic in regards to page navigation, center the team list stats on the homepage underneath their respective logo, get the API to return this years MLS rankings again like it did before & make a final adjustment to my .yml file so the unit tests will work properly.
 -->
 
 
