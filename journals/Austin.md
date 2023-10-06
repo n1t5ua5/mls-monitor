@@ -10,7 +10,7 @@ Trying to figure out why the API has pulled from different MLS season & then fix
 
 
 <!-- 10/5/23
-Today centered the team's info beneath their logo using css. To finish today, I'm going to implement Bootstrap to place a dark / light mode button in the footer of the app.
+Today centered the team's info beneath their logo using css. To finish off today I implemented a Dark / Light Mode button in the footer, but right now it's only working inside of the footer so tomorrow I'll finish that & get it working for the rest of the site. 
 -->
 
 

@@ -9,7 +9,7 @@ export const mlsApi = createApi({
   }),
   endpoints: (builder) => ({
     getAllTeams: builder.query({
-      query: () => "/api/teams",
+      query: (season) => `/api/teams?season=${season}`,
       transformResponse: (response) => {
         if (response.message) {
           throw new Error(response.message);

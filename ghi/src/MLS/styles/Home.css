@@ -88,6 +88,13 @@ body {
 }
 
 
+.dark-mode {
+  background-color: #1a1a1a;
+  color: #FFF;
+}
+
+
+
 @media only screen and (max-width: 600px) {
 
   .home-container {

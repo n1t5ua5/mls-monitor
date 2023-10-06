@@ -8,7 +8,7 @@ import Footer from "./Footer";
 
 
 function Home() {
-  const { data: teams, isLoading, isError } = useGetAllTeamsQuery();
+  const { data: teams, isLoading, isError } = useGetAllTeamsQuery("2023");
 
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredTeams, setFilteredTeams] = useState([]);
