@@ -1,6 +1,5 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-console.log("API Host:", process.env.REACT_APP_API_HOST);
 
 export const mlsApi = createApi({
   reducerPath: "mlsApi",
@@ -9,8 +8,16 @@ export const mlsApi = createApi({
   }),
   endpoints: (builder) => ({
     getAllTeams: builder.query({
-      query: (season) => `/api/teams?season=${season}`,
+      query: (season) => ({
+        url: "/",
+        headers: {
+          "X-RapidAPI-Key": process.env.API_KEY,
+          "X-RapidAPI-Host": "major-league-soccer-standings.p.rapidapi.com",
+        },
+        params : { season: season },
+      }),
       transformResponse: (response) => {
+        console.log("API Response:", response);
         if (response.message) {
           throw new Error(response.message);
         }

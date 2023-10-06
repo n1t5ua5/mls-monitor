@@ -4,13 +4,18 @@
 -->
 
 
+<!-- 10/9/23
+Unit testing, unit testing - 1, 2, 3 ?
+-->
+
+
 <!-- 10/6/23
-Trying to figure out why the API has pulled from different MLS season & then fix some of the page logic so when you login you get redirected to the homepage.
+Began with figuring out why the API has pulled from the last MLS season & the current one for unknown reasons so I did some investigating today to figure out why it was still stuck in 2022. On the API creators page someone asked a similar question to them & their answer as a few months ago was to pass in a season parameter so I did & ... X. Next I am
 -->
 
 
 <!-- 10/5/23
-Today centered the team's info beneath their logo using css. To finish off today I implemented a Dark / Light Mode button in the footer, but right now it's only working inside of the footer so tomorrow I'll finish that & get it working for the rest of the site. 
+Today I altered the CSS to center all of the team's info beneath their respective logo. To finish off today I implemented a Dark / Light Mode button in the footer, but right now it's only working inside of the footer itself so tomorrow I'll finish that & get it working for the entirety of the application.
 -->
 
 
