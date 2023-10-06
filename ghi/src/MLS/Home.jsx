@@ -8,8 +8,7 @@ import Footer from "./Footer";
 
 
 function Home() {
-  const { data: teams, isLoading, isError } = useGetAllTeamsQuery("2023");
-  console.log("Teams Data:", teams);
+  const { data: teams, isLoading, isError } = useGetAllTeamsQuery();
 
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredTeams, setFilteredTeams] = useState([]);
@@ -17,7 +16,10 @@ function Home() {
   if (isLoading) return <div>Almost there...</div>;
   if (isError) return <div>Error fetching teams.</div>;
 
-  const sortedTeams = teams?.sort((a, b) => a.ranking - b.ranking) || [];
+  const sortedTeams =
+    teams && Array.isArray(teams)
+      ? [...teams].sort((a, b) => a.ranking - b.ranking)
+      : [];
 
 const handleSearchChange = (e) => {
   const query = e.target.value.toLowerCase();

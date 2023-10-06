@@ -8,16 +8,8 @@ export const mlsApi = createApi({
   }),
   endpoints: (builder) => ({
     getAllTeams: builder.query({
-      query: (season) => ({
-        url: "/",
-        headers: {
-          "X-RapidAPI-Key": process.env.API_KEY,
-          "X-RapidAPI-Host": "major-league-soccer-standings.p.rapidapi.com",
-        },
-        params : { season: season },
-      }),
+      query: () => "/api/teams",
       transformResponse: (response) => {
-        console.log("API Response:", response);
         if (response.message) {
           throw new Error(response.message);
         }
