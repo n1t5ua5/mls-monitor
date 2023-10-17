@@ -4,18 +4,23 @@
 -->
 
 
+<!-- 10/10/23
+?????
+-->
+
+
 <!-- 10/9/23
-Unit testing, unit testing - 1, 2, 3 ?
+I messed around with the dark mode button for quite some time & to be honest it's just not worth it at this stage to configure. It would be a cool addition, but it'll have to be scrapped. I got it to work & effect just the footer. Then I got it to stop effecting the footer, but I can't seem to trigger the event for the whole project. Moving forward, the best solution to this is starting with the button, not ending with one. All I want to do now is reconfigure the page logic regarding the LoginForm function & then revisit why the unit tests stopped working towards the end & then I'm officially done.
 -->
 
 
 <!-- 10/6/23
-Began with figuring out why the API has pulled from the last MLS season & the current one for unknown reasons so I did some investigating today to figure out why it was still stuck in 2022. On the API creators page someone asked a similar question to them & their answer as a few months ago was to pass in a season parameter so I did & ... X. Next I am
+Began with figuring out why the API has pulled both from the last MLS season & the current one for unknown reasons so I did some investigating today to figure out why it was stuck in 2022 again. On the API creators RapidAPI account page someone asked them a similar question to me & their answer as a few months ago was to pass in a season parameter so I did a million things to re-implement the API this way but realized that in the long run; the API will probably regenerate itself at the end of the current season which is less than a month away. So I reverted all of my changes back to how they were & now I'll wait to see what happens by the New Year at the latest instead of changing it because if it does like it should, I'll never have to update it again which is better then making it so only one particular season shows. Next I am trying to configure the logic for the login page & I'm driving myself crazy with it.
 -->
 
 
 <!-- 10/5/23
-Today I altered the CSS to center all of the team's info beneath their respective logo. To finish off today I implemented a Dark / Light Mode button in the footer, but right now it's only working inside of the footer itself so tomorrow I'll finish that & get it working for the entirety of the application.
+Today I altered the CSS to center all of the team's info beneath their respective logo with proper spacing. To finish off today I took awhile but finally figured out how to implemented a Dark / Light Mode button in the footer, but right now it's only working inside of the footer-container itself so tomorrow I'll finish that & get it working for the entirety of the application.
 -->
 
 
@@ -30,7 +35,7 @@ A peer of mine & I met with our former instructor to ask for his advice on getti
 
 
 <!-- 10/2/23
-Worked on the CSS changes that I wanted to make for awhile where the homepage is a little more organized, same goes for the rest of the pages. They all align with the Nav better than before, but I'm still not finished. I want to refocus on deployment & then make the last update.
+Worked on the CSS changes that I wanted to make for awhile hoy whereas the homepage is now a little more organized, same goes for the rest of the pages. They all align with the Nav better than before, but I'm still not finished here. I want to refocus on deployment & then I'll make the last updates.
 -->
 
 

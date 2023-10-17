@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { useLoginMutation } from "./app/apiSlice";
 import "./styles/Login.css";
 import Footer from "./Footer";
@@ -8,16 +9,16 @@ const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [login] = useLoginMutation();
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       await login({ email, password });
 
-      window.location.href = "/";
+      navigate('/teams');
     } catch (error) {
-
-      console.error("Login failed:", error);
+      console.error("Login failed:", error)
     }
   };
 

@@ -89,7 +89,7 @@ nav {
 @media only screen and (max-width: 768px) {
 
   #navbar li a {
-    font-size: .55rem;
+    font-size: .5rem;
     font-weight: 800;
   }
 
