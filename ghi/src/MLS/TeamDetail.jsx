@@ -50,7 +50,7 @@ function TeamDetails() {
           <TeamCard
             name={team.team.name}
             logo={team.team.logo}
-            ranking={team.team.ranking}
+            ranking={team.team.ranking} 
             stats={team.team.stats}
           />
         </div>
@@ -93,6 +93,7 @@ function TeamDetails() {
         </ul>
         <Footer />
       </div>
+    </div>
   );
 };
 

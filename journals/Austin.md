@@ -4,13 +4,98 @@
 -->
 
 
-<!-- 10/10/23
-?????
+<!-- 10/18/23
+    I sent out messages to a few folks that I needed their advice in solving this problem. Then I started examining the TypeError in TeamCard.jsx again to gain a better of understanding of what is happening & researched some more possible solutions.
+-->
+
+
+<!-- 10/17/23
+The login issue persists & I am unsure if I am moving in the right direction or not because I did not write this portion of code & I believe my teammates are on vacation. I read online that if I changed my REACT_APP_BASE_URL environment variable from /mls-monitor/ to /mls-monitor that this could potentially resolve the issue I'm experiencing where once the submit button is clicked inside of the Login.jsx file, you are directed to https://hack-reactor-hacks-18.gitlab.io (which is a 404 error from Gitlab) instead of back to the original https://hack-reactor-hacks-18.gitlab.io/mls-monitor/. But if you paste the original URL back into the browser after you clicked submit, it will actually bring you to the proper page; it's weird.
+
+Upon pushing/pulling/rebuilding & clicking submit on the login button after updating the previously mentioned environment variable in vscode & Gitlab, I was directed to an unexpected application error. When I looked at the error in the console, this is what I found,
+
+
+react-dom.production.min.js:189 TypeError: Cannot read properties of undefined (reading '0')
+    at _i (TeamCard.jsx:18:16)
+    at Ei (react-dom.production.min.js:167:137)
+    at xl (react-dom.production.min.js:290:337)
+    at bc (react-dom.production.min.js:280:389)
+    at yc (react-dom.production.min.js:280:320)
+    at mc (react-dom.production.min.js:280:180)
+    at oc (react-dom.production.min.js:271:88)
+    at ac (react-dom.production.min.js:268:429)
+    at k (scheduler.production.min.js:13:203)
+    at MessagePort.R (scheduler.production.min.js:14:128)
+du @ react-dom.production.min.js:189
+
+React Router caught the following error during render TypeError: Cannot read properties of undefined (reading '0')
+hooks.tsx:608
+    at _i (TeamCard.jsx:18:16)
+    at Ei (react-dom.production.min.js:167:137)
+    at xl (react-dom.production.min.js:290:337)
+    at bc (react-dom.production.min.js:280:389)
+    at yc (react-dom.production.min.js:280:320)
+    at mc (react-dom.production.min.js:280:180)
+    at oc (react-dom.production.min.js:271:88)
+    at ac (react-dom.production.min.js:268:429)
+    at k (scheduler.production.min.js:13:203)
+    at MessagePort.R (scheduler.production.min.js:14:128) Object
+
+
+So I looked inside my TeamCard.jsx file to see what was going on & what I viewed on line 18 is what I pasted below this.
+
+    {name[0].toUpperCase() + name.slice(1)}
+
+According to the error, it looks like the team names are not being displayed properly & are instead being set as equal to undefined. I then looked inside my TeamDetail.jsx file because that's where 'name' is being defined. I searched in Google & read that I might want to add the TeamCard component to the TeamDetail page in a more explicit way so I imported it at the top of the file & then added this inside my return statement.
+
+
+    <div className="col-12">
+        <TeamCard
+            name={team.team.name}
+            logo={team.team.logo}
+            ranking={team.team.ranking}
+            stats={team.team.stats}
+        />
+    </div>
+
+
+But instead the undefined error remains & now I am beginning to question if this is actually going to fix the login information or not because I don't believe the TeamCard should be used this way at all. If I erased that change though, is the second error I incurred because the list of teams aren't loading properly? If so, why was it working this entire time previously? Or am even asking the right question? I haven't encountered this before until trying to debug the loggin routing issue this time around but regardless I pasted the latest error below that I found in the console for reference.
+
+
+react-dom.production.min.js:189 TypeError: Cannot read properties of undefined (reading '0')
+    at _i (TeamCard.jsx:18:16)
+    at Ei (react-dom.production.min.js:167:137)
+    at xl (react-dom.production.min.js:290:337)
+    at bc (react-dom.production.min.js:280:389)
+    at yc (react-dom.production.min.js:280:320)
+    at mc (react-dom.production.min.js:280:180)
+    at oc (react-dom.production.min.js:271:88)
+    at ac (react-dom.production.min.js:268:429)
+    at k (scheduler.production.min.js:13:203)
+    at MessagePort.R (scheduler.production.min.js:14:128)
+du	@	react-dom.production.min.js:189
+
+React Router caught the following error during render TypeError: Cannot read properties of undefined (reading '0')
+hooks.tsx:608
+    at _i (TeamCard.jsx:18:16)
+    at Ei (react-dom.production.min.js:167:137)
+    at xl (react-dom.production.min.js:290:337)
+    at bc (react-dom.production.min.js:280:389)
+    at yc (react-dom.production.min.js:280:320)
+    at mc (react-dom.production.min.js:280:180)
+    at oc (react-dom.production.min.js:271:88)
+    at ac (react-dom.production.min.js:268:429)
+    at k (scheduler.production.min.js:13:203)
+    at MessagePort.R (scheduler.production.min.js:14:128)
+Object
+componentStack
+:
+"\n    at _i (https://hack-reactor-hacks-18.gitlab.io/mls-monitor/static/js/main.0ef19785.js:2:299627)\n    at div\n    at Mi (https://hack-reactor-hacks-18.gitlab.io/mls-monitor/
 -->
 
 
 <!-- 10/9/23
-I messed around with the dark mode button for quite some time & to be honest it's just not worth it at this stage to configure. It would be a cool addition, but it'll have to be scrapped. I got it to work & effect just the footer. Then I got it to stop effecting the footer, but I can't seem to trigger the event for the whole project. Moving forward, the best solution to this is starting with the button, not ending with one. All I want to do now is reconfigure the page logic regarding the LoginForm function & then revisit why the unit tests stopped working towards the end & then I'm officially done.
+I messed around with the dark mode button for quite some time & to be honest it's just not worth it at this stage to configure. It would be a cool addition, but it'll have to be scrapped. I got it to work & effect just the footer. Then I got it to stop effecting the footer, but I can't seem to trigger the event for the whole project. Moving forward, the best solution to this is starting with the button, not ending with one. It's possible I'll go back one last time after these other two steps are done, but I don't think it's likely. So now all I want to do is reconfigure the page logic regarding the LoginForm function & then revisit why the unit tests stopped working towards the end & then I'm officially done.
 -->
 
 
