@@ -4,7 +4,6 @@ import { useGetAllTeamsQuery, useGetTokenQuery} from "./app/apiSlice";
 import "./styles/TeamDetail.css";
 import "./styles/Footer.css";
 import Footer from "./Footer";
-import TeamCard from "./TeamCard";
 
 
 function TeamDetails() {
