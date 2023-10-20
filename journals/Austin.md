@@ -4,13 +4,23 @@
 -->
 
 
+<!-- 10/25/23
+
+-->
+
+
+<!-- 10/20/23
+
+-->
+
+
 <!-- 10/18/23
-    I sent out messages to a few folks that I needed their advice in solving this problem. Then I started examining the TypeError in TeamCard.jsx again to gain a better of understanding of what is happening & researched some more possible solutions.
+I sent out messages to a few folks that I needed their advice in solving this problem. Then I started examining the TypeError in TeamCard.jsx again to gain a better of understanding of what is happening & researched some more possible solutions but I think I need to step away from the computer for a little bit to try & think about this critically in my head.
 -->
 
 
 <!-- 10/17/23
-The login issue persists & I am unsure if I am moving in the right direction or not because I did not write this portion of code & I believe my teammates are on vacation. I read online that if I changed my REACT_APP_BASE_URL environment variable from /mls-monitor/ to /mls-monitor that this could potentially resolve the issue I'm experiencing where once the submit button is clicked inside of the Login.jsx file, you are directed to https://hack-reactor-hacks-18.gitlab.io (which is a 404 error from Gitlab) instead of back to the original https://hack-reactor-hacks-18.gitlab.io/mls-monitor/. But if you paste the original URL back into the browser after you clicked submit, it will actually bring you to the proper page; it's weird.
+The login issue persists & I am unsure if I am moving in the right direction or not because I did not write this portion of code & my teammates are on vacation. I read online that if I changed my REACT_APP_BASE_URL environment variable from /mls-monitor/ to /mls-monitor that this could potentially resolve the issue I'm experiencing where once the submit button is clicked inside of the Login.jsx file, you are directed to https://hack-reactor-hacks-18.gitlab.io (which is a 404 error from Gitlab) instead of back to the original https://hack-reactor-hacks-18.gitlab.io/mls-monitor/. But if you paste the original URL back into the browser after you clicked submit, it will actually bring you to the proper page; it's weird.
 
 Upon pushing/pulling/rebuilding & clicking submit on the login button after updating the previously mentioned environment variable in vscode & Gitlab, I was directed to an unexpected application error. When I looked at the error in the console, this is what I found,
 

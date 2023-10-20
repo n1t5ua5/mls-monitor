@@ -47,13 +47,6 @@ function TeamDetails() {
     <div className="team-detail-container">
       <div>
         <div className="row">
-          <TeamCard
-            name={team.team.name}
-            logo={team.team.logo}
-            ranking={team.team.ranking}
-            stats={team.team.stats}
-          />
-        </div>
           <div className="col-8">
             <h1>{team.team.name}</h1>
             <img
@@ -93,6 +86,7 @@ function TeamDetails() {
         </ul>
         <Footer />
       </div>
+    </div>
   );
 };
 

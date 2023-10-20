@@ -5,10 +5,10 @@
 
         created by....
 
-        Deontay Bell
-        Ethan Wilson
-        Mariam Sheikh
-        & Austin Sekel
+        Deontay B.
+        Ethan W.
+        Mariam S.
+        & Austin S.
 
         featuring....
 
@@ -40,14 +40,14 @@ FUNCTIONALITY: visitors may create an account to like any of the teams they supp
 
 INITIALIZATION: to use this application on your local machine, please follow the steps below.
 
-Clone the repository down to your local machine
-CD into the new project directory
-Run docker volume create mls-monitor
-Run docker compose build
-Run docker compose up
-Run docker exec -it mls-monitor-inventory-api-1 bash
-Run python manage.py loaddata products.json
-Exit the container's CLI & enjoy the MLS Monitor
+- Clone the repository down to your local machine
+- CD into the new project directory
+- Run docker volume create mls-monitor
+- Run docker compose build
+- Run docker compose up
+- Run docker exec -it mls-monitor-inventory-api-1 bash
+- Run python manage.py loaddata products.json
+- Exit the container's CLI & enjoy the MLS Monitor
 
 STRETCH GOALS: Adding an 'About' page to showcase our individual portfolio's & our team's repository on Gitlab would be an good addition to this neat little application of ours. I think getting a better API that's paid for would be worth it too given the potential traffic it could receive.
 
