@@ -32,6 +32,7 @@ services:
       CORS_HOST: http://localhost:3000
       SIGNING_KEY: ${SIGNING_KEY}
       API_KEY: ${API_KEY}
+      REACT_APP_BASE_URL: /mls-monitor
     build:
       context: api
       dockerfile: Dockerfile.dev
