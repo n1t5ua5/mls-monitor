@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useGetAllTeamsQuery } from "./app/apiSlice";
 import TeamCard from "./TeamCard";
 import "./styles/Home.css";
-import "./styles/Nav.css"
+import "./styles/Nav.css";
 import "./styles/Footer.css";
 import Footer from "./Footer";
 

@@ -3,6 +3,7 @@ body{
     align-items: center;
     justify-content: center;
     background: rgb(247, 247, 247);
+    padding-bottom: 5px;
 }
 
 .wrapper{

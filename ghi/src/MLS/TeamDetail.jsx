@@ -44,47 +44,45 @@ function TeamDetails() {
 
   return (
     <div className="team-detail-container">
-      <div>
-        <div className="row">
-          <div className="col-8">
-            <h1>{team.team.name}</h1>
-            <img
-              src={team.team.logo}
-              alt={team.team.logo}
-              style={{ width: "200px", height: "200px" }}
-            />
-          </div>
-          <div className="col-4">
-            <button
-              onClick={toggleFavorite}
-              className={isFavorite ? "btn btn-danger" : "btn btn-primary"}
-            >
-              {isFavorite ? "Remove from Favorites" : "Add to Favorites"}
-            </button>
-          </div>
+      <div className="row">
+        <div className="col-8">
+          <h1>{team.team.name}</h1>
+          <img
+            src={team.team.logo}
+            alt={team.team.logo}
+            style={{ width: "200px", height: "200px" }}
+          />
         </div>
-        <ul className="list-group">
-          <li className="list-group-item">
-            Abbreviation: {team.team.abbreviation}
-          </li>
-          <li className="list-group-item">Wins: {team.stats.wins}</li>
-          <li className="list-group-item">Losses: {team.stats.losses}</li>
-          <li className="list-group-item">Ties: {team.stats.ties}</li>
-          <li className="list-group-item">
-            Games Played: {team.stats.gamesPlayed}
-          </li>
-          <li className="list-group-item">Goals For: {team.stats.goalsFor}</li>
-          <li className="list-group-item">
-            Goals Against: {team.stats.goalsAgainst}
-          </li>
-          <li className="list-group-item">Points: {team.stats.points}</li>
-          <li className="list-group-item">Rank: {team.stats.rank}</li>
-          <li className="list-group-item">
-            Goal Difference: {team.stats.goalDifference}
-          </li>
-        </ul>
-        <Footer />
+        <div className="col-4">
+          <button
+            onClick={toggleFavorite}
+            className={isFavorite ? "btn btn-danger" : "btn btn-primary"}
+          >
+            {isFavorite ? "Remove from Favorites" : "Add to Favorites"}
+          </button>
+        </div>
       </div>
+      <ul className="list-group">
+        <li className="list-group-item">
+          Abbreviation: {team.team.abbreviation}
+        </li>
+        <li className="list-group-item">Wins: {team.stats.wins}</li>
+        <li className="list-group-item">Losses: {team.stats.losses}</li>
+        <li className="list-group-item">Ties: {team.stats.ties}</li>
+        <li className="list-group-item">
+          Games Played: {team.stats.gamesPlayed}
+        </li>
+        <li className="list-group-item">Goals For: {team.stats.goalsFor}</li>
+        <li className="list-group-item">
+          Goals Against: {team.stats.goalsAgainst}
+        </li>
+        <li className="list-group-item">Points: {team.stats.points}</li>
+        <li className="list-group-item">Rank: {team.stats.rank}</li>
+        <li className="list-group-item">
+          Goal Difference: {team.stats.goalDifference}
+        </li>
+      </ul>
+      <Footer />
     </div>
   );
 };

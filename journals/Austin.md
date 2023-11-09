@@ -4,18 +4,18 @@
 -->
 
 
-<!-- 10/25/23
+<!-- 11/10/23
 
 -->
 
 
 <!-- 10/20/23
-
+I met up with one of teammates to diagnose the problem further & some progress was made but the main issue is still persisting, nor can you view the site at its deployed url of https://hack-reactor-hacks-18.gitlab.io/mls-monitor/ anymore.
 -->
 
 
 <!-- 10/18/23
-I sent out messages to a few folks that I needed their advice in solving this problem. Then I started examining the TypeError in TeamCard.jsx again to gain a better of understanding of what is happening & researched some more possible solutions but I think I need to step away from the computer for a little bit to try & think about this critically in my head.
+I sent out messages to a few folks asking for their advice in solving this problem. Then I started examining the TypeError in TeamCard.jsx again to gain a better of understanding of what is happening & researched some more possible solutions but I think I need to step away from the computer for a little bit to try & think about this critically in my head.
 -->
 
 

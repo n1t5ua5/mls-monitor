@@ -11,6 +11,10 @@ const Nav = () => {
   const navigate = useNavigate();
   const { data: account } = useGetTokenQuery();
   const [logout, logoutResponse] = useLogoutMutation();
+  const handleLogout = () => {
+    logout();
+    window.location.reload();
+  };
 
   useEffect(() => {
     if (logoutResponse && logoutResponse.data) navigate("/");
@@ -69,7 +73,7 @@ const Nav = () => {
         </div>
         {account && (
           <div className="nav-logout-container">
-            <button className="nav-logout" onClick={logout}>
+            <button className="nav-logout" onClick={handleLogout}>
               Logout
             </button>
           </div>
