@@ -3,14 +3,24 @@
     Austin's MLS-Monitor Journal
 -->
 
-
 <!-- 11/10/23
+???
+-->
+
+<!-- 11/9/23
+After navigating to the correct directory in my terminal I input "docker-compose up --build" into my terminal & confirmed that all of the pipelines have been validated. Then I waited for the development surver to start & once it did I navigated to four different tabs in my browser & input one url into each: localhost:3000, localhost:8000/docs, https://hack-reactor-hacks-18.gitlab.io/mls-monitor/ & https://may-18-ct-fastapi.mod3projects.com/docs. Each of them loaded properly.
+
+Then I went into 8000/docs & properly logged inside of SwaggerAPI & produced a 200 response which means it was successful. Then I did the same in the deployed version & I also recieved a 200 response. In both instances I input a username & password of the word "string". After I logged in successfully & favorited some things, I logged back out.
+
+I got so caught up with finishing this that I forgot the crucial role SwaggerAPI played in logging in & out. Now that everything is working I am going to tackle getting the unit testing to work completely & then call it quits for the MLS Monitor.
+
+By next week I will also have a video runthrough of the project to clearly address how to use the application correctly.
 
 -->
 
 
 <!-- 10/20/23
-I met up with one of teammates to diagnose the problem further & some progress was made but the main issue is still persisting, nor can you view the site at its deployed url of https://hack-reactor-hacks-18.gitlab.io/mls-monitor/ anymore.
+I met up with one of teammates to diagnose the problem further & some progress was made but the main issue is still persisting. Most of the changes made were in the TeamDetail.jsx file, but I made some minor edits in the Login.jsx, Home.jsx & TeamList.jsx too.
 -->
 
 

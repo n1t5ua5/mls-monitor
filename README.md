@@ -23,22 +23,22 @@ API: We subscribed to the "Major League Soccer Standings" api from RapidAPI.
 
 PURPOSE: Display easy to ready rankings & stats for every team in Major League Soccer.
 
-INTENDED MARKET: Soccer / Football fans in the U.S., Canada & Mexico. With the arrival of Leo Messi in Miami & the upcoming World Cup in '26 that's hosted by the previously mentioned trio; fans new & old need a better way to follow the teams they love ( Est. Max Traffic: +1M per day ).
+INTENDED MARKET: Soccer / Football fans in the U.S., Canada & Mexico. With the arrival of Leo Messi in Miami & the upcoming World Cup in '26 that's hosted by the previously mentioned trio; fans new & old need a better way to follow the teams they love.
 
-FUNCTIONALITY: visitors may create an account to favorite any of the teams they support most.
+FUNCTIONALITY: Visitors may create an account to favorite any of the teams they support most.
 
 - If someone online types in https://hack-reactor-hacks-18.gitlab.io/mls-monitor/, they will be directed to the "Home-Page" of our site
 - Visitors will notice a NavBar towards the top that contains four options: "Home", "Create Account" & "Login"
 - To gain access the visitor must click on "Create Account" to fill out a form in order to become a user
-- The form asks for an e-mail address, name & password. The user must then click submit in order to register
-- After it's been submitted, the account is created & the new user will be immediately redirected to the "Home" page
-- Then, they will be able to favorite the teams they love best on the "Team Detail" page & remove them if necessary
+- The form asks for an e-mail address, name & password. The user must then click click in order to register
+- After it's been submitted, the account is created & the new user will be immediately redirected to the original "Home" page
+- Now, the user must click the Login tab in the top menu & input an e-mail address & password & click enter to login
 - Once logged in, the user will notice the NavBar now consists of "Home", "Create Account" & "Logout"
-- In order to logout, the user must click on the "Logout" tab & then they will be redirected to the home page
+- Finally, the user will be able to favorite the teams they love best on the "Team Detail" page & remove them if necessary
+- In order to logout, the user must click on the "Logout" tab & then they will be redirected to the "Home" page
 - Once logged out, the favorite option will disappear completely unless you choose to log back in
-- To login, click on the login tab located in the NavBar & footer which leads you to a form asking for your e-mail address & password
 
-INITIALIZATION: to use this application on your local machine, please follow the steps below.
+INITIALIZATION: To use this application on your local machine, please follow the steps below.
 
 - Clone the repository down to your local machine
 - CD into the new project directory

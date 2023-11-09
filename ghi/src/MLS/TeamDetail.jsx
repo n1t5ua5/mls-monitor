@@ -43,15 +43,14 @@ function TeamDetails() {
   };
 
   return (
-    <div className="team-detail-container">
+    <><div className="team-detail-container">
       <div className="row">
         <div className="col-8">
           <h1>{team.team.name}</h1>
           <img
             src={team.team.logo}
             alt={team.team.logo}
-            style={{ width: "200px", height: "200px" }}
-          />
+            style={{ width: "200px", height: "200px" }} />
         </div>
         <div className="col-4">
           <button
@@ -82,8 +81,7 @@ function TeamDetails() {
           Goal Difference: {team.stats.goalDifference}
         </li>
       </ul>
-      <Footer />
-    </div>
+    </div><Footer /></>
   );
 };
 
