@@ -24,8 +24,8 @@ api-unit-tests-job:
     - cd api
     - pip install -r requirements.txt
     - python -m pytest
-#   variables:
-#     SIGNING_KEY: ${SIGNING_KEY}
+  variables:
+    SIGNING_KEY: ${SIGNING_KEY}
 
 # Build API Image:
 build-api-image:
