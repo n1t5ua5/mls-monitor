@@ -15,7 +15,6 @@ Then I went into 8000/docs & properly logged inside of SwaggerAPI & produced a 2
 I got so caught up with finishing this that I forgot the crucial role SwaggerAPI played in logging in & out. Now that everything is working I am going to tackle getting the unit testing to work completely & then call it quits for the MLS Monitor.
 
 By next week I will also have a video runthrough of the project to clearly address how to use the application correctly.
-
 -->
 
 
