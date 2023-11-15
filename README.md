@@ -36,9 +36,8 @@ INITIALIZATION: To use this application on your local machine, please follow the
 - Run docker exec -it mls-monitor-inventory-api-1 bash
 - Run python manage.py loaddata products.json
 - Exit the container's CLI & the MLS Monitor is yours
-- But you must use your own API_KEY value inside the .env file
-
-
+- But you must request access to the values inside our .env file or create your own
+- If so, please add an .md file in the journals folder using your first name as the title & document your changes
 
 CONFIGURATION: Use SwaggerAPI to ensure everything works properly.
 
@@ -47,9 +46,7 @@ CONFIGURATION: Use SwaggerAPI to ensure everything works properly.
 - for example, type "string" for both username & password & click the execute button below. it will produce a 200 response beneath if sucessful
 - now go back to https://hack-reactor-hacks-18.gitlab.io/mls-monitor/ in your browser, you will be directed to the "Home" page
 
-
-
-FUNCTIONALITY: Visitors may create an account to favorite any of the teams they support most.
+NAVIGATION: Create an account, logging in + random tips.
 
 - visitors will notice a navigation bar towards the top that contains three options: "Home", "Create Account" & "Login"
 - to gain access the visitor must click on "Create Account" to fill out a form in order to become a user
@@ -60,6 +57,8 @@ FUNCTIONALITY: Visitors may create an account to favorite any of the teams they 
 - if redirected to Gitlab instead of https://hack-reactor-hacks-18.gitlab.io/mls-monitor/, simply type that url back into the browser &
   you will be directed the correct, logged in version of the homepage
 - once logged in, the user will notice the nav bar now consists of "Home", "Favorites" & "Team Detail" + a "Logout" button
+
+FUNCTIONALITY: Visitors may create an account to favorite any of the teams they support most.
 
 - now you can add any favorite team to your own new list in the "Favorites" page by clicking on any of the "Details" link on homepage
   which then brings you to each teams corresponding "Team Detail" page

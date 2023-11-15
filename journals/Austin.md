@@ -42,7 +42,7 @@ USING THE APP: Random tips to ensure it's working properly.
 - make sure you use the enter button on your keyboard instead of clicking on the submit button with your mouse when inside of the Create Account & Login forms
 - if redirected to Gitlab instead of https://hack-reactor-hacks-18.gitlab.io/mls-monitor/ when trying to login, simply type that url back into the browser & you will
   be directed to the correct version of the homepage. this is a bug that I added to the stretch goals section in the readme file
-- if anything still isn't working, please refer to the MLS Monitor video walkthrough found at https://youtube.com/nit5ua13k35 or msg me anytime on Discord or Slack
+- if anything still isn't working, please refer to the MLS Monitor video walkthrough found at https://youtube.com/13k35 or msg me anytime on Discord or Slack
 -->
 
 
