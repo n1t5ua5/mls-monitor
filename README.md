@@ -1,7 +1,6 @@
-##### OUR READ.ME JOURNAL
+        OUR READ.ME FILE for...
 
-
-        THE MLS MONITOR
+        the MLS MONITOR
 
         created by...
 
@@ -14,29 +13,18 @@
 
         data models
         GHI magic
-        integrations
+        unit testing
         API design
         & much more
 
 
-API: We subscribed to the "Major League Soccer Standings" api from RapidAPI.
+API: We subscribed to the "Major League Soccer Standings" API from RapidAPI.
 
 PURPOSE: Display easy to ready rankings & stats for every team in Major League Soccer.
 
-INTENDED MARKET: Soccer / Football fans in the U.S., Canada & Mexico. With the arrival of Leo Messi in Miami & the upcoming World Cup in '26 that's hosted by the previously mentioned trio; fans new & old need a better way to follow the teams they love.
+INTENDED MARKET: Soccer / Football fans in the U.S., Canada & Mexico. With the arrival of Leo Messi in Miami & the upcoming World Cup in '26 that's hosted by the previously mentioned trio; fans new & old need a new way to follow the teams they love.
 
-FUNCTIONALITY: Visitors may create an account to favorite any of the teams they support most.
 
-- If someone online types in https://hack-reactor-hacks-18.gitlab.io/mls-monitor/, they will be directed to the "Home-Page" of our site
-- Visitors will notice a NavBar towards the top that contains four options: "Home", "Create Account" & "Login"
-- To gain access the visitor must click on "Create Account" to fill out a form in order to become a user
-- The form asks for an e-mail address, name & password. The user must then click click in order to register
-- After it's been submitted, the account is created & the new user will be immediately redirected to the original "Home" page
-- Now, the user must click the Login tab in the top menu & input an e-mail address & password & click enter to login
-- Once logged in, the user will notice the NavBar now consists of "Home", "Create Account" & "Logout"
-- Finally, the user will be able to favorite the teams they love best on the "Team Detail" page & remove them if necessary
-- In order to logout, the user must click on the "Logout" tab & then they will be redirected to the "Home" page
-- Once logged out, the favorite option will disappear completely unless you choose to log back in
 
 INITIALIZATION: To use this application on your local machine, please follow the steps below.
 
@@ -47,8 +35,39 @@ INITIALIZATION: To use this application on your local machine, please follow the
 - Run docker compose up
 - Run docker exec -it mls-monitor-inventory-api-1 bash
 - Run python manage.py loaddata products.json
-- Exit the container's CLI & enjoy the MLS Monitor
+- Exit the container's CLI, now the MLS Monitor is yours too
 
-STRETCH GOALS: Adding an 'About' page to showcase our individual portfolio's & our team's repository on Gitlab would be a good addition to this neat little application of ours. I think getting a better API that's paid for would be worth it too given the potential traffic it could receive.
+
+
+CONFIGURATION: Use SwaggerAPI to ensure everything works properly.
+
+- type these urls in the browser: https://hack-reactor-hacks-18.gitlab.io/mls-monitor/ & https://may-18-ct-fastapi.mod3projects.com/docs
+- go to mod3projects.com/docs first & click on the green Login button. then click the Try it Out button in the upper right corner
+- for example, type "string" for both username & password & click the execute button below. it will produce a 200 response beneath if sucessful
+- now go back to https://hack-reactor-hacks-18.gitlab.io/mls-monitor/ in your browser, you will be directed to the "Home" page
+
+
+
+FUNCTIONALITY: Visitors may create an account to favorite any of the teams they support most.
+
+- visitors will notice a navigation bar towards the top that contains three options: "Home", "Create Account" & "Login"
+- to gain access the visitor must click on "Create Account" to fill out a form in order to become a user
+- please fill out the form that asks for an e-mail address, name & password. then hit enter on your keyboard to register
+- after it's been submitted, the account is created & the new user will be immediately redirected to the original "Home" page
+
+- now, you must click the "Login" tab in the nav bar & input an e-mail address & password. then hit enter on your keyboard to login
+- if redirected to Gitlab instead of https://hack-reactor-hacks-18.gitlab.io/mls-monitor/, simply type that url back into the browser &
+  you will be directed the correct, logged in version of the homepage
+- once logged in, the user will notice the nav bar now consists of "Home", "Favorites" & "Team Detail" + a "Logout" button
+
+- now you can add any favorite team to your own new list in the "Favorites" page by clicking on any of the "Details" link on homepage
+  which then brings you to each teams corresponding "Team Detail" page
+- finally click the "Add to Favorites" button where they're added to the "Favorites" page. once successfull added, the "Add to Favorites"
+  button reverts to a "Remove from Favorites" button so you can also remove them if necessary
+- in order to logout, you must click on the "Logout" tab in the nav & then you will be redirected back to the original homepage
+
+
+
+STRETCH GOALS: Adding an 'About' page to showcase each individual teammates portfolio & our team's repository on Gitlab would be a good addition to this neat little application of ours. Configuring it so you can click on the Submit button inside of the Create Account & Login page instead of having to type enter on your keyboard every time would be a plus too.
 
 GITLAB REPOSITORY: https://gitlab.com/hack-reactor-hacks-18/mls-monitor

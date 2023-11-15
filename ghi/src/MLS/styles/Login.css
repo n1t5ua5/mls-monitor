@@ -17,6 +17,7 @@ body{
     border-color: aqua;
     border-width: 10%;
     box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+    text-align: center;;
 }
 
 .wrapper h2{

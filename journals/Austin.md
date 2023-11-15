@@ -3,18 +3,58 @@
     Austin's MLS-Monitor Journal
 -->
 
-<!-- 11/10/23
+
+<!-- 11/16/23
 ???
 -->
 
+
+<!-- 11/15/23
+I finished editing all the files I needed to edit, complete with instructions & a video walkthrough at https://youtube.com/l3k35 with the title of "MLS Monitor Walkthrough". The application is working great! Although there are always more things that could be changed, I'm happy with how this turned out & can definitely call this a job well done. I reached out to some peers as well to show them everything our team made & welcome their feedback for any updates in the future.
+-->
+
+
+<!-- 11/14/23
+TEAMMATE SETUP: Make sure you are logged into Gitlab, you've deleted old containers & images inside Docker & you've updated vscode + any extensions in vscode. After you've updated those things, navigate to the correct directory inside your terminal & follow these steps.
+
+- code . / git checkout my-branch / git checkout main / git pull / git checkout my-branch / git merge main
+
+- *resolve any merge conflicts*
+
+- git checkout my-branch / git add . / git commit -m "sample-text" / git push origin my-branch
+
+- git checkout main / git pull / git checkout my-branch / git merge main / git checkout main / git pull / git merge my-branch / git push / git checkout my-branch
+
+FINISH SETUP: Test all the pipelines & use SwaggerAPI to ensure everything works properly.
+
+- navigate to the correct directory on your computer's terminal & input "docker-compose up --build"
+- while you wait, confirm all pipelines have passed inside https://gitlab.com/hack-reactor-hacks-18/mls-monitor/-/pipelines
+- once the development server starts, navigate to the these urls in your browser: https://localhost:3000, https://localhost:8000/docs,
+  https://hack-reactor-hacks-18.gitlab.io/mls-monitor/ & https://may-18-ct-fastapi.mod3projects.com/docs
+
+- go to mod3projects.com/docs & click on the green Login button. then click the Try it Out button in the upper right corner
+- for example, type in all lowercases for both the username & password "string" & click the execute button below
+- it will produce a 200 response beneath if sucessful. now go to the localhost:8000/docs url which also uses SwaggerAPI & do the same
+- now you can use either version: https://localhost:3000 or https://hack-reactor-hacks-18.gitlab.io/mls-monitor/
+
+USING THE APP: Random tips to ensure it's working properly.
+
+- make sure you use the enter button on your keyboard instead of clicking on the submit button with your mouse when inside of the Create Account & Login forms
+- if redirected to Gitlab instead of https://hack-reactor-hacks-18.gitlab.io/mls-monitor/ when trying to login, simply type that url back into the browser & you will
+  be directed to the correct version of the homepage. this is a bug that I added to the stretch goals section in the readme file
+- if anything still isn't working, please refer to the MLS Monitor video walkthrough found at https://youtube.com/nit5ua13k35 or msg me anytime on Discord or Slack
+-->
+
+
+<!-- 11/10/23
+I fixed the login page so it was aligned with the nav above it because it became off-centered. Now I'm making the walkthrough video demo of the site & editing it so everything will be clear. Above are additonal directions for setting up the entire project that I've been editing along with the readme file one last time.
+-->
+
+
 <!-- 11/9/23
-After navigating to the correct directory in my terminal I input "docker-compose up --build" into my terminal & confirmed that all of the pipelines have been validated. Then I waited for the development surver to start & once it did I navigated to four different tabs in my browser & input one url into each: localhost:3000, localhost:8000/docs, https://hack-reactor-hacks-18.gitlab.io/mls-monitor/ & https://may-18-ct-fastapi.mod3projects.com/docs. Each of them loaded properly.
+I got so caught up with finishing this that I forgot the crucial role using SwaggerAPI played in logging in & out. Now that everything is working I am going to tackle getting the unit testing to work completely. I tested each one individually & towards the end the 3rd one failed it's test so I assesed the error inside Gitlab & it said that there was a KeyError: ERROR tests/test_favorites_queries.py - KeyError: 'SIGNING_KEY' ERROR tests/test_soccer_queries.py - KeyError: 'SIGNING_KEY'.
 
-Then I went into 8000/docs & properly logged inside of SwaggerAPI & produced a 200 response which means it was successful. Then I did the same in the deployed version & I also recieved a 200 response. In both instances I input a username & password of the word "string". After I logged in successfully & favorited some things, I logged back out.
-
-I got so caught up with finishing this that I forgot the crucial role SwaggerAPI played in logging in & out. Now that everything is working I am going to tackle getting the unit testing to work completely & then call it quits for the MLS Monitor.
-
-By next week I will also have a video runthrough of the project to clearly address how to use the application correctly.
+I paused & re-analyzed all the code I was working with on the .yml file which started on line 18. Upon further assessment I realized that the SIGNING_KEY was still uncommented in the file. I uncommented it then typed git add . in my terminal, git commit -m "fourth unit test" & then git push origin austin - followed by the same for the main branch & now everything works.
 -->
 
 
