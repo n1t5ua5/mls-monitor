@@ -35,7 +35,8 @@ INITIALIZATION: To use this application on your local machine, please follow the
 - Run docker compose up
 - Run docker exec -it mls-monitor-inventory-api-1 bash
 - Run python manage.py loaddata products.json
-- Exit the container's CLI, now the MLS Monitor is yours too
+- Exit the container's CLI & the MLS Monitor is yours
+- But you must use your own API_KEY value inside the .env file
 
 
 
