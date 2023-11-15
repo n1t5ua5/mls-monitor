@@ -22,7 +22,11 @@ API: We subscribed to the "Major League Soccer Standings" API from RapidAPI.
 
 PURPOSE: Display easy to ready rankings & stats for every team in Major League Soccer.
 
-INTENDED MARKET: Soccer / Football fans in the U.S., Canada & Mexico. With the arrival of Leo Messi in Miami & the upcoming World Cup in '26 that's hosted by the previously mentioned trio; fans new & old need a new way to follow the teams they love.
+INTENDED MARKET: Soccer / Football / Fútbol fans in the United States, Canada & Mexico. With the arrival of Leo Messi in Miami & the upcoming World Cup in '26 that's hosted by the previously mentioned trio; fans new & old need a new way to follow the teams they love.
+
+STRETCH GOALS: Adding an 'About' page to showcase each individual teammates portfolio & our team's repository on Gitlab would be a good addition to this neat little application of ours. Configuring it so you can click on the Submit button inside of the Create Account & Login page instead of having to type enter on your keyboard every time would be a plus too. 
+
+GITLAB REPOSITORY: https://gitlab.com/hack-reactor-hacks-18/mls-monitor
 
 
 
@@ -58,16 +62,10 @@ NAVIGATION: Create an account, logging in + random tips.
   you will be directed the correct, logged in version of the homepage
 - once logged in, the user will notice the nav bar now consists of "Home", "Favorites" & "Team Detail" + a "Logout" button
 
-FUNCTIONALITY: Visitors may create an account to favorite any of the teams they support most.
+FUNCTIONALITY: Once logged in you may now favorite any of the teams you support most.
 
 - now you can add any favorite team to your own new list in the "Favorites" page by clicking on any of the "Details" link on homepage
   which then brings you to each teams corresponding "Team Detail" page
 - finally click the "Add to Favorites" button where they're added to the "Favorites" page. once successfull added, the "Add to Favorites"
   button reverts to a "Remove from Favorites" button so you can also remove them if necessary
 - in order to logout, you must click on the "Logout" tab in the nav & then you will be redirected back to the original homepage
-
-
-
-STRETCH GOALS: Adding an 'About' page to showcase each individual teammates portfolio & our team's repository on Gitlab would be a good addition to this neat little application of ours. Configuring it so you can click on the Submit button inside of the Create Account & Login page instead of having to type enter on your keyboard every time would be a plus too.
-
-GITLAB REPOSITORY: https://gitlab.com/hack-reactor-hacks-18/mls-monitor
