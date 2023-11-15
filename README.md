@@ -24,7 +24,7 @@ PURPOSE: Display easy to ready rankings & stats for every team in Major League S
 
 INTENDED MARKET: Soccer / Football / Fútbol fans in the United States, Canada & Mexico. With the arrival of Leo Messi in Miami & the upcoming World Cup in '26 that's hosted by the previously mentioned trio; fans new & old need a new way to follow the teams they love.
 
-STRETCH GOALS: Adding an 'About' page to showcase each individual teammates portfolio & our team's repository on Gitlab would be a good addition to this neat little application of ours. Configuring it so you can click on the Submit button inside of the Create Account & Login page instead of having to type enter on your keyboard every time would be a plus too. 
+STRETCH GOALS: Adding an 'About' page to showcase each individual teammates portfolio & our team's repository on Gitlab would be a good addition to this neat little application of ours. Configuring it so you can click on the Submit button inside of the Create Account & Login page instead of having to type enter on your keyboard every time would be a plus too.
 
 GITLAB REPOSITORY: https://gitlab.com/hack-reactor-hacks-18/mls-monitor
 
@@ -41,7 +41,7 @@ INITIALIZATION: To use this application on your local machine, please follow the
 - Run python manage.py loaddata products.json
 - Exit the container's CLI & the MLS Monitor is yours
 - But you must request access to the values inside our .env file or create your own
-- If so, please add an .md file in the journals folder using your first name as the title & document your changes
+- In any event, please add an .md file in the journals folder using your first name as the title & document your changes
 
 CONFIGURATION: Use SwaggerAPI to ensure everything works properly.
 

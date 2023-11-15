@@ -10,7 +10,7 @@
 
 
 <!-- 11/15/23
-I finished editing all the files I needed to edit, complete with instructions & a video walkthrough at https://youtube.com/l3k35 with the title of "MLS Monitor Walkthrough". I also went back & configured the login page to stay underneath the nav bar instead of stretching out to the right like it previously did on the mobile version. The application is working great now! Although there are always more things that could be changed, I'm happy with how this turned out & can definitely call this a job well done. I reached out to some peers as well to show them everything our team made & welcome their feedback for any updates that we or anyone could make.
+I finished editing all the files I needed to edit, complete with instructions & a video walkthrough at https://youtube.com/savisage with the title of "MLS Monitor Walkthrough". I also went back & configured the login page to stay underneath the nav bar instead of stretching out to the right like it previously did on the mobile version. The application is working great now! Although there are always more things that could be changed, I'm happy with how this turned out & can definitely call this a job well done. I reached out to some peers as well to show them everything our team made & welcome their feedback for any updates that we or anyone could make.
 -->
 
 
@@ -42,7 +42,7 @@ USING THE APP: Random tips to ensure it's working properly.
 - make sure you use the enter button on your keyboard instead of clicking on the submit button with your mouse when inside of the Create Account & Login forms
 - if redirected to Gitlab instead of https://hack-reactor-hacks-18.gitlab.io/mls-monitor/ when trying to login, simply type that url back into the browser & you will
   be directed to the correct version of the homepage. this is a bug that should be fixed in the future.
-- if anything still isn't working, please refer to the MLS Monitor video walkthrough found at https://youtube.com/13k35 or msg me anytime on Discord / Email
+- if anything still isn't working, please refer to the MLS Monitor video walkthrough found at https://youtube.com/savisage or msg me anytime on Discord / Email
 -->
 
 
