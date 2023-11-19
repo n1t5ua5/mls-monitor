@@ -4,22 +4,26 @@
 -->
 
 
-<!-- 11/16/23
-???
+<!-- 11/19/23
+I added some final touches to our application on the TeamDetail.css & Home.css files, like adding in some margin above the "Details" links. Same goes for the favorite button, I added in some margin-top & aligned the contents to center. I also edited the readme.md file & this journal one last time to make sure all of the directions for using the application were clear & concise for future users.
 -->
 
 
 <!-- 11/15/23
-I finished editing all the files I needed to edit, complete with instructions & a video walkthrough at https://youtube.com/savisage with the title of "MLS Monitor Walkthrough". I also went back & configured the login page to stay underneath the nav bar instead of stretching out to the right like it previously did on the mobile version. The application is working great now! Although there are always more things that could be changed, I'm happy with how this turned out & can definitely call this a job well done. I reached out to some peers as well to show them everything our team made & welcome their feedback for any updates that we or anyone could make.
+I finished editing all the files I needed to edit, complete with instructions & a video walkthrough at https://youtube.com/@mls-monitor with the title of "MLS Monitor Walkthrough". I also went back & configured the login page to stay underneath the nav bar instead of stretching out to the right like it previously did on the mobile version. The application is working great now! Although there are always more things that could be changed, I'm happy with how this turned out & can definitely call this a job well done. I reached out to some peers as well to show them everything our team made & welcome their feedback for any updates that we or anyone could make.
 -->
 
 
 <!-- 11/14/23
-TEAMMATE SETUP: Make sure you are logged into Gitlab, you've deleted old containers & images inside Docker & you've updated vscode + any extensions in vscode. After you've updated those things, navigate to the correct directory inside your terminal & follow these steps.
+TEAMMATE SETUP: Make sure you are logged into Gitlab, you've deleted old containers & images inside Docker & you've updated vscode + any extensions in vscode. After you've done those things, navigate to the correct directory inside your terminal & follow these steps.
+
+PULL & MERGE
 
 - code . / git checkout my-branch / git checkout main / git pull / git checkout my-branch / git merge main
 
 - *resolve any merge conflicts*
+
+ADD, COMMIT & PUSH
 
 - git checkout my-branch / git add . / git commit -m "sample-text" / git push origin my-branch
 
@@ -42,7 +46,7 @@ USING THE APP: Random tips to ensure it's working properly.
 - make sure you use the enter button on your keyboard instead of clicking on the submit button with your mouse when inside of the Create Account & Login forms
 - if redirected to Gitlab instead of https://hack-reactor-hacks-18.gitlab.io/mls-monitor/ when trying to login, simply type that url back into the browser & you will
   be directed to the correct version of the homepage. this is a bug that should be fixed in the future.
-- if anything still isn't working, please refer to the MLS Monitor video walkthrough found at https://youtube.com/savisage or msg me anytime on Discord / Email
+- if anything still isn't working, please refer to the MLS Monitor video walkthrough found at https://youtube.com/@mls-monitor or msg me anytime on Discord / Gitlab
 -->
 
 

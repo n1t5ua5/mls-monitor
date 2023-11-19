@@ -21,7 +21,9 @@ const TeamCard = ({ name, logo, ranking, stats }) => {
             <p>
               Record: {stats.wins} - {stats.losses}
             </p>
-            <Link to={`/teams/${name}`}>Details</Link>
+            <div className="detail-link">
+              <Link to={`/teams/${name}`}>Details</Link>
+            </div>
           </div>
         </div>
       </div>

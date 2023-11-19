@@ -8,3 +8,11 @@
 .list-group {
     padding-top: 55px;
 }
+
+.col-4 {
+    margin-right: 30px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
