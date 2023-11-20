@@ -42,7 +42,8 @@ INITIALIZATION: To use this application on your local machine, please follow the
 - Run docker exec -it mls-monitor-inventory-api-1 bash
 - Run python manage.py loaddata products.json
 - Exit the container's CLI & the MLS Monitor is yours
-- But you must request access to the values inside our .env file (i.e. API_KEY) or create your own .env file
+- View journals folder for additional instructions on adding / committing etc.
+- You must request access to the values inside our .env file (i.e. API_KEY) or create your own .env file
 - In any event, please add an .md file in the journals folder using your first name as the title & document any changes
 
 CONFIGURATION: Use SwaggerAPI to ensure everything works properly.
