@@ -1,6 +1,3 @@
-
-        our READ.ME file for...
-
         the MLS MONITOR
 
         created by...
