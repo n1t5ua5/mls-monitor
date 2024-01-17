@@ -1,19 +1,19 @@
-        the MLS MONITOR
+the MLS MONITOR
 
-        created by...
+created by...
 
-        Deontay B.
-        Ethan W.
-        Mariam S.
-        & Austin S.
+Deontay B.
+Ethan W.
+Mariam S.
+& Austin S.
 
-        featuring...
+featuring...
 
-        data models
-        GHI magic
-        unit testing
-        API design
-        & much more
+data models
+GHI magic
+unit testing
+API design
+& much more
 
 
 API: We subscribed to the "Major League Soccer Standings" API from RapidAPI.
@@ -59,14 +59,11 @@ NAVIGATION: Create an account, logging in + random tips.
 - after it's been submitted, the account is created & the new user will be immediately redirected to the original "Home" page
 
 - now, you must click the "Login" tab in the nav bar & input an e-mail address & password. then hit enter on your keyboard to login
-- if redirected to Gitlab instead of https://hack-reactor-hacks-18.gitlab.io/mls-monitor/, simply type that url back into the browser &
-  you will be directed the correct, logged in version of the homepage
+- if redirected to Gitlab instead of https://hack-reactor-hacks-18.gitlab.io/mls-monitor/, simply type that url back into the browser & you will be directed the correct, logged in version of the homepage
 - once logged in, the user will notice the nav bar now consists of "Home", "Favorites" & "Team Detail" + a "Logout" button
 
 FUNCTIONALITY: Once logged in you may now favorite any team you support or remove them from your custom list.
 
-- now you can add any favorite team to your own new list in the "Favorites" page by clicking on any teams "Details" link on the homepage
-  which then brings you to each teams corresponding "Team Detail" page
-- finally click the "Add to Favorites" button where they're added to the "Favorites" page. once successfull added, the "Add to Favorites"
-  button reverts to a "Remove from Favorites" button so you can also remove them from your list if necessary
+- now you can add any favorite team to your own new list in the "Favorites" page by clicking on any teams "Details" link on the homepage which then brings you to each teams corresponding "Team Detail" page
+- finally click the "Add to Favorites" button where they're added to the "Favorites" page. once successfull added, the "Add to Favorites" button reverts to a "Remove from Favorites" button so you can also remove them from your list if necessary
 - in order to logout, you must click on the "Logout" tab in the nav & then you will be redirected back to the original homepage
