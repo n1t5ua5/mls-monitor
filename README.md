@@ -2,16 +2,16 @@ the MLS MONITOR
 
 created by...
 
-Deontay B.
-Ethan W.
+Deontay B.,
+Ethan W.,
 Mariam S.
 & Austin S.
 
 featuring...
 
-data models
-GHI magic
-unit testing
+data models,
+GHI magic,
+unit testing,
 API design
 & much more
 
@@ -47,7 +47,7 @@ CONFIGURATION: Use SwaggerAPI to ensure everything works properly.
 
 - type these urls in the browser: https://hack-reactor-hacks-18.gitlab.io/mls-monitor/ & https://may-18-ct-fastapi.mod3projects.com/docs
 - go to mod3projects.com/docs first & click on the green Login button. then click the Try it Out button in the upper right corner
-- for example, type "string" for both username & password & then click the execute button below. it will produce a 200 response if sucessful
+- for example, type "string" for both username & password & then click the execute button below. it will produce a 200 response if successful
 - now go back to https://hack-reactor-hacks-18.gitlab.io/mls-monitor/ in your browser, you will be directed to the "Home" page
 - next, do the same for the https://localhost:3000/ & https://localhost:8000/docs for your local machine
 
