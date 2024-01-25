@@ -9,7 +9,7 @@ To fix this issue, add a unique id or name attribute to a form field. This is no
 
 The console pointed towards an input element on line 40 of the Home.jsx file which made fixing the error relatively straightforward. I added an id="teamSearch" & the error ceased from persisting. I then scanned the rest of the app & now I'm seeing something similar about the form on the Login page, "A form field has an id or name attribute that the browser's autofill recognizes. However, it doesn't have an autocomplete attribute assigned. This might prevent the browser from correctly autofilling the form. To fix this issue, provide an autocomplete attribute."
 
-Id is a property I'm used to using but autoComplete is a little more raw albeit I've used it before inside of forms. After doing some research online & looking over my code, I input a value of password, but then I got another error about this being a non-standard practice so I had to search some more & eventually found out that if I set the value to current-password, it should work. I tried it out & now the errors are all gone so I'm going to add, commit & push to make sure these are reflected in the live version too. 
+Id is a property I'm used to using but autoComplete is a little more raw albeit I've used it before inside of forms. After doing some research online & looking over my code, I input a value of password, but then I got another error about this being a non-standard practice so I had to search some more & eventually found out that if I set the value to current-password, it should work. I tried it out & now the errors are all gone so I'm going to add, commit & push to make sure these are reflected in the live version too.
 
 
 -->
@@ -57,7 +57,7 @@ USING THE APP: Random tips to ensure it's working properly.
 - make sure you use the enter button on your keyboard instead of clicking on the submit button with your mouse when inside of the Create Account & Login forms
 - if redirected to Gitlab instead of https://hack-reactor-hacks-18.gitlab.io/mls-monitor/ when trying to login, simply type that url back into the browser & you will
   be directed to the correct version of the homepage. this is a bug that should be fixed in the future.
-- if anything still isn't working, please refer to the MLS Monitor video walkthrough found at https://youtube.com/@mls-monitor or msg me anytime on Discord / Gitlab
+- if anything still isn't working, please refer to the MLS Monitor video walkthrough found at https://youtube.com/@mls-monitor.
 -->
 
 

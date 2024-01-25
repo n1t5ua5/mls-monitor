@@ -21,7 +21,6 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="center-container">
       <div className="wrapper">
         <h2>Login</h2>
         <form onSubmit={handleSubmit}>
@@ -45,7 +44,7 @@ const LoginForm = () => {
               placeholder="Password"
               required
               type="password"
-              name="Password"
+              name="password"
               id="password"
               className="form-control"
               value={password}
@@ -60,7 +59,6 @@ const LoginForm = () => {
         </form>
         <Footer />
       </div>
-    </div>
   );
 };
 
