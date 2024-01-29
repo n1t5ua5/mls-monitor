@@ -20,7 +20,7 @@ class MyAuthenticator(Authenticator):
         return accounts
 
     def get_hashed_password(self, account: AccountOutWithPassword):
-        return account.hashed_password
+        return account.hashed_password.encode('utf-8')
 
     def get_account_data_for_cookie(self, account: AccountOutWithPassword):
         return account.email, AccountOut(**account.dict())
