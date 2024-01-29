@@ -3,7 +3,6 @@ import { useLoginMutation } from "./app/apiSlice";
 import "./styles/Login.css";
 import Footer from "./Footer";
 
-
 const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -13,7 +12,6 @@ const LoginForm = () => {
     e.preventDefault();
     try {
       await login({ email, password });
-
       window.location.href = "/";
     } catch (error) {
       console.error("Login failed:", error);
@@ -26,31 +24,32 @@ const LoginForm = () => {
       <form onSubmit={handleSubmit}>
         <div className="input-box">
           <input
-            placeholder="Email"
-            required
             type="text"
-            name="username"
-            id="username"
+            id="email"
+            name="email"
+            placeholder="Email"
             className="form-control"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            required
           />
-          <label htmlFor="username"></label>
+          <label htmlFor="email">Email</label>
         </div>
 
         <div className="input-box">
           <input
-            placeholder="Password"
-            required
             type="password"
-            name="Password"
             id="password"
+            name="password"
+            placeholder="Password"
             className="form-control"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            required
           />
-          <label htmlFor="password"></label>
+          <label htmlFor="password">Password</label>
         </div>
+
         <button className="button" type="submit">
           Submit
         </button>
