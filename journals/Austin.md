@@ -3,6 +3,11 @@
 -->
 
 
+<!-- 1/29/24
+Took another swing at fixing this 500 response I keep getting when logging in on the deployed version since I met with my friend & he helped redirect me in the right direction in regards to reading the logs more carefully. I've tried messing around with the authenticator.py file because essentially what seems to be happening is that one of the dependecies was updated unbeknowst to my team & I.
+-->
+
+
 <!-- 1/17/24
 Been awhile since I checked up on this neat little app of ours. On the browser, I noticed there was 1 issue persisting in the console, "A form field element should have an id or name attribute. A form field element has neither an id nor a name attribute. This might prevent the browser from correctly autofilling the form.
 To fix this issue, add a unique id or name attribute to a form field. This is not strictly needed, but still recommended even if you have an autocomplete attribute on the same element."
@@ -10,8 +15,6 @@ To fix this issue, add a unique id or name attribute to a form field. This is no
 The console pointed towards an input element on line 40 of the Home.jsx file which made fixing the error relatively straightforward. I added an id="teamSearch" & the error ceased from persisting. I then scanned the rest of the app & now I'm seeing something similar about the form on the Login page, "A form field has an id or name attribute that the browser's autofill recognizes. However, it doesn't have an autocomplete attribute assigned. This might prevent the browser from correctly autofilling the form. To fix this issue, provide an autocomplete attribute."
 
 Id is a property I'm used to using but autoComplete is a little more raw albeit I've used it before inside of forms. After doing some research online & looking over my code, I input a value of password, but then I got another error about this being a non-standard practice so I had to search some more & eventually found out that if I set the value to current-password, it should work. I tried it out & now the errors are all gone so I'm going to add, commit & push to make sure these are reflected in the live version too.
-
-
 -->
 
 
