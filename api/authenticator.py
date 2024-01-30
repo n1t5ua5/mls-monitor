@@ -30,5 +30,17 @@ class MyAuthenticator(Authenticator):
     def get_account_data_for_cookie(self, account: AccountOutWithPassword):
         return account.email, AccountOut(**account.dict())
 
+    def verify_password(self, plain_password, hashed_password):
+        plain_password_bytes = plain_password.encode("utf-8")
+        hashed_password_bytes = (
+            hashed_password.encode("utf-8")
+            if isinstance(hashed_password, str)
+            else hashed_password
+        )
+
+        return self.pwd_context.verify(
+            plain_password_bytes, hashed_password_bytes
+        )
+
 
 authenticator = MyAuthenticator(os.environ["SIGNING_KEY"])
