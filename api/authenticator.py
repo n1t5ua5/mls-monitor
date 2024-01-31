@@ -41,14 +41,20 @@ class MyAuthenticator(Authenticator):
             if isinstance(hashed_password, str)
             else hashed_password
         )
-        if "$" in hashed_password and isinstance(hashed_password, str):
-            parts = hashed_password.split("$")
-            parts = [p.encode("utf-8") for p in parts]
-            hashed_password_bytes = b"$".join(parts)
 
-        return self.pwd_context.verify(
-            plain_password_bytes, hashed_password_bytes
-        )
+        try:
+            verification_result = bcrypt.verify(
+                plain_password_bytes, hashed_password_bytes
+            )
+            return verification_result
+        except ValueError:
+            print("Password verification failed.")
+            return False
+
+    def hash_password(self, password):
+        password_bytes = password.encode("utf-8")
+        hashed_password_bytes = bcrypt.hash(password_bytes)
+        return hashed_password_bytes.decode("utf-8")
 
 
 authenticator = MyAuthenticator(os.environ["SIGNING_KEY"])
