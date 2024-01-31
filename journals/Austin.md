@@ -4,6 +4,11 @@
 
 
 <!-- 1/29/24
+Back at it again today working on that same 500 response error. In my deployed projects logs in the terminal it states: TypeError: argument 'salt': 'str' object cannot be converted to 'PyBytes'. If Im understanding this correctly, it means that that a particular string object was unable to be converted into an integer. 
+-->
+
+
+<!-- 1/29/24
 Took another swing at fixing this 500 response I keep getting when logging in on the deployed version since I met with my friend & he helped redirect me in the right direction in regards to reading the logs more carefully. I've tried messing around with the authenticator.py file because essentially what seems to be happening is that one of the dependecies was updated unbeknowst to my team & I.
 -->
 
