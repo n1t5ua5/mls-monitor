@@ -37,6 +37,10 @@ class MyAuthenticator(Authenticator):
             if isinstance(hashed_password, str)
             else hashed_password
         )
+        if '$' in hashed_password and isinstance(hashed_password, str):
+            parts = hashed_password.split('$')
+            parts = [p.encode('utf-8') for p in parts]
+            hashed_password_bytes = b'$'.join(parts)
 
         return self.pwd_context.verify(
             plain_password_bytes, hashed_password_bytes
