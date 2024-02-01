@@ -3,6 +3,11 @@
 -->
 
 
+<!-- 2/1/24
+I spoke with another colleague of mine who reminded me that I should check the atlas clusters in MongoDB itself. After logging in, the dashboard showed how our database had been paused due to inactivity so I clicked resume to revert it back to its old self again & waited for it to reboot.
+-->
+
+
 <!-- 1/29/24
 Back at it again today working on that same 500 response error, except now I have it narrowed down to a TypeError which is indicated in my deployed fastapi logs. In my deployed projects logs in the terminal it states: TypeError: argument 'salt': 'str' object cannot be converted to 'PyBytes'. If Im understanding this correctly, it means that that a particular string object was unable to be converted into an integer.
 -->
