@@ -3,6 +3,9 @@
 -->
 
 
+<!-- 2/7/24 I had a massive breakthrough today due to a friend's guidance about this project. They recalled a new dependency update with MongoDB that I was unaware of, reminded me how I needed to add a new variable via GitLab so that this new URI was read right. I updated my .yml file to match the new variable name & finally added/committed/pushed to GitLab. When I went to my logs using glv-cloud-cli logs -a fastapi I recieved a new error; an AttributeError instead of a long conviluted one like I was getting with the TypeError. I'm investigating that some more now, but while I ponder I tested to see if I could login into the deployed project using our bogus passwword & eureka!!!!!! I'm so happy this was diagnosed properly & I can move forward. I'll have to keep an eye on any updates from MongoDB & FastAPI, but now I know how to handle updates like that in general which will definitely come in handy in the future. Incredibly grateful for my friends & their willingness to work with me - working together really does work. -->
+
+
 <!-- 2/1/24
 I spoke with another colleague of mine who reminded me that I should check the atlas clusters in MongoDB itself. After logging in, the dashboard showed how our database had been paused due to inactivity so I clicked resume to revert it back to its old self again & waited for it to reboot.
 -->
