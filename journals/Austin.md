@@ -3,6 +3,11 @@
 -->
 
 
+<!-- 2/11/24
+Still having trouble with resolving this AttributeError which has snowballed into a new pipeline failure for the test stage. I sent my colleague a video message via Loom to help explain in detail what's going on because I think he has some more insight as to what the proper commands in the terminal should be regards to updating requirements.txt files; I'll pick this up again tomorrow when I hear back from him again.
+-->
+
+
 <!-- 2/7/24 I had a massive breakthrough today due to a friend's guidance about this project. They recalled a new dependency update with MongoDB that I was unaware of, reminded me how I needed to add a new variable via GitLab so that this new URI was read right. I updated my .yml file to match the new variable name & finally added/committed/pushed to GitLab. When I went to my logs using glv-cloud-cli logs -a fastapi I recieved a new error; an AttributeError instead of a long conviluted one like I was getting with the TypeError. I'm investigating that some more now, but while I ponder I tested to see if I could login into the deployed project using our bogus passwword & eureka!!!!!! I'm so happy this was diagnosed properly & I can move forward. I'll have to keep an eye on any updates from MongoDB & FastAPI, but now I know how to handle updates like that in general which will definitely come in handy in the future. Incredibly grateful for my friends & their willingness to work with me - working together really does work. -->
 
 
