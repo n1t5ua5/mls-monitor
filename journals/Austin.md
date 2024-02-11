@@ -4,7 +4,7 @@
 
 
 <!-- 2/11/24
-Still having trouble with resolving this AttributeError which has snowballed into a new pipeline failure for the test stage. I sent my colleague a video message via Loom to help explain in detail what's going on because I think he has some more insight as to what the proper commands in the terminal should be regards to updating requirements.txt files; I'll pick this up again tomorrow when I hear back from him again.
+Still having trouble with resolving this AttributeError which has snowballed into a new pipeline failure for the test stage. I sent my colleague a video message via Loom to help explain in detail what's going on because I think he has some more insight as to what the proper commands in the terminal should be regards to updating requirements.txt files; I'll pick this up again tomorrow when I hear back from him again. I'm running some more tests on my own too in the meantime. 
 -->
 
 
