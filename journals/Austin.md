@@ -2,9 +2,13 @@
     Austin's MLS-Monitor Journal
 -->
 
+<!-- 2/27/24
+After reviewing the application since the opening week of Major League Soccer this past weekend, all of the teams have properly updated with their new records/stats for the new season as expected. The only foreseaable addition necessary is the inclusion of San Diego FC next year when they make their debut. As long as the API is updated internally by its administrators to include them (UnlimitedAPI from RapidAPI), it should be automatically added to the Western Conference section around this time in 2025, I will check in halfway in between now & then too. 
+-->
+
 
 <!-- 2/11/24
-Still having trouble with resolving this AttributeError which has snowballed into a new pipeline failure for the test stage. I sent my colleague a video message via Loom to help explain in detail what's going on because I think he has some more insight as to what the proper commands in the terminal should be regards to updating requirements.txt files; I'll pick this up again tomorrow when I hear back from him again. I'm running some more tests on my own too in the meantime. 
+Still having trouble with resolving this AttributeError which has snowballed into a new pipeline failure for the test stage. I sent my colleague a video message via Loom to help explain in detail what's going on because I think he has some more insight as to what the proper commands in the terminal should be regards to updating requirements.txt files; I'll pick this up again tomorrow when I hear back from him again. I'm running some more tests on my own too in the meantime.
 -->
 
 

@@ -15,14 +15,13 @@ unit testing,
 API design
 & much more
 
-
 API: We subscribed to the "Major League Soccer Standings" API from RapidAPI.
 
 PURPOSE: An easy to use, open-source application that displays the rankings & stats for every team in Major League Soccer.
 
 INTENDED MARKET: Soccer / Football / Fútbol fans in the United States, Canada & Mexico. With the arrival of Leo Messi in Miami & the upcoming World Cup in '26 that's hosted by the previously mentioned trio; fans new & old need a new way to follow the teams they love.
 
-STRETCH GOALS: Adding an 'About' page to showcase each individual teammates portfolio including our team's repository on Gitlab would be a good addition to this neat little application of ours. Configuring it so you can click on the Submit button inside of the Create Account & Login page instead of having to type enter on your keyboard every time would be a plus too.
+STRETCH GOALS: Adding an 'About Us' page to showcase each individual teammates portfolio would be a great addition to this neat little application of ours. Configuring this so you can actually click on the Submit button inside of the Create Account & Login forms instead of having to type enter on your keyboard every time would be a plus too. Also, if you search for a team, their respective conference should be shown above it instead of having the Eastern Conference constantly showing up top by default.
 
 GITLAB REPOSITORY: https://gitlab.com/hack-reactor-hacks-18/mls-monitor
 
