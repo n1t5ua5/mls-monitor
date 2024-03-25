@@ -2,8 +2,14 @@
     Austin's MLS-Monitor Journal
 -->
 
+
+<!-- 3/25/24
+After checking in on the app after MLS Matchday 6, I noticed that the words "Login" & "Password" started to appear out of their respective order in the Login form page. There are the two bars where you input info with the words Login & Password there by default to signify what should be input by the user, but then the words also appeared underneath each input bar. Very strange. I remember talking to my friend the other week who just started using React & was reminded of how breaking things could be easily resolved given the nature of the program which enables realtime UI updates. I went into the Login.jsx file & noticed there were Label elements made for the words "Login" & "Password", just like I had been working on this past week with this app called SoloLearn in my spare time. I removed them from the code & immediately noticed how they were also gone in my browser. I added them back in, just to make sure I was seeing things right & that's that thankfully! It's cool to see how random practice can help you easily identify different aspects in the applications we create.
+-->
+
+
 <!-- 2/27/24
-After reviewing the application since the opening week of Major League Soccer this past weekend, all of the teams have properly updated with their new records/stats for the new season as expected. The only foreseaable addition necessary is the inclusion of San Diego FC next year when they make their debut. As long as the API is updated internally by its administrators to include them (UnlimitedAPI from RapidAPI), it should be automatically added to the Western Conference section around this time in 2025, I will check in halfway in between now & then too. 
+After reviewing the application since the opening week of Major League Soccer this past weekend, all of the teams have properly updated with their new records/stats for the new season as expected. The only foreseaable addition necessary is the inclusion of San Diego FC next year when they make their debut. As long as the API is updated internally by its administrators to include them (UnlimitedAPI from RapidAPI), it should be automatically added to the Western Conference section around this time in 2025, I will check in halfway in between now & then too.
 -->
 
 

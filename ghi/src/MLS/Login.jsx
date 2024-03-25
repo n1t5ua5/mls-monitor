@@ -33,9 +33,7 @@ const LoginForm = () => {
             onChange={(e) => setEmail(e.target.value)}
             required
           />
-          <label htmlFor="email">Email</label>
         </div>
-
         <div className="input-box">
           <input
             type="password"
@@ -47,9 +45,7 @@ const LoginForm = () => {
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-          <label htmlFor="password">Password</label>
         </div>
-
         <button className="button" type="submit">
           Submit
         </button>
