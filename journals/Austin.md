@@ -1,5 +1,5 @@
-<!--
-    Austin's MLS-Monitor Journal
+<!-- 4/29/24
+I wanted to look up the latest Major League Soccer standings on my phone today to celebrate how Miami is Number One in the Eastern Conference right now + they're beating all the Western Conference teams by points too. But when I visited the Login page, I immediately notice how the form wasn't centered beneath the Nav. Instead it was sticking out on the right, but I think I know how to quickly fix this problem in the Login.css file. I compared it with the CreateAccount.css file & input any changes I thought would help but nothing did. So I figured I need to make a new styling decleration inside the .center-container & .wrapper classes. I tried using the calc function within the width property but that didn't do anything either. Then I remembered the box-sizing property. I created a new property inside of the .wrapper class & set the border-box to content-box. But still, nothing changed. I then used border-box instead of content-box & eureka, problem solved.
 -->
 
 
@@ -86,8 +86,7 @@ FINISH SETUP: Test all the pipelines & use SwaggerAPI to ensure everything works
 USING THE APP: Random tips to ensure it's working properly.
 
 - make sure you use the enter button on your keyboard instead of clicking on the submit button with your mouse when inside of the Create Account & Login forms
-- if redirected to Gitlab instead of https://hack-reactor-hacks-18.gitlab.io/mls-monitor/ when trying to login, simply type that url back into the browser & you will
-  be directed to the correct version of the homepage. this is a bug that should be fixed in the future.
+- if redirected to Gitlab instead of https://hack-reactor-hacks-18.gitlab.io/mls-monitor/ when trying to login, simply type that url back into the browser & you will be directed to the correct version of the homepage. this is a bug that should be fixed in the future.
 - if anything still isn't working, please refer to the MLS Monitor video walkthrough found at https://youtube.com/@mls-monitor.
 -->
 
