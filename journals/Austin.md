@@ -1,3 +1,13 @@
+<!-- 5/15/24
+I spent an hour or so researching potential reasons for this pesky new 503 error I'm incurring. I found another major missing puzzle piece, when I input glv-cloud-cli list into my terminal to check on the deployed apps, neither of them were appearing - only "null". Considering I finished that last bit of CSS, I'm going to add, commit etc. to see if my pipelines pass or not because that could tell me a lot more about what's actually happening.
+-->
+
+
+<!-- 5/14/24
+Checked in on the app in the browser & noticed that the teams weren't loading on the homepage... I also realized there was an old error I thought I had never got around to fixing which is how the form on the login page isn't positioned directly in the center beneath the nav, it sits on the left side of the nav. After revieving my old entry from before, I thought I had fixed this problem before but apparently it reverted back to it's old way somehow? I'm really confused... Anyways, it took a little while to see where exactly the change should've been made & I eventually settled with adding an id to the wrapper div on the Login page so I could apply CSS to only that considering the CreateAccount page had the same class. Setting the max-width to 100% works just fine & even though the create account page contents were settled in the middle, I applied the max-width property to the CreateAccount page too for the sake of uniformity because it didn't span the entire width of the nav either. I can confidentally say that I no longer have to work on the CSS anymore which feels great. Now back to the API issue: every payment for this year was made successfully & the site was properly fetching data as of seven days ago according to RapidAPI. I didn't make any changes to the project during that time period either. I'm not seeing anything in the logs + when I go to FastApi in the browser I'm automatically getting a 503 error. Earlier today I accidentally deleted the docker volumes, thinking they were old images. I want to blame that as the issue, but I noticed the error in the browser before I ever went into docker so that can't be it either, right? I considered another possibility, maybe that the API is undergoing some internal maintenance, but there hasn't been any sort of announcement from the administrator. I'm going to think about this overnight, review my old journal entries from below & get back to this sometime tomorrow afternoon.
+-->
+
+
 <!-- 4/29/24
 I wanted to look up the latest Major League Soccer standings on my phone today to celebrate how Miami is Number One in the Eastern Conference right now + they're beating all the Western Conference teams by points too. But when I visited the Login page, I immediately notice how the form wasn't centered beneath the Nav. Instead it was sticking out on the right, but I think I know how to quickly fix this problem in the Login.css file. I compared it with the CreateAccount.css file & input any changes I thought would help but nothing did. So I figured I need to make a new styling decleration inside the .center-container & .wrapper classes. I tried using the calc function within the width property but that didn't do anything either. Then I remembered the box-sizing property. I created a new property inside of the .wrapper class & set the border-box to content-box. But still, nothing changed. I then used border-box instead of content-box & eureka, problem solved.
 -->
@@ -22,7 +32,7 @@ Still having trouble with resolving this AttributeError which has snowballed int
 
 
 <!-- 2/1/24
-I spoke with another colleague of mine who reminded me that I should check the atlas clusters in MongoDB itself. After logging in, the dashboard showed how our database had been paused due to inactivity so I clicked resume to revert it back to its old self again & waited for it to reboot.
+I spoke with another colleague of mine who reminded me that I should check the atlas clusters in MongoDB itself. After logging in, the dashboard showed how our database had been paused due to inactivity so I clicked resume to revert it back to its old self again & waited for it to reboot successfully, which it did.
 -->
 
 
@@ -163,7 +173,7 @@ According to the error, it looks like the team names are not being displayed pro
     </div>
 
 
-But instead the undefined error remains & now I am beginning to question if this is actually going to fix the login information or not because I don't believe the TeamCard should be used this way at all. If I erased that change though, is the second error I incurred because the list of teams aren't loading properly? If so, why was it working this entire time previously? Or am even asking the right question? I haven't encountered this before until trying to debug the loggin routing issue this time around but regardless I pasted the latest error below that I found in the console for reference.
+But instead the undefined error remains & now I am beginning to question if this is actually going to fix the login information or not because I don't believe the TeamCard should be used this way at all. If I erased that change though, is the second error I incurred because the list of teams aren't loading properly? If so, why was it working this entire time previously? Or am even asking the right question? I haven't encountered this before until trying to debug the login routing issue this time around but regardless I pasted the latest error below that I found in the console for reference.
 
 
 react-dom.production.min.js:189 TypeError: Cannot read properties of undefined (reading '0')
@@ -214,17 +224,17 @@ Today I altered the CSS to center all of the team's info beneath their respectiv
 
 
 <!-- 10/4/23
-I started making the application mobile friendly. It took a long time today but the site is ready according to Chrome Developer Tools. Next I'll add the dark mode button, make the team stats line up in the center & figure out why the API keeps going back & forth with which data we get. To reiterate, it originally fetched data from the previous MLS season, then suddenly it fetched this years data & now it's back to the old again - I'll figure it out. & lastly I'll worry about the page navigation logic & .yml file unit testing issues.
+I started making the application mobile friendly. It took a long time today but the site is errore-free according to Chrome Developer Tools. Next I'll add the dark mode button, make the team stats line up in the center & figure out why the API keeps going back & forth with which data we get. To reiterate, it originally fetched data from the previous MLS season, then suddenly it fetched this years data & now it's back to the old again - I'll figure it out. & lastly I'll worry about the page navigation logic & .yml file unit testing issues.
 -->
 
 
 <!-- 10/3/23
-A peer of mine & I met with our former instructor to ask for his advice on getting the fastapi deployed properly. I think it's almost there... eureka!!! https://hack-reactor-hacks-18.gitlab.io/mls-monitor/. I'm hoping to be completely done with this project before the week is over so it's full speed ahead from here. I'm also making a quick change before I go to lunch that will alter this whole file. As of 1pm ET on 10/3/23, the last update to this journal was written on line 127 of this file, but I'm reversing the order so that new updates will be made on the top of the page instead of the bottom. A half a dozen hurdles remain: implementing a dark mode button, make the application mobile friendly, fix some of the logic in regards to page navigation, center the team list stats on the homepage underneath their respective logo, get the API to return this years MLS rankings again like it did before & make a final adjustment to my .yml file so the unit tests will work properly.
+A peer of mine & I met with our former instructor to ask for his advice on getting the fastapi deployed properly. I think it's almost there... eureka!!! https://hack-reactor-hacks-18.gitlab.io/mls-monitor/. I'm hoping to be completely done with this project before the week is over so it's full speed ahead from here. I'm also making a quick change before I go to lunch that will alter this whole file. As of 1pm ET on 10/3/23, the last update to this journal was written on line 127 of this file, but I'm reversing the order so that new updates will be made on the top of the page instead of the bottom. A half a dozen hurdles remain: implement a dark mode button, make the application mobile friendly, fix some of the logic in regards to page navigation, center the team list stats on the homepage underneath their respective logo, get the API to return this years MLS rankings again like it did before & make a final adjustment to my .yml file so the unit tests will work properly.
 -->
 
 
 <!-- 10/2/23
-Worked on the CSS changes that I wanted to make for awhile hoy whereas the homepage is now a little more organized, same goes for the rest of the pages. They all align with the Nav better than before, but I'm still not finished here. I want to refocus on deployment & then I'll make the last updates.
+Worked on the CSS changes that I wanted to make for awhile hoy whereas the homepage is now a little more organized, same goes for the rest of the pages. They all align with the Nav better than before, but I'm still not finished here. I want to refocus on deployment & then I'll make the last styling updates.
 -->
 
 

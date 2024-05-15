@@ -19,7 +19,7 @@ const LoginForm = () => {
   };
 
   return (
-    <div className="wrapper">
+    <div className="wrapper" id="login-wrapper">
       <h2>Login</h2>
       <form onSubmit={handleSubmit}>
         <div className="input-box">

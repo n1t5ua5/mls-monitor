@@ -6,6 +6,10 @@ body{
     padding-bottom: 5px;
 }
 
+#login-wrapper{
+    max-width: 1000%;
+}
+
 .wrapper{
     margin: 40px 0 auto;
     margin-top: 10px;
