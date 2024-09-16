@@ -16,7 +16,7 @@ COPY ghi/ .
 RUN npm run build
 
 # Use an official Python runtime as a parent image for the api
-FROM python:3.9
+FROM python:3.10
 
 WORKDIR /app
 
