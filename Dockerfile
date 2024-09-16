@@ -33,5 +33,5 @@ COPY --from=ghi /app/ghi/build /app/ghi/build
 # Expose the port the app runs on
 EXPOSE 8000
 
-# Command to run the application
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+# The ENTRYPOINT will be overridden by Railway's start command
+ENTRYPOINT ["uvicorn", "main:app", "--host", "0.0.0.0"]
