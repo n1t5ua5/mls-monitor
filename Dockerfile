@@ -1,37 +1,42 @@
-# Use an official Node runtime as a parent image for the ghi
-FROM node:14 AS ghi
-
+# Frontend (ghi) build stage
+FROM node:20 AS frontend-build
 WORKDIR /app/ghi
-
-# Copy package.json and package-lock.json
 COPY ghi/package*.json ./
-
-# Install dependencies
 RUN npm install
-
-# Copy ghi source code
-COPY ghi/ .
-
-# Build the ghi
+COPY ghi/ ./
 RUN npm run build
 
-# Use an official Python runtime as a parent image for the api
-FROM python:3.11.2
+# Backend (api) build stage
+FROM python:3.11 AS backend-build
+WORKDIR /app/api
+COPY api/requirements.txt ./
+RUN pip install -r requirements.txt
+COPY api/ ./
 
+# Final stage
+FROM python:3.11
 WORKDIR /app
 
-# Copy api requirements and install dependencies
-COPY api/requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+# Copy frontend (ghi) build
+COPY --from=frontend-build /app/ghi/build /app/ghi/build
 
-# Copy api source code
-COPY api/ .
+# Copy backend (api)
+COPY --from=backend-build /app/api /app/api
 
-# Copy built ghi from the ghi stage
-COPY --from=ghi /app/ghi/build /app/ghi/build
+# Install necessary tools
+RUN apt-get update && apt-get install -y \
+    nodejs \
+    npm \
+    && rm -rf /var/lib/apt/lists/*
 
-# Expose the port the app runs on
-EXPOSE 8000
+# Install serve to host the frontend
+RUN npm install -g serve
 
-# The ENTRYPOINT will be overridden by Railway's start command
-ENTRYPOINT ["uvicorn", "main:app", "--host", "0.0.0.0"]
+# Install uvicorn for the backend
+RUN pip install uvicorn
+
+# Copy Procfile
+COPY Procfile .
+
+# Set the entrypoint to run the Procfile using Railway's Nixpacks
+ENTRYPOINT ["nixpacks", "start"]
