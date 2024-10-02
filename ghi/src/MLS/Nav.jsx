@@ -1,16 +1,17 @@
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate, useLocation } from "react-router-dom";
 import { useGetTokenQuery, useLogoutMutation } from "./app/apiSlice";
 import React, { useEffect } from "react";
 import "./styles/Nav.css";
 import MMLogo2 from "./styles/MMlogo2.png";
 
-
 const card_id = "Inter Miami CF";
 
 const Nav = () => {
   const navigate = useNavigate();
-  const { data: account } = useGetTokenQuery();
+  const location = useLocation();
+  const { data: account, refetch } = useGetTokenQuery();
   const [logout, logoutResponse] = useLogoutMutation();
+
   const handleLogout = () => {
     logout();
     window.location.reload();
@@ -19,6 +20,10 @@ const Nav = () => {
   useEffect(() => {
     if (logoutResponse && logoutResponse.data) navigate("/");
   }, [logoutResponse, navigate]);
+
+  useEffect(() => {
+    refetch();
+  }, [location, refetch]);
 
   return (
     <nav className="nav">

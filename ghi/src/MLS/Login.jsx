@@ -2,8 +2,10 @@ import React, { useState } from "react";
 import { useLoginMutation } from "./app/apiSlice";
 import "./styles/Login.css";
 import Footer from "./Footer";
+import { useNavigate } from "react-router-dom";
 
 const LoginForm = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [login] = useLoginMutation();
@@ -12,7 +14,7 @@ const LoginForm = () => {
     e.preventDefault();
     try {
       await login({ email, password });
-      window.location.href = "/";
+      navigate("/");
     } catch (error) {
       console.error("Login failed:", error);
     }
